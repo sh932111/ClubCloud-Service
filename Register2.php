@@ -8,6 +8,9 @@
 	$username = $_POST["username"];
 	$password = $_POST["password"];
 	$user_id = $_POST["user_id"];
+	$device_token = $_POST["device_token"];
+	$device_os = $_POST["device_os"];
+
 
 	$link = mysql_connect('localhost','root','sh3599033');
 
@@ -33,15 +36,17 @@
 	{
 		$creat_query  ="CREATE TABLE `user_table`(
 			`name` VARCHAR(20) NOT NULL,
-			`username` VARCHAR(20) NOT NULL,
+			`username` VARCHAR(20) NOT NULL PRIMARY KEY,
 			`password` VARCHAR(20) NOT NULL,
-			`user_id` VARCHAR(20) NOT NULL
+			`user_id` VARCHAR(20) NOT NULL,
+			`device_token` VARCHAR(200) NOT NULL,
+			`device_os` VARCHAR(10) NOT NULL
 			);";
 		$table_selected = mysql_query($creat_query, $link);
 
-		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`) 
-			VALUES ('%s','%s','%s','%s')",
-			$name,$username,$password,$user_id);
+		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`,`device_token`,`device_os`) 
+			VALUES ('%s','%s','%s','%s','%s','%s')",
+			$name,$username,$password,$user_id,$device_token,$device_os);
 
 			$res = mysql_query($query,$link);
 

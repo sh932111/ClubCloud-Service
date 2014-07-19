@@ -7,11 +7,25 @@ $check = check_nick($user_id);
 
 if ($check) 
 {
-	# code...
-	$arr["Message"] = '驗證成功';
-	$arr["result"] = true;
-	echo json_encode($arr);
-    exit();
+    include_once("CheckUserID.php");
+
+    $check2 = checkID($user_id);
+
+    if ($check2) 
+    {
+        $arr["Message"] = '驗證成功';
+        $arr["result"] = true;
+        echo json_encode($arr);
+        exit();
+    }
+    else
+    {
+        $arr["Message"] = '身分證以註冊';
+        $arr["result"] = FALSE;
+        echo json_encode($arr);
+        exit();
+    }
+    
 }
 
 else
@@ -20,7 +34,6 @@ else
 	$arr["result"] = FALSE;
 	echo json_encode($arr);
     exit();
-
 }
 
 
