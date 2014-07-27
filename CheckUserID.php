@@ -12,7 +12,9 @@
 			`password` VARCHAR(20) NOT NULL,
 			`user_id` VARCHAR(20) NOT NULL,
 			`device_token` VARCHAR(200) NOT NULL,
-			`device_os` VARCHAR(10) NOT NULL
+			`device_os` VARCHAR(10) NOT NULL,
+			`user_city` VARCHAR(20) NOT NULL,
+			`user_city_detail` VARCHAR(20) NOT NULL
 			);";
 		$table_selected = mysql_query($creat_query, $objConnect);
 
