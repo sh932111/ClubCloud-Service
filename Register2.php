@@ -3,6 +3,12 @@
 	$objDB = mysql_select_db("user");
 	mysql_query ( "set character set utf8" );
 */
+	header('Content-Type: text/html; charset=utf8');
+
+	
+	mysql_query("SET NAMES 'utf8'");
+	mysql_query("SET CHARACTER_SET_CLIENT='utf8'");
+	mysql_query("SET CHARACTER_SET_RESULTS='utf8'");
 
 	$name = $_POST["name"];
 	$username = $_POST["username"];
@@ -12,7 +18,11 @@
 	$device_os = $_POST["device_os"];
 	$user_city = $_POST["user_city"];
 	$user_city_detail = $_POST["user_city_detail"];
+	$city_id = $_POST["city_id"];
+	$city_detail_id = $_POST["city_detail_id"];
 
+//	mysql_query ( "set character set utf8" );
+	//mysql_query("SET NAMES 'UTF8'");
 
 	$link = mysql_connect('localhost','root','sh3599033');
 
@@ -37,20 +47,22 @@
 	if ($db_selected) 
 	{
 		$creat_query  ="CREATE TABLE `user_table`(
-			`name` VARCHAR(20) NOT NULL,
+			`name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 			`username` VARCHAR(20) NOT NULL PRIMARY KEY,
 			`password` VARCHAR(20) NOT NULL,
 			`user_id` VARCHAR(20) NOT NULL,
 			`device_token` VARCHAR(200) NOT NULL,
 			`device_os` VARCHAR(10) NOT NULL,
-			`user_city` VARCHAR(20) NOT NULL,
-			`user_city_detail` VARCHAR(20) NOT NULL
+			`user_city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+			`user_city_detail` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+			`city_id` VARCHAR(20) NOT NULL,
+			`city_detail_id` VARCHAR(20) NOT NULL
 			);";
 		$table_selected = mysql_query($creat_query, $link);
 
-		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`,`device_token`,`device_os`,`user_city`,`user_city_detail`) 
-			VALUES ('%s','%s','%s','%s','%s','%s','%s','%s')",
-			$name,$username,$password,$user_id,$device_token,$device_os,$user_city,$user_city_detail);
+		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`,`device_token`,`device_os`,`user_city`,`user_city_detail`,`city_id`,`city_detail_id`) 
+			VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+			$name,$username,$password,$user_id,$device_token,$device_os,$user_city,$user_city_detail,$city_id,$city_detail_id);
 
 			$res = mysql_query($query,$link);
 
