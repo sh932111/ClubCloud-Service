@@ -6,16 +6,10 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="testjs/test.js"></script>
 <title>httpPostTest</title>
 <head></head>
 <body>
-Please input your message<br />
-<form method="POST" action="Register1.php" >
-	
-	<input type="text" name="user_id" size="20"  /><br />
-	
-	<input name="Submit1" type="submit" value="Send" /><br />
-</form>	
-
+	<input type="button" value="Submit Form" onclick="post();" /><br />
 </body>
 </html>

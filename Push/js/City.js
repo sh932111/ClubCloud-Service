@@ -11,7 +11,7 @@ function init()
 {
 	var xmlhttp = new XMLHttpRequest();
     
-    xmlhttp.open("POST", "http://localhost:8888/ClubCloud/Push/GetCityData.php", true);
+    xmlhttp.open("POST", "http://localhost/ClubCloud/Push/GetCityData.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 
@@ -68,7 +68,7 @@ function loaddata(get_city)
 
 	var xmlhttp = new XMLHttpRequest();
 	    
-	    xmlhttp.open("POST", "http://localhost:8888/ClubCloud/Push/GetCityDetail.php", true);
+	    xmlhttp.open("POST", "http://localhost/ClubCloud/Push/GetCityDetail.php", true);
 	    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 		xmlhttp.onreadystatechange = function() 
@@ -120,7 +120,7 @@ function send()
 {
 	var xmlhttp = new XMLHttpRequest();
 	    
-	    xmlhttp.open("POST", "http://localhost:8888/ClubCloud/Push/delegate.php", true);
+	    xmlhttp.open("POST", "http://localhost/ClubCloud/Push/delegate.php", true);
 	    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 		xmlhttp.onreadystatechange = function() 
