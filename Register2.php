@@ -10,16 +10,25 @@
 	mysql_query("SET CHARACTER_SET_CLIENT='utf8'");
 	mysql_query("SET CHARACTER_SET_RESULTS='utf8'");
 
-	$name = $_POST["name"];
-	$username = $_POST["username"];
-	$password = $_POST["password"];
-	$user_id = $_POST["user_id"];
-	$device_token = $_POST["device_token"];
-	$device_os = $_POST["device_os"];
-	$user_city = $_POST["user_city"];
-	$user_city_detail = $_POST["user_city_detail"];
-	$city_id = $_POST["city_id"];
-	$city_detail_id = $_POST["city_detail_id"];
+	$name = $_POST["name"];//使用者名稱
+	
+	$username = $_POST["username"];//帳號
+	
+	$password = $_POST["password"];//密碼
+	
+	$user_id = $_POST["user_id"];//身分證
+
+	$device_token = $_POST["device_token"];//推撥用的id
+	
+	$device_os = $_POST["device_os"];//iOS or Android
+
+	$user_city = $_POST["user_city"];//territory_name
+
+	$user_city_detail = $_POST["user_city_detail"];//district_name
+	
+	$city_id = $_POST["city_id"];//city_id
+	
+	$city_detail_id = $_POST["city_detail_id"];//district_id
 
 //	mysql_query ( "set character set utf8" );
 	//mysql_query("SET NAMES 'UTF8'");
