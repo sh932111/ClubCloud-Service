@@ -1,4 +1,4 @@
-註冊的流程
+社區雲註冊的流程
 
 有帳號:
 
@@ -25,4 +25,5 @@ userphoto資料夾用來放圖片的
 test.php 跟 CheckUserID.php 可以無視他
 
 test2.html是拿來看table裡的資料
+
 
