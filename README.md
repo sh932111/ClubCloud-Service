@@ -17,3 +17,12 @@
 Request資料夾是居民上傳資料給村長的php
 
 Push資料夾是村長推播的php
+
+testjs資料夾請無視他
+
+userphoto資料夾用來放圖片的
+
+test.php 跟 CheckUserID.php 可以無視他
+
+test2.html是拿來看table裡的資料
+
