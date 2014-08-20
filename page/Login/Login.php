@@ -47,7 +47,12 @@
 		$arr["user_id"] = $objResult["user_id"];
 		$arr["device_token"] = $objResult["device_token"];
 		$arr["device_os"] = $objResult["device_os"];
-
+		
+		$arr["user_city"] = $objResult["user_city"];//territory_name
+		$arr["user_city_detail"] = $objResult["user_city_detail"];//district_name
+		$arr["city_id"] = $objResult["city_id"];//city_id
+		$arr["city_detail_id"] = $objResult["city_detail_id"];//district_id
+		
 		echo json_encode($arr);
 		exit();
 	}

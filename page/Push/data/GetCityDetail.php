@@ -1,5 +1,7 @@
 <?php
 
+	$territory_name = $_POST["territory_name"];
+
 	$data = array();
 	
 	$list =  array();
@@ -8,7 +10,7 @@
 
 	try
 	{
-		$db_conn = new PDO('sqlite:city.db');
+		$db_conn = new PDO('sqlite:res/city.db');
 	}
 	catch(PDOException $e)
 	{
@@ -20,14 +22,16 @@
 
 	while($row = $sth->fetch(PDO::FETCH_ASSOC))
 	{
-		$data["district_name"] = $row['district_name'];
-		$data["district_id"] = $row['district_id'];
-		$data["territory_name"] = $row['territory_name'];
+		if ($territory_name == $row['territory_name']) 
+		{
+			$data["district_name"] = $row['district_name'];
+			$data["district_id"] = $row['district_id'];
 
-		$list[$i] = $data;
+			$list[$i] = $data;
 			//$list[$i] = $data;
 
-		$i = $i + 1;
+			$i = $i + 1;
+		}
 	}
 	//$list["num"] = $i;
 

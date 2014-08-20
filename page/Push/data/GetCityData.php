@@ -6,7 +6,7 @@
 
 	try
 	{
-		$db_conn = new PDO('sqlite:city.db');
+		$db_conn = new PDO('sqlite:res/city.db');
 	}
 	catch(PDOException $e)
 	{
