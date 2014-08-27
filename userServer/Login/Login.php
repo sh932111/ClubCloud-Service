@@ -6,8 +6,17 @@
 
 	$user_name = $_POST["username"];
 	$user_password = $_POST["password"];
+	$device_token = $_POST["device_token"];
+	$device_os = $_POST["device_os"];
 	
-	$select_action = "SELECT * FROM root_table WHERE username = '$user_name'  
+	$query = sprintf("UPDATE `user_table` SET 
+					`device_token` = '$device_token',
+					`device_os` = '$device_os' 
+					WHERE `username` = '$user_name';");
+
+	$res = mysql_query($query,$objConnect);
+
+	$select_action = "SELECT * FROM user_table WHERE username = '$user_name'  
 		AND password = '$user_password'  
 		";
 
@@ -32,19 +41,17 @@
 
 		$arr["Message"] = "登入成功";
 
-		$data["username"] = $objResult["username"];
-		$data["password"] = $objResult["password"];
-		$data["name"] = $objResult["name"];
-		$data["user_id"] = $objResult["user_id"];
+		$arr["username"] = $objResult["username"];
+		$arr["password"] = $objResult["password"];
+		$arr["name"] = $objResult["name"];
+		$arr["user_id"] = $objResult["user_id"];
+		$arr["device_token"] = $objResult["device_token"];
+		$arr["device_os"] = $objResult["device_os"];
 		
-		$data["user_city"] = $objResult["user_city"];//territory_name
-		$data["user_city_detail"] = $objResult["user_city_detail"];//district_name
-		$data["city_id"] = $objResult["city_id"];//city_id
-		$data["city_detail_id"] = $objResult["city_detail_id"];//district_id
-		
-		$data["address"] = $objResult["city_detail_id"];//district_id
-
-		$arr["data"] = $data;
+		$arr["user_city"] = $objResult["user_city"];//territory_name
+		$arr["user_city_detail"] = $objResult["user_city_detail"];//district_name
+		$arr["city_id"] = $objResult["city_id"];//city_id
+		$arr["city_detail_id"] = $objResult["city_detail_id"];//district_id
 		
 		echo json_encode($arr);
 		exit();

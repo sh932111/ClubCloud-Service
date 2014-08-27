@@ -130,6 +130,8 @@ function send()
 
 	            var return_data = xmlhttp.responseText;
 
+	            console.log(return_data);
+
 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
 	        }
 	    }

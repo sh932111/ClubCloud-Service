@@ -6,7 +6,7 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>httpPostTest</title>
+<title>發送訊息</title>
 <script src="js/City.js" type="text/javascript"></script>
 <head></head>
 <body onload="init()">

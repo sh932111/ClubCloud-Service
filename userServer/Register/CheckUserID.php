@@ -13,7 +13,6 @@
 		$objDB = mysql_select_db("user_data");
 		//mysql_query ( "set character set utf8" );
 		mysql_query("SET NAMES 'UTF8'");
-
 		$creat_query  ="CREATE TABLE `user_table`(
 			`name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 			`username` VARCHAR(20) NOT NULL PRIMARY KEY,

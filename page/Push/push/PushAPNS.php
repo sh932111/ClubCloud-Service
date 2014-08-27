@@ -2,10 +2,10 @@
 
 function callAPNS($title,$detail,$time,$time_detail,$device_token)
 {
-	$deviceToken = $device_token;
+	$deviceToken = "5ff64aebb4027750a548a12265b20d82ecee5d2c48712c3728cbba04b6d18956";//$device_token;
 
 	// Put your private key's passphrase here:
-	$passphrase = '075228906';
+	$passphrase = 'monkey';
 	 
 
 	$ctx = stream_context_create();
@@ -27,6 +27,7 @@ function callAPNS($title,$detail,$time,$time_detail,$device_token)
 
 	// Create the payload body
 	$body['aps'] = array(
+		'alert' => $title,
 		'title' => $title,
 		'detail' => $detail,
 		'time' => $time,
@@ -41,7 +42,7 @@ function callAPNS($title,$detail,$time,$time_detail,$device_token)
 
 	// Send it to the server
 	$result = fwrite($fp, $msg, strlen($msg));
-/*
+
 	if (!$result)
 	{
 		$arr["result"] = FALSE;
@@ -61,7 +62,7 @@ function callAPNS($title,$detail,$time,$time_detail,$device_token)
 		echo 'Message successfully delivered' . PHP_EOL;
 		
 	}
-*/
+
 	// Close the connection to the server
 	fclose($fp);
 }
