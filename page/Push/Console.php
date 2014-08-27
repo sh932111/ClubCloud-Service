@@ -1,33 +1,45 @@
 <!DOCTYPE html >
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
 
+$username = $_GET['username'];
+
+?>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+	<script type="text/javascript">
+
+		var userName = "<?echo $username ?>";
+
+	</script>
+
 <title>發送訊息</title>
-<script src="js/City.js" type="text/javascript"></script>
 <head></head>
 <body onload="init()">
-<p>標題：</p>
-	<input type="text" name="title" size="20" id="title" /><br />
-	<p>訊息：</p>
-	<input type="text" name="detail" size="20" id="detail" /><br />
-	<p>日期：</p>
-	<input type="text" name="time" size="20" id="time" /><br />
-	<p>時間：</p>
-	<input type="text" name="time_detail" size="20" id="time_detail" /><br />
-	<br />
-	<select id="citylist" onChange="setValue(this);" >
+
+	<p><div id="username"></div></p>
+	<p><div id="user"></div></p>
+	<p><div id="city"></div></p>
+	<p><div id="city_detail"></div></p>
+
+	<p>標題：<input type="text" name="title" size="20" id="title" /></p>
+	<p>訊息：<input type="text" name="detail" size="20" id="detail" /></p>
+	<p>日期：<input type="text" name="time" size="20" id="time" /></p>
+	<p>時間：<input type="text" name="time_detail" size="20" id="time_detail" /></p>
+	<!-- <select id="citylist" onChange="setValue(this);" >
 		
 	</select><br /><br />
 	<select id="citydetaillist" onChange="getDetailValue(this);" >
 		
-	</select><br /><br />
+	</select><br /><br /> -->
 
 	<input name="Submit1" type="submit" value="Send" onClick="send();"/><br />
 
 </body>
+<script src="js/City.js" type="text/javascript"></script>
 </html>
 

@@ -169,7 +169,7 @@ function post()
 
 			if (msg.result)
 			{
-				location.href = "../home.php";
+				location.href = '../home.php?username='+username;
 			}
         }
     }

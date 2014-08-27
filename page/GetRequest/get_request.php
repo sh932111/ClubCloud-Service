@@ -23,10 +23,7 @@ $username = $_GET['username'];
 
 		<p><div id="username"></div></p>
 		<p><div id="user"></div></p>
-		<p><input type="button" value="訊息查詢" onclick="selectMsg()" /></p>
-		<p><input type="button" value="訊息傳送" onclick="pushMsg()" /></p>
-		<p><input type="button" value="緊急訊息" onclick="crashMsg()" /></p>
 	</body>
 
-	<script src="js/home.js"></script>
+	<script src="js/request.js"></script>
 </html>

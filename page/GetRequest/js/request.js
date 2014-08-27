@@ -1,4 +1,4 @@
-function init () 
+function init() 
 {
 	var user_div = document.getElementById("username");
 
@@ -6,26 +6,11 @@ function init ()
 
 	getData();
 }
-
-function selectMsg()
-{
-    location.href = 'GetRequest/get_request.php?username='+userName;
-}
-
-function crashMsg()
-{
-
-}
-
-function pushMsg () 
-{
-	location.href = 'Push/Console.php?username='+userName;
-}
 function getData()
 {
 	var xmlhttp = new XMLHttpRequest();
     
-    xmlhttp.open("POST", "get_data/get_data.php", true);
+    xmlhttp.open("POST", "../get_data/get_data.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 

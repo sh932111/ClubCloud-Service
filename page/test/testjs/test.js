@@ -3,7 +3,7 @@ function post()
 
 	var hr = new XMLHttpRequest();
 
-	var url = "../userServer/Request/Request.php";
+	var url = "../../userServer/Request/Request.php";
 
 	var vars = "name="+"YoGa"+"&username="+"sh932111"+"&title="+"hello"+"&detail="+"messagetest"+"&date="+"2014/09/29"+"&time="+"19:00"+"&city="+"高雄市"+"&area="+"三民區"+"&liner="+"鼎盛里"+"&address="+"鼎富路46號4F";
 
@@ -20,14 +20,7 @@ function post()
 
 			var jsonObj = JSON.parse(return_data);
 
-			if (jsonObj.Result) 
-			{
-				alert("新增成功");
-			}
-			else
-			{
-				alert("新增失敗");
-			}
+			alert(jsonObj.Message);
 		}
 	}
 

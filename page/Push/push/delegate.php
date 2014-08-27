@@ -30,27 +30,27 @@
 
     $intNumRows = mysql_num_rows($objQuery);
 
-    // while($row = mysql_fetch_array($objQuery))
-    // {
+    while($row = mysql_fetch_array($objQuery))
+    {
 
-    //     if ($row['device_os'] == "android" && $row['city_id'] == $city_id && $row['city_detail_id'] == $city_detail_id) 
-    //     {
-    //         include_once("PushGCM.php");
+        if ($row['device_os'] == "android" && $row['city_id'] == $city_id && $row['city_detail_id'] == $city_detail_id) 
+        {
+            include_once("PushGCM.php");
 
-    //         callGCM($title,$detail,$time,$time_detail ,$row['device_token']);
+            callGCM($title,$detail,$time,$time_detail ,$row['device_token']);
         
-    //     }
-    //     else if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
-    //     {
-    //         include_once("PushAPNS.php");
+        }
+        else if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
+        {
+            include_once("PushAPNS.php");
 
-    //         callAPNS($title,$detail,$time,$time_detail,$row['device_token']);
-    //     }
-    // }
+            callAPNS($title,$detail,$time,$time_detail,$row['device_token']);
+        }
+    }
 
-    include_once("PushAPNS.php");
+    // include_once("PushAPNS.php");
 
-            callAPNS($title,$detail,"time","time_detail","ss");
+    //         callAPNS($title,$detail,"time","time_detail","ss");
 
     mysql_close($objConnect);
 

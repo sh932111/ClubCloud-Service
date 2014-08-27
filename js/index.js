@@ -26,13 +26,11 @@ function login ()
             
             var msg = JSON.parse(return_data);
 
-            console.log(msg);
-
-			alert(msg.Message);
+            alert(msg.Message);
 
 			if (msg.result)
 			{
-				location.href = "page/home.php";
+				location.href = 'page/home.php?username='+username;
 			}
         }
     }
