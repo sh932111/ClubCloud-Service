@@ -5,7 +5,7 @@ function post()
 
 	var url = "../../userServer/Request/Request.php";
 
-	var vars = "name="+"YoGa"+"&username="+"sh932111"+"&title="+"hello"+"&detail="+"messagetest"+"&date="+"2014/09/29"+"&time="+"19:00"+"&city="+"高雄市"+"&area="+"三民區"+"&liner="+"鼎盛里"+"&address="+"鼎富路46號4F";
+	var vars = "name="+"YoGa"+"&username="+"sh932111"+"&title="+"hello"+"&detail="+"messagetest"+"&date="+"2014/09/29"+"&time="+"19:00"+"&city="+"高雄市"+"&area="+"三民區"+"&liner="+"鼎盛里"+"&address="+"鼎富路46號4F"+"&image="+"0";
 
 	hr.open("POST", url, true);
 
