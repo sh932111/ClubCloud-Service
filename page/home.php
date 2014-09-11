@@ -25,6 +25,7 @@ $username = $_GET['username'];
 		<p><div id="user"></div></p>
 		<p><input type="button" value="訊息查詢" onclick="selectMsg()" /></p>
 		<p><input type="button" value="訊息傳送" onclick="pushMsg()" /></p>
+		<p><input type="button" value="活動行事曆" onclick="checkCalendar()" /></p>
 		<p><input type="button" value="緊急訊息" onclick="crashMsg()" /></p>
 	</body>
 

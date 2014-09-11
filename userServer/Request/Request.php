@@ -2,8 +2,7 @@
 
 mysql_query ( "set character set utf8" );
 
-header('Content-Type: text/html; charset=utf8');
-
+header("Content-Type: text/html;charset=utf-8"); 
 date_default_timezone_set('Asia/Taipei');
 
 $id = date("Ymdhis");
@@ -20,6 +19,8 @@ $address = $_POST["address"];//地點
 $image = $_POST["image"];//是否有圖 1 or 0
 
 $link = mysql_connect('localhost','root','sh3599033');
+
+mysql_query("SET NAMES 'utf8'",$link);
 
 if (!$link) 
 {
@@ -57,17 +58,17 @@ if ($db_selected)
 
 
         $creat_query  ="CREATE TABLE `user_request`(
-            `name` VARCHAR(20) NOT NULL,
+            `name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `id` VARCHAR(20) NOT NULL PRIMARY KEY,
             `username` VARCHAR(20) NOT NULL,
-            `title` VARCHAR(20)  NOT NULL,
-            `detail` VARCHAR(200) NOT NULL,
+            `title` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+            `detail` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `date` VARCHAR(10) NOT NULL,
             `time` VARCHAR(20) NOT NULL,
-            `city` VARCHAR(20)  NOT NULL,
-            `area` VARCHAR(20) NOT NULL,
-            `liner` VARCHAR(20) NOT NULL,
-            `address` VARCHAR(20) NOT NULL,
+            `city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci   NOT NULL,
+            `area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+            `liner` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+            `address` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
             `image` INT NOT NULL
             );";
 

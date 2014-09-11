@@ -24,6 +24,8 @@ function post()
 		}
 	}
 
+	console.log(vars);
+
 	hr.send(vars);
 }
 

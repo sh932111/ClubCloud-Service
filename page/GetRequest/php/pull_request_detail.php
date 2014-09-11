@@ -5,7 +5,7 @@
 
 	mysql_query ( "set character set utf8" );
 
-	header('Content-Type: text/html; charset=utf8');
+	header('Content-Type: text/html; charset=utf-8');
 
 	$post_id = $_POST["postId"];
 

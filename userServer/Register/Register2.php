@@ -35,6 +35,7 @@
 
 	$link = mysql_connect('localhost','root','sh3599033');
 
+	mysql_query("SET NAMES 'utf8'",$link);
 	if (!$link) 
 	{
 		$arr["result"] = FALSE;

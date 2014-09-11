@@ -12,6 +12,11 @@ function selectMsg()
     location.href = 'GetRequest/get_request.php?username='+userName;
 }
 
+function checkCalendar()
+{
+    location.href = 'Calender/Calendar.php?username='+userName;
+}
+
 function crashMsg()
 {
 

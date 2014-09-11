@@ -10,6 +10,7 @@
 	function checkID($user_id)
 	{
 		$objConnect = mysql_connect("localhost","root","sh3599033");
+		mysql_query("SET NAMES 'utf8'",$objConnect);
 		$objDB = mysql_select_db("user_data");
 		//mysql_query ( "set character set utf8" );
 		mysql_query("SET NAMES 'UTF8'");
