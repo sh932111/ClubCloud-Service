@@ -9,12 +9,20 @@ function init ()
 
 function selectMsg()
 {
-    location.href = 'GetRequest/get_request.php?username='+userName;
+    document.getElementById('iframe').setAttribute('src','GetRequest/get_request.php?username='+userName);
+    //location.href = 'GetRequest/get_request.php?username='+userName;
 }
 
 function checkCalendar()
 {
-    location.href = 'Calender/Calendar.php?username='+userName;
+    //location.href = 'Calender/Calendar.php?username='+userName;
+    document.getElementById('iframe').setAttribute('src','Calender/Calendar.php?username='+userName);
+    
+}
+
+function makebook()
+{
+    
 }
 
 function crashMsg()
@@ -24,7 +32,9 @@ function crashMsg()
 
 function pushMsg () 
 {
-	location.href = 'Push/Console.php?username='+userName;
+    document.getElementById('iframe').setAttribute('src','Push/Console.php?username='+userName);
+    
+	//location.href = 'Push/Console.php?username='+userName;
 }
 function getData()
 {

@@ -100,13 +100,13 @@ $username = $_GET['username'];
 </head>
 <body>
 
-	<center>
+	<left>
 		<div id="jMonthCalendar"></div>
 
 		<button id="Button">Add More Events</button>
 
 		<button id="ChangeMonth">Change Months May 2009</button>
-	</center>
+	</left>
 </body>
 
 </html>

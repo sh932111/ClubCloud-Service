@@ -7,27 +7,41 @@ $username = $_GET['username'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript">
+
+var userName = "<?echo $username ?>";
+
+</script>
+
+<title>首頁</title>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script type="text/javascript">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="init()">
 
-		var userName = "<?echo $username ?>";
-
-	</script>
-
-	<title>首頁</title>
-	<head>
+	<div id="header">
 		<h1>首頁</h1>
-	</head>
-	<body onload="init()">
-
+	</div>
+	<div id="sidebar">
 		<p><div id="username"></div></p>
 		<p><div id="user"></div></p>
+		<p><input type="button" value="活動行事曆" onclick="checkCalendar()" /></p>
 		<p><input type="button" value="訊息查詢" onclick="selectMsg()" /></p>
 		<p><input type="button" value="訊息傳送" onclick="pushMsg()" /></p>
-		<p><input type="button" value="活動行事曆" onclick="checkCalendar()" /></p>
+		<p><input type="button" value="社刊製作" onclick="makebook()" /></p>
 		<p><input type="button" value="緊急訊息" onclick="crashMsg()" /></p>
-	</body>
+	</div>
+	<div id="main">
 
-	<script src="js/home.js"></script>
+		<iframe id="iframe" src="Calender/Calendar.php?username=sh932111" scrolling="yes" frameborder="0">
+		</iframe>
+	</div>
+	<div id="footer"></div>
+
+	
+	
+</body>
+
+<script src="js/home.js"></script>
 </html>
