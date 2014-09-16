@@ -38,8 +38,6 @@ var userName = "<?echo $username ?>";
 		</iframe>
 	</div>
 	<div id="footer"></div>
-
-	
 	
 </body>
 

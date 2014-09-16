@@ -9,50 +9,8 @@ var getCityDetailId;
 
 function init() 
 {
-	var user_div = document.getElementById("username");
-
-	user_div.innerHTML = "帳號："+userName;
 
 	getData();
-
-	// var xmlhttp = new XMLHttpRequest();
-    
- //    xmlhttp.open("POST", "data/GetCityData.php", true);
- //    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-	// xmlhttp.onreadystatechange = function() 
- //    {
- //        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
- //        {
- //            var return_data = xmlhttp.responseText;
-
- //            jsonObj = JSON.parse(return_data);
-
- //            for (var i = 0; i < jsonObj.length; i++) 
- //            {
-
- //            	var city = jsonObj[i].territory_name;
- //            	var city_id = jsonObj[i].city_id;
-
-	// 			var items = new Option(city);
-
-	// 			if (i == 0) 
-	// 			{
-	// 				getCity = city;
-	// 				getCityId = city_id;
-	// 			}
-
-	// 		    document.getElementById('citylist').options.add(items);
-
- //            }
-	// 		var city = jsonObj[0].territory_name;
-	// 		//var city_id = jsonObj[0].city_id;
- //            loaddata(city);
- //            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
- //        }
- //    }
- //    // Send the data to PHP now... and wait for response to update the status div
- //    xmlhttp.send(); 
 
 }
 
@@ -73,11 +31,10 @@ function getData()
 
             var user_data = get_json.data;
 
-            var user_div = document.getElementById("user");
+            //var user_div = document.getElementById("user");
             var city_div = document.getElementById("city");
             var city_detail_div = document.getElementById("city_detail");
 
-			user_div.innerHTML = "管理人："+user_data.name;
 			city_div.innerHTML = "市："+user_data.user_city;
 			city_detail_div.innerHTML = "區："+user_data.user_city_detail;
 
@@ -91,72 +48,6 @@ function getData()
     // Send the data to PHP now... and wait for response to update the status div
     xmlhttp.send("username="+userName); 
 }
-
-// function setValue(index)
-// {
-// 	var get_city = jsonObj[index.selectedIndex].territory_name;
-
-// 	getCity = get_city;
-
-// 	var get_city_id = jsonObj[index.selectedIndex].city_id;
-
-// 	getCityId = get_city_id;
-
-// 	loaddata(get_city);
-// }
-
-// function loaddata(get_city)
-// {
-
-// 	var xmlhttp = new XMLHttpRequest();
-	    
-// 	    xmlhttp.open("POST", "data/GetCityDetail.php", true);
-// 	    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-// 		xmlhttp.onreadystatechange = function() 
-// 	    {
-// 	        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
-// 	        {
-
-// 	            var return_data = xmlhttp.responseText;
-
-// 	            detailJson = JSON.parse(return_data);
-
-
-// 	            document.getElementById('citydetaillist').options.length = 0;
-
-// 	            for (var i = 0; i < detailJson.length; i++) 
-// 	            {
-
-// 	            	var district_name = detailJson[i].district_name;
-// 	            	var district_id = detailJson[i].district_id;
-
-// 					var items = new Option(district_name);
-
-// 					if (i == 0) 
-// 					{
-// 						getCityDetail = district_name;
-// 						getCityDetailId = district_id;
-// 					}
-
-// 				    document.getElementById('citydetaillist').options.add(items);
-
-// 	            }
-
-// 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
-// 	        }
-// 	    }
-// 	    // Send the data to PHP now... and wait for response to update the status div
-// 	    xmlhttp.send("territory_name="+get_city); 
-// }
-
-// function getDetailValue(index)
-// {
-
-// 	getCityDetail = detailJson[index.selectedIndex].district_name;
-// 	getCityDetailId = detailJson[index.selectedIndex].district_id;
-
-// }
 
 function send()
 {

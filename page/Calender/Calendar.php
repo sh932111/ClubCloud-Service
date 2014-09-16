@@ -40,7 +40,8 @@ $username = $_GET['username'];
 					//$.jMonthCalendar.ReplaceEventCollection(events);
 					return true;
 				},
-				onEventLinkClick: function(event) { 
+				onEventLinkClick: function(event) {
+					console.log(event); 
 					alert("event link click");
 					return true; 
 				},
@@ -68,7 +69,7 @@ $username = $_GET['username'];
 			
 			
 			var events = [ 	{ "EventID": 1, "Date": "new Date(2009, 3, 1)", "Title": "10:00 pm - EventTitle1", "URL": "https://www.google.com.tw", "Description": "This is a sample event description", "CssClass": "Birthday" },
-							{ "EventID": 1, "StartDateTime": new Date(2009, 3, 12), "Title": "10:00 pm - EventTitle1", "URL": "#", "Description": "This is a sample event description", "CssClass": "Birthday" },
+							{ "EventID": 10, "StartDateTime": new Date(2014, 8, 12), "Title": "10:00 pm - EventTitle1", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" },
 							{ "EventID": 2, "Date": "2009-04-28T00:00:00.0000000", "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" },
 							{ "EventID": 3, "StartDateTime": new Date(2009, 3, 20), "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" },
 							{ "EventID": 4, "StartDateTime": "2009-04-14", "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" }

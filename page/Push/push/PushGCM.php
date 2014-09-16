@@ -19,6 +19,7 @@
     // Set POST variables
     $url = 'https://android.googleapis.com/gcm/send';
       
+    echo $device_token;
  
     $fields = array('registration_ids'  => $regID,
                     'data'              => array('title' => $title,'detail' => $detail,'time' => $time,'time_detail' => $time_detail)
@@ -48,6 +49,7 @@
     // 並接收回傳結果
     $result = curl_exec($ch);
       
+    echo "result".$result;
     // Close connection
     /*
     if ($result === FALSE)

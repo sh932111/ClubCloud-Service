@@ -21,15 +21,14 @@ $username = $_GET['username'];
 <head></head>
 <body onload="init()">
 
-	<p><div id="username"></div></p>
-	<p><div id="user"></div></p>
 	<p><div id="city"></div></p>
 	<p><div id="city_detail"></div></p>
 
 	<p>標題：<input type="text" name="title" size="20" id="title" /></p>
-	<p>訊息：<input type="text" name="detail" size="20" id="detail" /></p>
-	<p>日期：<input type="text" name="time" size="20" id="time" /></p>
-	<p>時間：<input type="text" name="time_detail" size="20" id="time_detail" /></p>
+	<p>訊息：</p>
+	<p><textarea size="20" id="detail" name="detail"></textarea></p>
+	<p>日期：<input type="date" name="time" size="20" id="time" /></p>
+	<p>時間：<input type="time" name="time_detail" size="20" id="time_detail" /></p>
 	<!-- <select id="citylist" onChange="setValue(this);" >
 		
 	</select><br /><br />
