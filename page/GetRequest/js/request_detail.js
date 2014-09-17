@@ -156,7 +156,7 @@ function pushMsg()
             {
 
                 var return_data = xmlhttp.responseText;
-
+                pushCalendar();
                 //console.log(return_data);
                 deleteMsg(1);
                 //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
@@ -165,6 +165,33 @@ function pushMsg()
         // Send the data to PHP now... and wait for response to update the status div
 
         var post = "title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId;
+
+        xmlhttp.send(post); 
+}
+function pushCalendar()
+{
+    var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.open("POST", "../Calender/php/push_calendar.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xmlhttp.onreadystatechange = function() 
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+
+                var return_data = xmlhttp.responseText;
+
+                var get_json = JSON.parse(return_data);
+
+                console.log(get_json);
+
+                //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
+            }
+        }
+        // Send the data to PHP now... and wait for response to update the status div
+
+        var post = "title="+requestData.title+"&detail="+requestData.detail+"&date="+requestData.date+"&time="+requestData.time+"&city="+getCity+"&area="+getCityDetail+"&address="+requestData.address+"&name="+requestData.name+"&username="+requestData.username+"&liner="+"某某里";
 
         xmlhttp.send(post); 
 }

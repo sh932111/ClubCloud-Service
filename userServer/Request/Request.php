@@ -105,6 +105,5 @@ if ($db_selected)
             
 }
 
-
 mysql_close($link);
 ?>

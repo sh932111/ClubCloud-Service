@@ -49,7 +49,7 @@
 	if (!$db_selected)
  	{
 		$arr["result"] = FALSE;
-		$arr["Message"] = "errpr select db";
+		$arr["Message"] = "error select db";
 		echo json_encode($arr);
 		exit();
 	}
