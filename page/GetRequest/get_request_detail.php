@@ -19,12 +19,24 @@ $post_id = $_GET['post_id'];
 
 	<title>訊息資料查詢</title>
 	<head>
-		<h1>訊息資料查詢</h1>
+		<h2>訊息資料查詢</h2>
 	</head>
 	<body onload="init()">
 
-		<p><div id="username"></div></p>
-		<p><div id="user"></div></p>
+		<!-- <p><div id="username"></div></p>
+		<p><div id="user"></div></p> -->
+		<p><div id="msg_name"></div></p>
+		<p><div id="msg_username"></div></p>
+		<p><div id="msg_title"></div></p>
+		<p><div id="msg_address"></div></p>
+		<p><div id="msg_time"></div></p>
+		<p><div id="msg_list"></div></p>
+		<p><div id="msg_image"></div></p>
+
+		<!-- <p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p> -->
+		
+		<input type="button" value="推送活動" onclick="pushMsg()" />
+		<input type="button" value="刪除活動" onclick="deleteMsg(0)" />
 		
 	</body>
 

@@ -76,8 +76,6 @@ else
 	
 	//json_encode($list);
 
-	flush(); 
-
 		//echo 'data: ' . json_encode($arr) . "\n\n";
 
 

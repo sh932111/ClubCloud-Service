@@ -3,9 +3,9 @@ var request_data;
 
 function init() 
 {
-	var user_div = document.getElementById("username");
+	// var user_div = document.getElementById("username");
 
-	user_div.innerHTML = "帳號："+userName;
+	// user_div.innerHTML = "帳號："+userName;
 
 	getData();
 
@@ -28,9 +28,10 @@ function getData()
 
             var user_data = get_json.data;
 
-            var user_div = document.getElementById("user");
+
+            // var user_div = document.getElementById("user");
             
-            user_div.innerHTML = "管理人："+user_data.name;
+            // user_div.innerHTML = "管理人："+user_data.name;
         
         }
     }
@@ -44,6 +45,8 @@ function getRequestData()
     es.onmessage = function(e) 
     {
         var get_json = JSON.parse(e.data);
+
+        console.log(get_json);
 
         request_data = get_json;
 
