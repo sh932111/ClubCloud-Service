@@ -4,6 +4,8 @@ header("Content-Type: text/event-stream");
 
 $id = $_POST["id"];
 
+unlink("../../../userServer/Request/request_img/" .$id .".png");
+
 $link = mysql_connect('localhost','root','sh3599033');
 
 if (!$link) 
