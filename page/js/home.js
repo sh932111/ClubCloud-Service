@@ -4,6 +4,8 @@ function init ()
 
 	user_div.innerHTML = "帳號："+userName;
 
+    document.getElementById('iframe').setAttribute('src','Calender/Calendar.php?username='+userName);
+    
 	getData();
 }
 

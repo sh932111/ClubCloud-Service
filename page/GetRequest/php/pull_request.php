@@ -4,6 +4,9 @@ header("Content-Type: text/event-stream");
 
 $link = mysql_connect('localhost','root','sh3599033');
 
+mysql_query("SET NAMES 'UTF8'",$link);
+
+
 if (!$link) 
 {
 	$arr["Result"] = FALSE;

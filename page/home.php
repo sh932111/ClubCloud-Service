@@ -34,7 +34,7 @@ var userName = "<?echo $username ?>";
 	</div>
 	<div id="main">
 
-		<iframe id="iframe" src="Calender/Calendar.php?username=sh932111" scrolling="yes" frameborder="0">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
 		</iframe>
 	</div>
 	<div id="footer"></div>

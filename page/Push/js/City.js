@@ -77,7 +77,10 @@ function send()
 	    var div_time = document.getElementById('time').value;
 	    var div_time_detail = document.getElementById('time_detail').value;
 
-	    var post = "title="+div_title+"&detail="+div_detail+"&time="+div_time+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId;
+		var myDate = new Date(div_time);
+		var day =  myDate.getFullYear()+ "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() ;
+
+	    var post = "title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId;
 
 	    xmlhttp.send(post); 
 }
@@ -98,8 +101,12 @@ function pushCalendar()
 
             	var get_json = JSON.parse(return_data);
 
-	            console.log(get_json);
-
+	            if (get_json.result) 
+	            {
+	            	 alert("推送成功");
+	            	 
+                    history.go(-1);
+	            }
 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
 	        }
 	    }
@@ -110,7 +117,11 @@ function pushCalendar()
 	    var div_time = document.getElementById('time').value;
 	    var div_time_detail = document.getElementById('time_detail').value;
 
-	    var post = "title="+div_title+"&detail="+div_detail+"&date="+div_time+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里";
+	   	var myDate = new Date(div_time);
+
+		var day =  myDate.getFullYear()+ "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() ;
+
+	    var post = "title="+div_title+"&detail="+div_detail+"&date="+day+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里";
 
 	    xmlhttp.send(post); 
 }
