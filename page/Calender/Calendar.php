@@ -134,7 +134,7 @@ $username = $_GET['username'];
 			            	{
 			            		var myDate = new Date(get_data[i].date);
 				            	//link
-								var js_data = { "EventID": get_data[i].id, "StartDateTime": new Date(myDate.getFullYear(), myDate.getMonth(), myDate.getDate()), "Title": get_data[i].title, "URL": ".detail/Calendar_detail.php?username="+userName+"&data_id="+ get_data[i].id, "Description": get_data[i].detail, "CssClass": "Meeting" };
+								var js_data = { "EventID": get_data[i].id, "StartDateTime": new Date(myDate.getFullYear(), myDate.getMonth(), myDate.getDate()), "Title": get_data[i].title, "URL": "detail/Calendar_detail.php?username="+userName+"&data_id="+ get_data[i].id, "Description": get_data[i].detail, "CssClass": "Meeting" };
 								
 								extraEvents.push(js_data);
 			            	}

@@ -2,14 +2,20 @@
 
 header('Content-Type: text/html; charset=utf8');
 
-echo $title = $_POST["title"];
-echo $detail = $_POST["detail"];
-echo $time = $_POST["time"];
-echo $time_detail = $_POST["time_detail"];
-echo $city = $_POST["city"];
-echo $city_detail = $_POST["city_detail"];
-echo $city_id = $_POST["city_id"];
-echo $city_detail_id = $_POST["city_detail_id"];
+$id = $_POST["id"];
+$title = $_POST["title"];
+$detail = $_POST["detail"];
+$time = $_POST["time"];
+$time_detail = $_POST["time_detail"];
+$city = $_POST["city"];
+$city_detail = $_POST["city_detail"];
+$city_id = $_POST["city_id"];
+$city_detail_id = $_POST["city_detail_id"];
+$image = $_POST["image"];
+// date_default_timezone_set('Asia/Taipei');
+// $id = date("Ymdhis");
+// $arr["id"] = $id;
+// echo json_encode($arr);
 
 $objConnect = mysql_connect("localhost","root","sh3599033");
 
@@ -30,14 +36,14 @@ while($row = mysql_fetch_array($objQuery))
     {
         include_once("PushGCM.php");
 
-        callGCM($title,$detail,$time,$time_detail ,$row['device_token']);
+        callGCM($id,$title,$detail,$time,$time_detail ,$row['device_token'],$image);
 
     }
     if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
     {
         include_once("PushAPNS.php");
 
-        callAPNS($title,$detail,$time,$time_detail,$row['device_token']);
+        callAPNS($id,$title,$detail,$time,$time_detail,$row['device_token'],$image);
     }
 }
 

@@ -3,7 +3,7 @@
 // 這支程式就是將自己模擬成 client 端,
 // 發送 POST 給 Google GCM server
 // function sendModifyGCM($regID){
- function callGCM($title,$detail,$time,$time_detail ,$device_token)
+ function callGCM($data_id,$title,$detail,$time,$time_detail ,$device_token,$image)
 {
     // $username = $_POST["username"];
  
@@ -20,7 +20,7 @@
     $url = 'https://android.googleapis.com/gcm/send';
  
     $fields = array('registration_ids'  => $regID,
-                    'data'              => array('title' => $title,'detail' => $detail,'time' => $time,'time_detail' => $time_detail)
+                    'data'              => array('data_id' => $data_id,'title' => $title,'detail' => $detail,'time' => $time,'time_detail' => $time_detail,'image' => $image)
                     );
       
     $headers = array('Content-Type: application/json',

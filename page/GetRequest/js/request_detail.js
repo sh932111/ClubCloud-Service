@@ -10,15 +10,11 @@ var getCity;
 var getCityDetail;
 var getCityId;
 var getCityDetailId;
-
+var imgCheck;
 
 function init() 
 {
-	// var user_div = document.getElementById("username");
-
-	// user_div.innerHTML = "帳號："+userName;
-
-	getData();
+    getData();
 
     getDetailData();
 }
@@ -27,6 +23,7 @@ function getData()
 	var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.open("POST", "../get_data/get_data.php", true);
+    
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 
@@ -55,8 +52,24 @@ function getData()
 function getDetailData()
 {
     var xmlhttp = new XMLHttpRequest();
+
+    if (linkClass == 0)
+    {
+        xmlhttp.open("POST", "../Calender/php/pull_calendar_detail.php", true);
+
+        var push_bt = document.getElementById("push_bt");
+
+        push_bt.style.display = 'none';
+        
+        var delete_bt = document.getElementById("delete_bt");
+
+        delete_bt.style.display = 'none';
+    }
+    else if (linkClass == 1)
+    {
+        xmlhttp.open("POST", "php/pull_request_detail.php", true);
+    }
     
-    xmlhttp.open("POST", "php/pull_request_detail.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlhttp.onreadystatechange = function() 
@@ -79,7 +92,7 @@ function getDetailData()
             document.getElementById("msg_list").innerHTML = "內文："+requestData.detail;
             
             var img_check = requestData.image;
-
+            imgCheck = img_check;
             if (img_check == 1)
             {
                 var msg_image = document.getElementById("msg_image");
@@ -164,7 +177,7 @@ function pushMsg()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
-        var post = "title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId;
+        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ imgCheck;
 
         xmlhttp.send(post); 
 }
@@ -191,7 +204,7 @@ function pushCalendar()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
-        var post = "title="+requestData.title+"&detail="+requestData.detail+"&date="+requestData.date+"&time="+requestData.time+"&city="+getCity+"&area="+getCityDetail+"&address="+requestData.address+"&name="+requestData.name+"&username="+requestData.username+"&liner="+"某某里";
+        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&date="+requestData.date+"&time="+requestData.time+"&city="+getCity+"&area="+getCityDetail+"&address="+requestData.address+"&name="+requestData.name+"&username="+requestData.username+"&liner="+"某某里"+"&image="+ imgCheck;
 
         xmlhttp.send(post); 
 }

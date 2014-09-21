@@ -21,14 +21,23 @@ var dataID = "<?echo $data_id ?>";
 </script>
 
 <title>發送訊息</title>
+
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
 <head></head>
 <body onload="init()">
 
-	<div class="demo">
-   		<h3>活動QR Code：</h3>
-   		<div id="code"></div>
-		<!-- <img id="image" /> --><a href="#" download="dl.png" onclick="this.href=cvs.toDataURL();" >下載</a>
-   </div>
+	<div id="demo">
+		<h3>活動QR Code：</h3>
+
+		<div id="code"></div>
+		
+		<a href="#" download="QRcode.png" onclick="this.href=cvs.toDataURL();" >下載</a>
+	</div>
+	<div id="main">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="0">
+		</iframe>
+	</div>
 
 </body>
 <script src="js/detail.js" type="text/javascript"></script>

@@ -4,7 +4,7 @@
 
 $username = $_GET['username'];
 $post_id = $_GET['post_id'];
-
+$link_class = $_GET['class'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,6 +14,7 @@ $post_id = $_GET['post_id'];
 
 		var userName = "<?echo $username ?>";
 		var postId = "<?echo $post_id ?>";
+		var linkClass = "<?echo $link_class ?>";
 
 	</script>
 
@@ -35,8 +36,8 @@ $post_id = $_GET['post_id'];
 
 		<!-- <p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p> -->
 		
-		<input type="button" value="推送活動" onclick="pushMsg()" />
-		<input type="button" value="刪除活動" onclick="deleteMsg(0)" />
+		<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
+		<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
 		
 	</body>
 

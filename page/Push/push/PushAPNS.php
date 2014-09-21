@@ -1,9 +1,9 @@
 <?php
 
-function callAPNS($title,$detail,$time,$time_detail,$device_token)
+function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$image)
 {
-	$deviceToken = "5ff64aebb4027750a548a12265b20d82ecee5d2c48712c3728cbba04b6d18956";//$device_token;
-
+	//$deviceToken = "5ff64aebb4027750a548a12265b20d82ecee5d2c48712c3728cbba04b6d18956";//$device_token;
+	$deviceToken = $device_token;
 	// Put your private key's passphrase here:
 	$passphrase = 'monkey';
 	 
@@ -28,10 +28,12 @@ function callAPNS($title,$detail,$time,$time_detail,$device_token)
 	// Create the payload body
 	$body['aps'] = array(
 		'alert' => $title,
+		'data_id' => $data_id,
 		'title' => $title,
 		'detail' => $detail,
 		'time' => $time,
-		'time_detail' => $time_detail
+		'time_detail' => $time_detail,
+		'image' => $image
 		);
 
 	// Encode the payload as JSON

@@ -80,6 +80,6 @@ function goPage(i)
 
     var pull_id = request_data[index]["id"];
 
-    location.href = 'get_request_detail.php?username='+userName+'&post_id='+pull_id;;
+    location.href = 'get_request_detail.php?username='+userName+'&post_id='+pull_id+'&class='+"1";
 
 }

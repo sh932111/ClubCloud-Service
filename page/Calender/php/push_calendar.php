@@ -13,10 +13,10 @@ date_default_timezone_set('Asia/Taipei');
 
 $id = $_POST["id"];
 
-if (is_null($id)) 
-{
-	$id = date("Ymdhis");
-}
+// if (is_null($id)) 
+// {
+// 	$id = date("Ymdhis");
+// }
 
 $username = $_POST["username"];//帳號
 $name = $_POST["name"];//發送者
