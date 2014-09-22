@@ -86,7 +86,22 @@ function pushData()
 	    var div_time_detail = document.getElementById('time_detail').value;
 
 		var myDate = new Date(div_time);
-		var day =  myDate.getFullYear()+ "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() ;
+
+		var d = (myDate.getMonth() + 1);
+
+	   	if (d < 10) 
+	   	{
+	   		d = "0"+d;
+	   	}
+
+		var m = myDate.getDate();
+
+	   	if (m < 10) 
+	   	{
+	   		m = "0"+m;
+	   	}
+
+		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
 	    var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ImageCheck;
 
@@ -128,7 +143,21 @@ function pushCalendar()
 
 	   	var myDate = new Date(div_time);
 
-		var day =  myDate.getFullYear()+ "/" + (myDate.getMonth() + 1) + "/" + myDate.getDate() ;
+	   	var d = (myDate.getMonth() + 1);
+
+	   	if (d < 10) 
+	   	{
+	   		d = "0"+d;
+	   	}
+
+		var m = myDate.getDate();
+
+	   	if (m < 10) 
+	   	{
+	   		m = "0"+m;
+	   	}
+
+		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
 	    var post = "id="+item+"&title="+div_title+"&detail="+div_detail+"&date="+day+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里"+"&image="+ ImageCheck;
 
