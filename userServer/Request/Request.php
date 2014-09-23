@@ -5,7 +5,8 @@ mysql_query ( "set character set utf8" );
 header("Content-Type: text/html;charset=utf-8"); 
 date_default_timezone_set('Asia/Taipei');
 
-$id = date("Ymdhis");
+//$id = date("Ymdhis");
+$id = $_POST["id"];
 $username = $_POST["username"];//帳號
 $name = $_POST["name"];//發送者
 $title = $_POST["title"];//標題
