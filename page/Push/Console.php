@@ -14,7 +14,7 @@ $username = $_GET['username'];
 
 <script type="text/javascript">
 
-var userName = "<?echo $username ?>";
+var userName = "<?php echo $username; ?>";
 
 </script>
 
@@ -65,6 +65,8 @@ function ajs_upload()
 	var item = document.getElementById('item');
 
 	item.value = ID;
+
+	console.log(item.value);
 
 	$("#ajaxForm").ajaxSubmit(
 	{

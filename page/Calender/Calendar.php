@@ -24,7 +24,7 @@ $username = $_GET['username'];
 
     <script type="text/javascript">
     var extraEvents;
-    var userName = "<?echo $username ?>";
+    var userName = "<?php echo $username; ?>";
 
         $().ready(function() {
 			var options = {

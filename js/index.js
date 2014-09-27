@@ -16,6 +16,8 @@ function login ()
 	var xmlhttp = new XMLHttpRequest();
 	    
 	xmlhttp.open("POST", "page/Login/Login.php", true);
+	
+//	xmlhttp.open("POST", "userServer/Login/Login.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 
@@ -26,7 +28,7 @@ function login ()
             
             var msg = JSON.parse(return_data);
 
-            alert(msg.Message);
+            alert(msg.data.name);
 
 			if (msg.result)
 			{

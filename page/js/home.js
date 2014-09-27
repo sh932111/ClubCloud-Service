@@ -4,7 +4,7 @@ function init ()
 
 	user_div.innerHTML = "帳號："+userName;
 
-    document.getElementById('iframe').setAttribute('src','Calender/Calendar.php?username='+userName);
+   	document.getElementById('iframe').setAttribute('src','Calender/Calendar.php?username='+userName);
     
 	getData();
 }
@@ -53,8 +53,10 @@ function getData()
 
             var get_json = JSON.parse(return_data);
 
-            var user_data = get_json.data;
+	    console.log(get_json.Message);
 
+            var user_data = get_json.data;
+	
             var user_div = document.getElementById("user");
             
             user_div.innerHTML = "管理人："+user_data.name;

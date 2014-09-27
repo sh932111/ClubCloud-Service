@@ -15,8 +15,8 @@ $data_id = $_GET['data_id'];
 
 <script type="text/javascript">
 
-var userName = "<?echo $username ?>";
-var dataID = "<?echo $data_id ?>";
+var userName = "<?php echo $username; ?>";
+var dataID = "<?php echo $data_id; ?>";
 
 </script>
 

@@ -10,8 +10,8 @@ $username = $_GET['username'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript">
 
-var userName = "<?echo $username ?>";
-
+var userName = '<?php echo $username; ?>';
+//console.log(userName);
 </script>
 
 <title>首頁</title>

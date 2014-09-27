@@ -12,9 +12,9 @@ $link_class = $_GET['class'];
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script type="text/javascript">
 
-		var userName = "<?echo $username ?>";
-		var postId = "<?echo $post_id ?>";
-		var linkClass = "<?echo $link_class ?>";
+		var userName = "<?php echo $username; ?>";
+		var postId = "<?php echo $post_id; ?>";
+		var linkClass = "<?php echo $link_class; ?>";
 
 	</script>
 
@@ -34,7 +34,7 @@ $link_class = $_GET['class'];
 		<p><div id="msg_list"></div></p>
 		<p><div id="msg_image"></div></p>
 
-		<!-- <p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p> -->
+		<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
 		
 		<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
 		<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />

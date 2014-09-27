@@ -93,23 +93,25 @@ function getDetailData()
             
             var img_check = requestData.image;
             imgCheck = img_check;
-            if (img_check == 1)
+            
+	console.log(imgCheck);
+	if (img_check == 1)
             {
                 var msg_image = document.getElementById("msg_image");
 
                 msg_image.innerHTML = "活動圖片：<br>";
 
                 var p = document.createElement("p");
+		
+		console.log(postId);
 
-                var img = document.createElement("img");
+                var img = document.getElementById("uploadImg");
+                //img.setAttribute("src","../../userServer/Request/request_img/"+postId+".png");
+	img.src = "../../userServer/Request/request_img/"+postId+".png";	
+		
+                //img.setAttribute("height","768");
+                //img.setAttribute("width","1024");
 
-                img.src = "../../userServer/Request/request_img/"+postId+".png";
-                
-                img.style.width = "400px";
-
-                p.appendChild(img);
-
-                msg_image.appendChild(p);
             }
                         
         }
