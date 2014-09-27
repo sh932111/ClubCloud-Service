@@ -1,5 +1,4 @@
 <?php
-	setRequestHeader("Access-Control-Allow-Origin","*");
 	$objConnect = mysql_connect("localhost","root","sh3599033");
 	$objDB = mysql_select_db("user_data");
 	mysql_query ( "set character set utf8" );
