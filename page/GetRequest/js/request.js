@@ -46,8 +46,6 @@ function getRequestData()
     {
         var get_json = JSON.parse(e.data);
 
-        console.log(get_json);
-
         request_data = get_json;
 
         var num = get_json["num"];
