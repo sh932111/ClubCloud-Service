@@ -114,6 +114,7 @@ function toQuery($tblName,$name,$username,$user_id)
    $longitude = "0";
    $t_check = "0";
 
+    mysql_query("Use `user_data`");
    return "INSERT INTO `$tblName` VALUES ('$name', '$username', '$user_id', '$latitude', '$longitude', '$t_check', null)";
 }
 
