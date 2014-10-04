@@ -1,6 +1,6 @@
 <?php
 
-function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$image)
+function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$image,$type)
 {
 	//$deviceToken = "5ff64aebb4027750a548a12265b20d82ecee5d2c48712c3728cbba04b6d18956";//$device_token;
 	$deviceToken = $device_token;
@@ -33,7 +33,8 @@ function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$imag
 		'detail' => $detail,
 		'time' => $time,
 		'time_detail' => $time_detail,
-		'image' => $image
+		'image' => $image,
+		'type' => $type
 		);
 
 	// Encode the payload as JSON
