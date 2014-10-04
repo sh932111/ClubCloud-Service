@@ -1,3 +1,11 @@
+
+var getCity;
+var getCityDetail;
+var getCityId;
+var getCityDetailId;
+
+var userData;
+
 function init () 
 {
 	getData();
@@ -37,3 +45,56 @@ function getData()
     // Send the data to PHP now... and wait for response to update the status div
     xmlhttp.send("username="+userName); 
 }
+function EmergencyPush()
+{
+    var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.open("POST", "push/delegate.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xmlhttp.onreadystatechange = function() 
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+
+                var return_data = xmlhttp.responseText;
+
+            }
+        }
+        // Send the data to PHP now... and wait for response to update the status div
+
+        var div_title = document.getElementById('title').value;
+        var div_detail = document.getElementById('detail').value;
+        var div_time = document.getElementById('time').value;
+        var div_time_detail = document.getElementById('time_detail').value;
+
+        var myDate = new Date(div_time);
+
+        var d = (myDate.getMonth() + 1);
+
+        if (d < 10) 
+        {
+            d = "0"+d;
+        }
+
+        var m = myDate.getDate();
+
+        if (m < 10) 
+        {
+            m = "0"+m;
+        }
+
+        var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
+
+        var dt = new Date();
+        var month = dt.getMonth()+1;
+        var day = dt.getDate();
+        var year = dt.getFullYear();
+    
+        var ID = year +""+ month +""+ day+"" + dt.getHours()+""+ dt.getMinutes()+""+ dt.getSeconds();
+
+        var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+0+"&type="+"2";
+
+        xmlhttp.send(post); 
+}
+
