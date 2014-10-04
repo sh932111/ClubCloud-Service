@@ -87,21 +87,24 @@ if ($db_selected)
         $obj_Query = mysql_query($us_select_action);
     
         $intNumRows = mysql_num_rows($obj_Query);
+        
+        $arr = array();
 
-        // if($intNumRows != 0)
-        // {
-        //     while ($objResult = mysql_fetch_array($obj_Query)) 
-        //     {
-        //         $inser_query = sprintf("INSERT INTO `id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
-        //         VALUES ('%s','%s','%s','%s','%s','%s','%s')",
-        //         $id,$objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");
+        if($intNumRows != 0)
+        {
+            $i = 0;
+            while ($record = mysql_fetch_array($obj_Query)) 
+            {
+                $arr[$i] = $record["name"];
+                // $inser_query = sprintf("INSERT INTO `id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
+                // VALUES ('%s','%s','%s','%s','%s','%s','%s')",
+                // $id,$objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");
 
-        //         $user_res = mysql_query($inser_query,$link);
-        //     }
-        // } 
+                // $user_res = mysql_query($inser_query,$link);
+            }
+        } 
         $arr["Message"] = '訊息新增成功！';
         $arr["result"] = true;
-        $arr["data"] =  $intNumRows;
 
         echo json_encode($arr);
 
