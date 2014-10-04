@@ -62,6 +62,8 @@ function EmergencyPush()
             }
         }
         // Send the data to PHP now... and wait for response to update the status div
+        var div_title = document.getElementById('title').value;
+        var div_detail = document.getElementById('detail').value;
 
         var dt = new Date();
         var month = dt.getMonth()+1;
