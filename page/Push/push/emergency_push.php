@@ -95,19 +95,7 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
-                $res_name = $record["name"];
-                $res_username = $record["username"];
-                $res_user_id = $record["user_id"];
-
-                $insert = mysql_query(
-                "INSERT INTO $id (name, username, user_id, latitude, longitude, t_check) VALUES ('".$res_name."','".$res_username."','".$res_user_id."',0,0,0)");
-
-                // $inser_query = "INSERT INTO `{$id}` VALUES ('".$studno."','".$firstname."','".$lastname."')";
-                // $inser_query = sprintf("INSERT INTO `".$id."`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
-                // VALUES (%s','%s','%s','%s','%s','%s')",
-                // ,$record["username"],$record["user_id"],"0","0","0");
-
-                $user_res = mysql_query($insert,$link);
+                $user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
                 $arr["result2"] = $user_res;
             }
         } 
@@ -118,6 +106,15 @@ if ($db_selected)
 
         exit();
     }
+}
+
+function toQuery($tblName,$name,$username,$user_id)
+{
+   $latitude = "0";
+   $longitude = "0";
+   $t_check = "0";
+
+   return "INSERT INTO `$tblName` VALUES ('$name', '$username', '$user_id', '$latitude', '$longitude', '$t_check', null)";
 }
 
 mysql_close($link);
