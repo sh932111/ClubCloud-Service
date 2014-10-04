@@ -36,14 +36,14 @@ while($row = mysql_fetch_array($objQuery))
     {
         include_once("PushGCM.php");
 
-        callGCM($id,$title,$detail,$time,$time_detail ,$row['device_token'],$image);
+        callGCM($id,$title,$detail,$time,$time_detail ,$row['device_token'],$image,1);
 
     }
     if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
     {
         include_once("PushAPNS.php");
 
-        callAPNS($id,$title,$detail,$time,$time_detail,$row['device_token'],$image);
+        callAPNS($id,$title,$detail,$time,$time_detail,$row['device_token'],$image,1);
     }
 }
 
