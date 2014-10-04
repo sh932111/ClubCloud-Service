@@ -29,14 +29,7 @@ function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$imag
 	$body['aps'] = array(
 		'alert' => $title,
 		'badge' => "0",
-		'soubd' => "default",
-		'data_id' => $data_id,
-		'title' => $title,
-		'detail' => $detail,
-		'time' => $time,
-		'time_detail' => $time_detail,
-		'image' => $image,
-		'type' => $type
+		'soubd' => "default"
 		);
 
 	// Encode the payload as JSON
