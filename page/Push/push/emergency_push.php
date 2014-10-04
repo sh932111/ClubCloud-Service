@@ -75,7 +75,7 @@ if ($db_selected)
             `user_id` VARCHAR(200) NOT NULL,
             `latitude` VARCHAR(200),
             `longitude` VARCHAR(200),
-            `check` VARCHAR(20) NOT NULL
+            `t_check` VARCHAR(20) NOT NULL
             );";
 
         $db_table_selected = mysql_query($sq_creat_query, $link);
@@ -100,7 +100,7 @@ if ($db_selected)
                 $res_user_id = $record["user_id"];
 
                 $insert = mysql_query(
-                "INSERT INTO ".$id." (name, username, user_id, latitude, longitude, check) VALUES ('".$res_name."','".$res_username."','".$res_user_id."',0,0,0)");
+                "INSERT INTO $id (name, username, user_id, latitude, longitude, t_check) VALUES ('".$res_name."','".$res_username."','".$res_user_id."',0,0,0)");
 
                 // $inser_query = "INSERT INTO `{$id}` VALUES ('".$studno."','".$firstname."','".$lastname."')";
                 // $inser_query = sprintf("INSERT INTO `".$id."`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
