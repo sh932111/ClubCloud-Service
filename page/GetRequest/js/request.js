@@ -1,6 +1,9 @@
 
 var request_data;
 var user_data;
+
+var cityId;
+var areaId;
 function init() 
 {
 	// var user_div = document.getElementById("username");
@@ -27,6 +30,10 @@ function getData()
             var get_json = JSON.parse(return_data);
 
             user_data = get_json.data;
+
+            cityId = user_data.city_id;
+            areaId = user_data.city_detail_id;
+
             // var user_div = document.getElementById("user");
             
             // user_div.innerHTML = "管理人："+user_data.name;
@@ -56,6 +63,13 @@ function getRequestData()
 
         for (var i = 0; i < num; i++) 
         {
+            var city_id  = get_json[i]["city_id"];            
+            var area_id  = get_json[i]["area_id"];            
+            
+            if (city_id == cityId && area_id == areaId)
+            {
+                
+
             var name  = get_json[i]["name"];            
             var username  = get_json[i]["username"];            
             var title  = get_json[i]["title"];            
@@ -63,6 +77,7 @@ function getRequestData()
             var time  = get_json[i]["time"];            
                 
             result += "<tr><td>" + name + "</td><td>" + username + "</td><td>" + title + "</td><td>" + date + "</td><td>"+ time  + "</td><td><button onclick='goPage(this)' id="+i+">go</button></td></tr>";
+            }
         }
         result += "</table>";
 

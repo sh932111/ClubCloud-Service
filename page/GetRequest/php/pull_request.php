@@ -52,6 +52,8 @@ else
 		$area = $record['area'];
 		$liner = $record['liner'];
 		$address = $record['address'];
+		$city_id = $record['city_id'];
+		$area_id = $record['area_id'];
 
 		$data["id"] = $id;
 		$data["name"] = $name;
@@ -64,6 +66,8 @@ else
 		$data["area"] = $area;
 		$data["liner"] = $liner;
 		$data["address"] = $address;
+		$data["city_id"] = $city_id;
+		$data["area_id"] = $area_id;
 
 		$list[$i] = $data;
 
