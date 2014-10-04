@@ -28,6 +28,8 @@ function callAPNS($data_id,$title,$detail,$time,$time_detail,$device_token,$imag
 	// Create the payload body
 	$body['aps'] = array(
 		'alert' => $title,
+		'badge' => "0",
+		'soubd' => "default",
 		'data_id' => $data_id,
 		'title' => $title,
 		'detail' => $detail,
