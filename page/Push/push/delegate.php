@@ -88,7 +88,14 @@ while($row = mysql_fetch_array($objQuery))
         $body['aps'] = array(
             'alert' => $title,
             'badge' => "0",
-            'soubd' => "default"
+            'soubd' => "default",
+            'data_id' => $id,
+            'title' => $title,
+            'detail' => $detail,
+            'time' => $time,
+            'time_detail' => $time_detail,
+            'image' => $image,
+            'type' => "1"
             );
 
     // Encode the payload as JSON
