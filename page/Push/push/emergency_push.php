@@ -95,12 +95,12 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
-                $arr[$i] = $record["name"];
-                // $inser_query = sprintf("INSERT INTO `id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
-                // VALUES ('%s','%s','%s','%s','%s','%s','%s')",
-                // $id,$objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");
+                $inser_query = sprintf("INSERT INTO `$id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
+                VALUES ('%s','%s','%s','%s','%s','%s','%s')",
+                $objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");
 
-                // $user_res = mysql_query($inser_query,$link);
+                $user_res = mysql_query($inser_query,$link);
+                $arr["result2"] = $user_res;
             }
         } 
         $arr["Message"] = '訊息新增成功！';
