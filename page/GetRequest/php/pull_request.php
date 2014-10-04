@@ -6,9 +6,6 @@ $link = mysql_connect('localhost','root','sh3599033');
 
 mysql_query("SET NAMES 'UTF8'",$link);
 
-$city_id = $_POST["city_id"];
-$area_id = $_POST["area_id"];
-
 if (!$link) 
 {
 	$arr["Result"] = FALSE;
@@ -29,8 +26,7 @@ if (!$db_selected)
 else
 {
 
-	$select_action = "SELECT * FROM user_request WHERE city_id = '$city_id'  
-		AND area_id = '$area_id' ORDER BY CAST(time AS signed) DESC
+	$select_action = "SELECT * FROM user_request ORDER BY CAST(time AS signed) DESC
 	";
 
 	$select_res = mysql_query($select_action);
