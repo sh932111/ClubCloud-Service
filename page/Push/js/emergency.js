@@ -47,22 +47,7 @@ function getData()
 }
 function EmergencyPush()
 {
-    var xmlhttp = new XMLHttpRequest();
-        
-        xmlhttp.open("POST", "push/delegate.php", true);
-        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-        xmlhttp.onreadystatechange = function() 
-        {
-            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
-            {
-
-                var return_data = xmlhttp.responseText;
-
-            }
-        }
-        // Send the data to PHP now... and wait for response to update the status div
-        var div_title = document.getElementById('title').value;
+     var div_title = document.getElementById('title').value;
         var div_detail = document.getElementById('detail').value;
 
         var dt = new Date();
@@ -74,8 +59,46 @@ function EmergencyPush()
         var date = year +"/"+ month +"/"+ day;
         var time = dt.getHours() +":"+ dt.getMinutes();
         
+    var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.open("POST", "push/delegate.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xmlhttp.onreadystatechange = function() 
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+                var return_data = xmlhttp.responseText;
+            }
+        }
+        // Send the data to PHP now... and wait for response to update the status div
+       
+        PushSQL(ID,date,time);
+
         var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+date+"&time_detail="+time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+0+"&type="+"2";
 
         xmlhttp.send(post); 
 }
 
+function PushSQL(ID,date,time)
+{
+    var xmlhttp = new XMLHttpRequest();
+        
+        xmlhttp.open("POST", "push/emergency_push.php", true);
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+        xmlhttp.onreadystatechange = function() 
+        {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            {
+                var return_data = xmlhttp.responseText;
+            }
+        }
+        // Send the data to PHP now... and wait for response to update the status div
+        var div_title = document.getElementById('title').value;
+        var div_detail = document.getElementById('detail').value;
+        
+        var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&date="+date+"&time="+time+"&city_id="+getCityId+"&area_id="+getCityDetailId+"&username="+userName+"&name="+userData.name;
+
+        xmlhttp.send(post); 
+}
