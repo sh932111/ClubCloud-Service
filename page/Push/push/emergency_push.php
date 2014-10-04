@@ -96,7 +96,8 @@ if ($db_selected)
         {
             while ($objResult = mysql_fetch_array($objQuery)) 
             {
-        
+                echo json_encode($objResult["name"]);
+
                 $inser_query = sprintf("INSERT INTO `id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
                 VALUES ('%s','%s','%s','%s','%s','%s','%s')",
                 $id,$objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");

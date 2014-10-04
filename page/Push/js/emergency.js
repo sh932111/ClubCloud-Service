@@ -93,6 +93,8 @@ function PushSQL(ID,date,time)
             {
                 var return_data = xmlhttp.responseText;
             
+                console.log(return_data);
+
                 alert("推送成功");
                      
                 history.go(-1);
