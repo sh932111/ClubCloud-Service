@@ -40,7 +40,7 @@ if (!$db_selected)
 
 if ($db_selected) 
 {
-        $creat_query  ="CREATE TABLE `user_request`(
+        $creat_query  ="CREATE TABLE `user_emergency`(
             `name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `id` VARCHAR(20) NOT NULL PRIMARY KEY,
             `username` VARCHAR(20) NOT NULL,
@@ -54,7 +54,7 @@ if ($db_selected)
 
     $table_selected = mysql_query($creat_query, $link);
 
-    $query = sprintf("INSERT INTO `user_request`(`id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`) 
+    $query = sprintf("INSERT INTO `user_emergency`(`id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`) 
             VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s')",
             $id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time);
 
