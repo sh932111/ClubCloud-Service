@@ -95,11 +95,19 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
-                $inser_query = sprintf("INSERT INTO `".$id."`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
-                VALUES (%s','%s','%s','%s','%s','%s')",
-                $record["name"],$record["username"],$record["user_id"],"0","0","0");
+                $res_name = $record["name"];
+                $res_username = $record["username"];
+                $res_user_id = $record["user_id"];
 
-                $user_res = mysql_query($inser_query,$link);
+                $insert = mysql_query(
+                "INSERT INTO ".$id." (name, username, user_id, latitude, longitude, check) VALUES ('".$res_name."','".$res_username."','".$res_user_id."',0,0,0)");
+
+                // $inser_query = "INSERT INTO `{$id}` VALUES ('".$studno."','".$firstname."','".$lastname."')";
+                // $inser_query = sprintf("INSERT INTO `".$id."`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
+                // VALUES (%s','%s','%s','%s','%s','%s')",
+                // ,$record["username"],$record["user_id"],"0","0","0");
+
+                $user_res = mysql_query($insert,$link);
                 $arr["result2"] = $user_res;
             }
         } 
