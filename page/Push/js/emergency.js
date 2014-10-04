@@ -92,6 +92,11 @@ function PushSQL(ID,date,time)
             if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
             {
                 var return_data = xmlhttp.responseText;
+            
+                alert("推送成功");
+                     
+                history.go(-1);
+                
             }
         }
         // Send the data to PHP now... and wait for response to update the status div
