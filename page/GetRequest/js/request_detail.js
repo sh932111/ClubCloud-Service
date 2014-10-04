@@ -179,7 +179,7 @@ function pushMsg()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
-        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ imgCheck;
+        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ imgCheck+"&type="+"1";
 
         xmlhttp.send(post); 
 }

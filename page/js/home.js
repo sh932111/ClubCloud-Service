@@ -34,8 +34,7 @@ function crashMsg()
 
 function pushMsg () 
 {
-    document.getElementById('iframe').setAttribute('src','Push/Console.php?username='+userName);
-    
+    document.getElementById('iframe').setAttribute('src','Push/ClassChoose.php?username='+userName);
 	//location.href = 'Push/Console.php?username='+userName;
 }
 function getData()

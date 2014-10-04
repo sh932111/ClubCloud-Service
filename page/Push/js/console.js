@@ -103,7 +103,7 @@ function pushData()
 
 		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
-	    var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ImageCheck;
+	    var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ImageCheck+"&type="+"1";
 
 	    xmlhttp.send(post); 
 }
