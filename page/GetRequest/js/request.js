@@ -28,7 +28,7 @@ function getData()
 
             var user_data = get_json.data;
 
-
+            console.log(user_data);
             // var user_div = document.getElementById("user");
             
             // user_div.innerHTML = "管理人："+user_data.name;
