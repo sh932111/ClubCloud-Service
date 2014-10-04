@@ -80,17 +80,17 @@ if ($db_selected)
 
         $db_table_selected = mysql_query($sq_creat_query, $link);
 
-        $user_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
-        AND city_detail_id = '$area_id' 
+        $us_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
+        AND city_detail_id = '$area_id'  
         ";
 
-        $objQuery = mysql_query($user_select_action);
+        $obj_Query = mysql_query($us_select_action);
     
-        $intNumRows = mysql_num_rows($objQuery);
+        $intNumRows = mysql_num_rows($obj_Query);
 
         if($intNumRows != 0)
         {
-            while ($objResult = mysql_fetch_array($objQuery)) 
+            while ($objResult = mysql_fetch_array($obj_Query)) 
             {
                 $inser_query = sprintf("INSERT INTO `id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
                 VALUES ('%s','%s','%s','%s','%s','%s','%s')",
