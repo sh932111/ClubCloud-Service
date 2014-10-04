@@ -86,7 +86,7 @@ if ($db_selected)
 
         $obj_Query = mysql_query($us_select_action);
     
-        // $intNumRows = mysql_num_rows($obj_Query);
+        $intNumRows = mysql_num_rows($obj_Query);
 
         // if($intNumRows != 0)
         // {
@@ -101,7 +101,7 @@ if ($db_selected)
         // } 
         $arr["Message"] = '訊息新增成功！';
         $arr["result"] = true;
-        $arr["data"] =  $obj_Query;
+        $arr["data"] =  $intNumRows;
 
         echo json_encode($arr);
 
