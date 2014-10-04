@@ -18,6 +18,8 @@ $area = $_POST["area"];//區
 $liner = $_POST["liner"];//里
 $address = $_POST["address"];//地點
 $image = $_POST["image"];//是否有圖 1 or 0
+$city_id = $_POST["city_id"];
+$area_id = $_POST["area_id"];
 
 $link = mysql_connect('localhost','root','sh3599033');
 
@@ -43,25 +45,12 @@ if (!$db_selected)
 
 if ($db_selected) 
 {
-        // $creat_query  ="CREATE TABLE `user_request`(
-        //     `id` VARCHAR(1000) NOT NULL PRIMARY KEY,
-        //     `username` VARCHAR(20)  NOT NULL,
-        //     `name` VARCHAR(20)  NOT NULL,
-        //     `title` VARCHAR(20) NOT NULL,
-        //     `detail` VARCHAR(9999) NOT NULL,
-        //     `date` VARCHAR(20) NOT NULL,
-        //     `time` VARCHAR(20) NOT NULL,
-        //     `city` VARCHAR(20) NOT NULL,
-        //     `area` VARCHAR(20) NOT NULL,
-        //     `liner` VARCHAR(20) NOT NULL,
-        //     `address` VARCHAR(2000) NOT NULL
-        //     );";
-
-
         $creat_query  ="CREATE TABLE `user_request`(
             `name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `id` VARCHAR(20) NOT NULL PRIMARY KEY,
             `username` VARCHAR(20) NOT NULL,
+            `city_id` VARCHAR(20)CHARACTER NOT NULL,
+            `area_id` VARCHAR(200)CHARACTER NOT NULL,
             `title` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `detail` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
             `date` VARCHAR(10) NOT NULL,
@@ -83,9 +72,9 @@ if ($db_selected)
     //     exit();
     // }
 
-    $query = sprintf("INSERT INTO `user_request`(`id`,`name`,`username`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`) 
-            VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-            $id,$name,$username,$title,$detail,$date,$time,$city,$area,$liner,$address,$image);
+    $query = sprintf("INSERT INTO `user_request`(`id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`) 
+            VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+            $id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image);
 
     $res = mysql_query($query,$link);
 
