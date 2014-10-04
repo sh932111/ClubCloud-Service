@@ -96,8 +96,8 @@ if ($db_selected)
             while ($record = mysql_fetch_array($obj_Query)) 
             {
                 $inser_query = sprintf("INSERT INTO `$id`(`name`,`username`,`user_id`,`latitude`,`longitude`,`check`) 
-                VALUES ('%s','%s','%s','%s','%s','%s','%s')",
-                $objResult["name"],$objResult["username"],$objResult["user_id"],"0","0","0");
+                VALUES (%s','%s','%s','%s','%s','%s')",
+                $record["name"],$record["username"],$record["user_id"],"0","0","0");
 
                 $user_res = mysql_query($inser_query,$link);
                 $arr["result2"] = $user_res;
