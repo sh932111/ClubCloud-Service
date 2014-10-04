@@ -95,9 +95,9 @@ function PushSQL(ID,date,time)
             
                 console.log(return_data);
 
-                alert("推送成功");
+                // alert("推送成功");
                      
-                history.go(-1);
+                // history.go(-1);
                 
             }
         }

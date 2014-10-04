@@ -85,7 +85,7 @@ if ($db_selected)
         $db_table_selected = mysql_query($sq_creat_query, $link);
 
         $user_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
-        AND city_detail_id = '$area_id'  ORDER BY CAST(time AS signed) DESC
+        AND city_detail_id = '$area_id' 
         ";
 
         $objQuery = mysql_query($user_select_action);
