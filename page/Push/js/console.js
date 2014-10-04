@@ -159,7 +159,7 @@ function pushCalendar()
 
 		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
-	    var post = "id="+item+"&title="+div_title+"&detail="+div_detail+"&date="+day+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里"+"&image="+ ImageCheck;
+	    var post = "id="+item+"&title="+div_title+"&detail="+div_detail+"&date="+day+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里"+"&image="+ ImageCheck+"&city_id="+getCityId+"&area_id="+ getCityDetailId;
 
 	    xmlhttp.send(post); 
 

@@ -84,7 +84,7 @@ $username = $_GET['username'];
 			
 			$.jMonthCalendar.Initialize(options, events);
 			
-			getData();
+			getRootData();
 
 			// var events2 = [
 			// { "EventID": 3, "StartDateTime": new Date(2014, 8, 10), "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" },
@@ -106,6 +106,41 @@ $username = $_GET['username'];
 			// 	$.jMonthCalendar.ChangeMonth(new Date(2009, 3, 7));
 			// });
         });
+
+		var getCityId;
+		var getCityDetailId;
+
+		function getRootData()
+		{
+			var xmlhttp = new XMLHttpRequest();
+    
+		    xmlhttp.open("POST", "../get_data/get_data.php", true);
+		    
+		    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+			xmlhttp.onreadystatechange = function() 
+		    {
+		        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+		        {
+		            var return_data = xmlhttp.responseText;
+
+		            var get_json = JSON.parse(return_data);
+
+		            userData = get_json.data;
+
+		            getCityId = userData.city_id;
+		            getCityDetailId = userData.city_detail_id;
+
+		            getData();
+		            // var user_div = document.getElementById("user");
+		            
+		            // user_div.innerHTML = "管理人："+user_data.name;
+		        }
+		    }
+		    // Send the data to PHP now... and wait for response to update the status div
+		    xmlhttp.send("username="+userName); 
+		}
+
 
 		function getData()
 			{
@@ -158,7 +193,7 @@ $username = $_GET['username'];
 			        }
 			    }
 			    // Send the data to PHP now... and wait for response to update the status div
-			    xmlhttp.send(); 
+			    xmlhttp.send("city_id="+getCityId+"&area_id="+ getCityDetailId); 
 			}
     </script>
 </head>

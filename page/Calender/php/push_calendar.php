@@ -10,13 +10,7 @@ mysql_query("SET NAMES 'UTF8'",$objConnect);
 
 date_default_timezone_set('Asia/Taipei');
 
-
 $id = $_POST["id"];
-
-// if (is_null($id)) 
-// {
-// 	$id = date("Ymdhis");
-// }
 
 $username = $_POST["username"];//帳號
 $name = $_POST["name"];//發送者
@@ -29,6 +23,8 @@ $area = $_POST["area"];//區
 $liner = $_POST["liner"];//里
 $address = $_POST["address"];//地點
 $image = $_POST["image"];//是否有圖 1 or 0
+$city_id = $_POST["city_id"];
+$area_id = $_POST["area_id"];
 
 if (!$objConnect) 
 {
@@ -54,6 +50,8 @@ if ($db_selected)
 		`name` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`data_id` VARCHAR(20) NOT NULL PRIMARY KEY,
 		`username` VARCHAR(20) NOT NULL,
+        `city_id` VARCHAR(20) NOT NULL,
+        `area_id` VARCHAR(200) NOT NULL,
 		`title` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`detail` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`date` VARCHAR(10) NOT NULL,
@@ -67,9 +65,9 @@ if ($db_selected)
 
 $table_selected = mysql_query($creat_query, $objConnect);
 
-$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`) 
-	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-	$id,$name,$username,$title,$detail,$date,$time,$city,$area,$liner,$address,$image);
+$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`) 
+	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+	$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image);
 
 $res = mysql_query($query,$objConnect);
 
