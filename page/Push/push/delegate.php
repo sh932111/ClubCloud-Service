@@ -67,8 +67,6 @@ while($row = mysql_fetch_array($objQuery))
     if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
     {
 
-        callAPNS($id,$title,$detail,$time,$time_detail,$row['device_token'],$image,1);
-       
         $deviceToken = $row['device_token'];
     
         $passphrase = 'enough306';
