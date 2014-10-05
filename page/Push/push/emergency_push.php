@@ -97,6 +97,7 @@ if ($db_selected)
             {
                 $user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
                 $arr[$i] = mysql_errno().": ".mysql_error();
+                $i++;
             }
         } 
         $arr["Message"] = '訊息新增成功！';
@@ -114,7 +115,6 @@ function toQuery($tblName,$name,$username,$user_id)
    $longitude = "0";
    $t_check = "0";
 
-    mysql_query("Use `user_data`");
    return "INSERT INTO `$tblName` VALUES ('$name', '$username', '$user_id', '$latitude', '$longitude', '$t_check', null)";
 }
 
