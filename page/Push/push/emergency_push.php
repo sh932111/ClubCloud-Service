@@ -96,7 +96,7 @@ if ($db_selected)
             while ($record = mysql_fetch_array($obj_Query)) 
             {
                 $user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
-                $arr["result2"] = $user_res;
+                $arr[$i] = mysql_errno().": ".mysql_error();
             }
         } 
         $arr["Message"] = '訊息新增成功！';
