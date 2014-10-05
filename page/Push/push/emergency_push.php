@@ -94,8 +94,8 @@ if ($db_selected)
         {
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
-            {
-                $user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
+            {//$record["username"]
+                $user_res = mysql_query(toQuery($id,"name","username","user_id"));
                 $arr[$i] = mysql_errno().": ".mysql_error();
                 $i++;
             }
