@@ -95,8 +95,8 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
-                $user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
-                $arr[$i] = mysql_errno().": ".mysql_error();
+                //$user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
+                $arr[$i] = $record["name"];//mysql_errno().": ".mysql_error();
                 $i++;
             }
         } 
@@ -115,7 +115,7 @@ function toQuery($tblName,$name,$username,$user_id)
    $longitude = "0";
    $t_check = "0";
 
-   return "INSERT INTO $tblName (`name`,`username`, `user_id`, `latitude`, `longitude`, `t_check`) VALUES ('$name','$username', '$user_id' , '$latitude', '$longitude', '$t_check')";
+   return "INSERT INTO $tblName (name, username, user_id, latitude, longitude, t_check) VALUES ('$name','$username', '$user_id' , '$latitude', '$longitude', '$t_check')";
 }
 
 mysql_close($link);
