@@ -6,7 +6,7 @@ header("Content-Type: text/html;charset=utf-8");
 date_default_timezone_set('Asia/Taipei');
 
 //$id = date("Ymdhis");
-$id = $_POST["id"];
+$table_id = $_POST["id"];
 $username = $_POST["username"];//帳號
 $name = $_POST["name"];//發送者
 $title = $_POST["title"];//標題
@@ -56,7 +56,7 @@ if ($db_selected)
 
     $query = sprintf("INSERT INTO `user_emergency`(`id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`) 
         VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-        $id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time);
+        $table_id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time);
 
     $res = mysql_query($query,$link);
 
@@ -69,7 +69,8 @@ if ($db_selected)
     }
     else
     {
-        $sq_creat_query  ="CREATE TABLE `$id`(
+        $sq_creat_query  ="CREATE TABLE `$table_id`(
+            `id` VARCHAR(20) NOT NULL PRIMARY KEY,
             `name` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
             `username` VARCHAR(200) NOT NULL,
             `user_id` VARCHAR(200) NOT NULL,
@@ -95,8 +96,13 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
+                $user_query = sprintf("INSERT INTO `$table_id`(`id`,`name`,`username`,`user_id`,`latitude`,`longitude`,`t_check`) 
+                VALUES ('%s','%s','%s','%s','%s','%s','%s')",
+                $i,$record["name"],$record["username"],$record["user_id"],"0","0","0");
+                $user_query_res = mysql_query($user_query,$link);
+
                 //$user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
-                $arr[$i] = $record["name"];//mysql_errno().": ".mysql_error();
+                $arr[$i] = mysql_errno().": ".mysql_error().": ".$user_query_res;
                 $i++;
             }
         } 
