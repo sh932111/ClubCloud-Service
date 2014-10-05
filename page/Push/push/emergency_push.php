@@ -70,9 +70,8 @@ if ($db_selected)
     else
     {
         $sq_creat_query  ="CREATE TABLE `$table_id`(
-            `id` VARCHAR(20) NOT NULL PRIMARY KEY,
+            `username` VARCHAR(200) NOT NULL PRIMARY KEY,
             `name` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-            `username` VARCHAR(200) NOT NULL,
             `user_id` VARCHAR(200) NOT NULL,
             `latitude` VARCHAR(200),
             `longitude` VARCHAR(200),
@@ -96,13 +95,10 @@ if ($db_selected)
             $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
-                $user_query = sprintf("INSERT INTO `$table_id`(`id`,`name`,`username`,`user_id`,`latitude`,`longitude`,`t_check`) 
-                VALUES ('%s','%s','%s','%s','%s','%s','%s')",
-                $i,$record["name"],$record["username"],$record["user_id"],"0","0","0");
+                $user_query = sprintf("INSERT INTO `$table_id`(`username`,`name`,`user_id`,`latitude`,`longitude`,`t_check`) 
+                VALUES ('%s','%s','%s','%s','%s','%s')",
+                $record["username"],$record["name"],$record["user_id"],"0","0","0");
                 $user_query_res = mysql_query($user_query,$link);
-
-                //$user_res = mysql_query(toQuery($id,$record["name"],$record["username"],$record["user_id"]));
-                $arr[$i] = mysql_errno().": ".mysql_error().": ".$user_query_res;
                 $i++;
             }
         } 
@@ -115,14 +111,6 @@ if ($db_selected)
     }
 }
 
-function toQuery($tblName,$name,$username,$user_id)
-{
-   $latitude = "0";
-   $longitude = "0";
-   $t_check = "0";
-
-   return "INSERT INTO $tblName (name, username, user_id, latitude, longitude, t_check) VALUES ('$name','$username', '$user_id' , '$latitude', '$longitude', '$t_check')";
-}
 
 mysql_close($link);
 ?>
