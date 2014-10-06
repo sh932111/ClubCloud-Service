@@ -55,7 +55,7 @@ function getEvent()
                         
                         nameDiv.id="nameDiv";
 
-                        nameDiv.innerHTML = "發送人："+obj.name;
+                        nameDiv.innerHTML = "標題："+obj.title;
                         
                         var oneDiv = document.createElement("div");
 
@@ -63,7 +63,7 @@ function getEvent()
 
                         var titleDiv = document.createElement("div");
 
-                        titleDiv.innerHTML = "標題："+obj.title +"&nbsp;&nbsp;&nbsp;日期："+obj.date+"&nbsp;&nbsp;&nbsp;時間：" +obj.time;
+                        titleDiv.innerHTML = "日期："+obj.date+"&nbsp;&nbsp;&nbsp;時間：" +obj.time;
                             
                         var listDiv = document.createElement("div");
 
