@@ -1,8 +1,10 @@
 <?php
 
-mysql_query ( "set character set utf8" );
+header('Content-Type: text/html; charset=utf8');
 
-header("Content-Type: text/html;charset=utf-8"); 
+mysql_query("SET NAMES 'utf8'");
+mysql_query("SET CHARACTER_SET_CLIENT='utf8'");
+mysql_query("SET CHARACTER_SET_RESULTS='utf8'");
 date_default_timezone_set('Asia/Taipei');
 
 //$id = date("Ymdhis");
@@ -27,6 +29,10 @@ if (!$link)
     echo json_encode($arr);
     exit();
 }
+
+$sql = 'CREATE DATABASE emergency_data';
+
+mysql_query($sql, $link);
 
 $db_selected = mysql_select_db('user_data');
 
@@ -69,6 +75,8 @@ if ($db_selected)
     }
     else
     {
+        $db_selected_2 = mysql_select_db('emergency_data');
+
         $sq_creat_query  ="CREATE TABLE `$table_id`(
             `username` VARCHAR(200) NOT NULL PRIMARY KEY,
             `name` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
@@ -79,6 +87,9 @@ if ($db_selected)
             );";
 
         $db_table_selected = mysql_query($sq_creat_query, $link);
+
+
+        $db_selected_3 = mysql_select_db('user_data');
 
         $us_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
         AND city_detail_id = '$area_id'  
@@ -94,6 +105,8 @@ if ($db_selected)
         {
             while ($record = mysql_fetch_array($obj_Query)) 
             {
+                $db_selected_4 = mysql_select_db('emergency_data');
+
                 $user_query = sprintf("INSERT INTO `$table_id`(`username`,`name`,`user_id`,`latitude`,`longitude`,`t_check`) 
                 VALUES ('%s','%s','%s','%s','%s','%s')",
                 $record["username"],$record["name"],$record["user_id"],"0","0","0");
