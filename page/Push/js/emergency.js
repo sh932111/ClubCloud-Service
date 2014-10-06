@@ -94,13 +94,10 @@ function PushSQL(ID,date,time)
                 var return_data = xmlhttp.responseText;
             
                 var get_json = JSON.parse(return_data);
-
-                console.log(get_json);
-                
-                // alert("推送成功");
+ 
+                alert("推送成功");
                      
-                // history.go(-1);
-                
+                history.go(-1);
             }
         }
         // Send the data to PHP now... and wait for response to update the status div

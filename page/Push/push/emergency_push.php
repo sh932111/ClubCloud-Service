@@ -92,14 +92,12 @@ if ($db_selected)
 
         if($intNumRows != 0)
         {
-            $i = 0;
             while ($record = mysql_fetch_array($obj_Query)) 
             {
                 $user_query = sprintf("INSERT INTO `$table_id`(`username`,`name`,`user_id`,`latitude`,`longitude`,`t_check`) 
                 VALUES ('%s','%s','%s','%s','%s','%s')",
                 $record["username"],$record["name"],$record["user_id"],"0","0","0");
                 $user_query_res = mysql_query($user_query,$link);
-                $i++;
             }
         } 
         $arr["Message"] = '訊息新增成功！';
@@ -110,7 +108,6 @@ if ($db_selected)
         exit();
     }
 }
-
 
 mysql_close($link);
 ?>
