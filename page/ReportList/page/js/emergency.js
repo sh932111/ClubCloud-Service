@@ -75,7 +75,7 @@ function getEvent()
                         var t = document.createTextNode("回報人統計");
                         bt.appendChild(t); 
                         bt.onclick = function(){
-                            alert(this.id);
+                            //alert(this.id);
                             return false;
                         };
 
