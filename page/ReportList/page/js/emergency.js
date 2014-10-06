@@ -47,10 +47,7 @@ function getEvent()
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
-    var post = "city_id="+userData.city_id+"&area_id"+userData.city_detail_id;
-
-    console.log(post);
+    var post = "city_id="+userData.city_id+"&area_id="+userData.city_detail_id;
 
     xmlhttp.send(post); 
-
 }
