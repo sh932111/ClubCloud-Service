@@ -44,7 +44,7 @@ else
 	{
 		$id = $record['id'];
 		$title = $record['title'];
-		$detail = $record['list'];
+		$detail = $record['detail'];
 		$date = $record['date'];
 		$time = $record['time'];
 

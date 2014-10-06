@@ -41,9 +41,46 @@ function getEvent()
 
             var get_json = JSON.parse(return_data);
 
-            var response = get_json.data;
+            if (get_json.result)
+            {
+                if (get_json.data.num != 0)
+                {
+                    for (var i = 0; i < get_json.data.num; i++) 
+                    {
+                        var obj = get_json.data[i];
 
-            console.log(response);
+                        var listView = document.getElementById('listView');
+
+                        var nameDiv = document.createElement("div");
+                        
+                        nameDiv.id="nameDiv";
+
+                        nameDiv.innerHTML = "發送人："+obj.name;
+                        
+                        var oneDiv = document.createElement("div");
+
+                        oneDiv.id="oneDiv";
+
+                        var titleDiv = document.createElement("div");
+
+                        titleDiv.innerHTML = "標題："+obj.title +"&nbsp;&nbsp;&nbsp;日期："+obj.date+"&nbsp;&nbsp;&nbsp;時間：" +obj.time;
+                            
+                        var listDiv = document.createElement("div");
+
+                        listDiv.innerHTML = obj.list;
+                        listDiv.id="listDiv";
+
+                        oneDiv.appendChild(titleDiv);
+
+                        listView.appendChild(nameDiv);
+                        listView.appendChild(oneDiv);
+                        listView.appendChild(listDiv);
+
+                        var hr = document.createElement("hr");
+                        listView.appendChild(hr);
+                    }
+               }
+           }
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
