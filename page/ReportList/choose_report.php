@@ -19,9 +19,13 @@ var userName = '<?php echo $username; ?>';
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="init()">
-	<input type="button" value="緊急回報清單" onclick="emList()" />
-	<iframe id="iframe" src="" scrolling="yes" frameborder="1">
-	</iframe>
+	<div id="menu">
+		<input type="button" value="緊急回報清單" onclick="emList()" />
+	</div>
+	<div id="main">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
+		</iframe>
+	</div>
 </body>
 
 <script src="js/choose_report.js"></script>
