@@ -19,7 +19,7 @@ var userName = '<?php echo $username; ?>';
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="init()">
-
+	<input type="button" value="緊急回報清單" onclick="emList()" />
 </body>
 
 <script src="js/choose_report.js"></script>
