@@ -20,6 +20,8 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<input type="button" value="緊急回報清單" onclick="emList()" />
+	<iframe id="iframe" src="" scrolling="yes" frameborder="1">
+	</iframe>
 </body>
 
 <script src="js/choose_report.js"></script>
