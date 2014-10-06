@@ -16,7 +16,7 @@ var userName = '<?php echo $username; ?>';
 
 <title>緊急事件清單</title>
 <head>
-	<link rel="stylesheet" href="css/emergency_detail_style.css">
+	<link rel="stylesheet" href="css/emergency_style.css">
 </head>
 <body onload="init()">
 	<nav>
@@ -26,5 +26,5 @@ var userName = '<?php echo $username; ?>';
 	</nav>
 </body>
 
-<script src="js/emergency_detail.js"></script>
+<script src="js/emergency.js"></script>
 </html>

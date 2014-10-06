@@ -18,7 +18,7 @@ var eventID = '<?php echo $event_id; ?>';
 
 <title>緊急事件清單</title>
 <head>
-	<link rel="stylesheet" href="css/emergency_style.css">
+	<link rel="stylesheet" href="css/emergency_detail_style.css">
 </head>
 <body onload="init()">
 	<nav>
@@ -28,5 +28,5 @@ var eventID = '<?php echo $event_id; ?>';
 	</nav>
 </body>
 
-<script src="js/emergency.js"></script>
+<script src="js/emergency_detail.js"></script>
 </html>
