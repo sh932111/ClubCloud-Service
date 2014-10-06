@@ -19,7 +19,7 @@ var userName = '<?php echo $username; ?>';
 	<link rel="stylesheet" href="css/emergency_style.css">
 </head>
 <body onload="init()">
-	
+	<h1>安</h1>
 </body>
 
 <script src="js/emergency.js"></script>
