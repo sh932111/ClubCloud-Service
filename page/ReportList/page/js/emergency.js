@@ -71,6 +71,7 @@ function getEvent()
                         listDiv.id="listDiv";
 
                         var bt = document.createElement("button");
+                        bt.value = "回報人統計";
 
                         oneDiv.appendChild(titleDiv);
 
