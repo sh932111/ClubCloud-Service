@@ -70,11 +70,14 @@ function getEvent()
                         listDiv.innerHTML = obj.list;
                         listDiv.id="listDiv";
 
+                        var bt = document.createElement("button");
+
                         oneDiv.appendChild(titleDiv);
 
                         listView.appendChild(nameDiv);
                         listView.appendChild(oneDiv);
                         listView.appendChild(listDiv);
+                        listView.appendChild(bt);
 
                         var hr = document.createElement("hr");
                         listView.appendChild(hr);
