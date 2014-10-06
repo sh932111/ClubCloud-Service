@@ -114,7 +114,7 @@ $username = $_GET['username'];
 		{
 			var xmlhttp = new XMLHttpRequest();
     
-		    xmlhttp.open("POST", "../get_data/get_data.php", true);
+		    xmlhttp.open("POST", "../lib/get_data/get_data.php", true);
 		    
 		    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 

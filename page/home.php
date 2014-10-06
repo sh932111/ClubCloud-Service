@@ -16,7 +16,7 @@ var userName = '<?php echo $username; ?>';
 
 <title>首頁</title>
 <head>
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="lib/css/style.css">
 </head>
 <body onload="init()">
 
@@ -41,5 +41,5 @@ var userName = '<?php echo $username; ?>';
 	
 </body>
 
-<script src="js/home.js"></script>
+<script src="lib/js/home.js"></script>
 </html>

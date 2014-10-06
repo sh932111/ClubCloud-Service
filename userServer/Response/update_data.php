@@ -32,4 +32,15 @@ $query = sprintf("UPDATE `$table_id` SET
 
 $res = mysql_query($query,$link);
 
+if ($res) 
+{
+	$response_result = TRUE;
+	$arr["result"] = $response_result;
+	$arr["Message"] = "回報成功！";
+	echo json_encode($arr);
+	exit();
+}
+
+mysql_close($link);
+
 ?>
