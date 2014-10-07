@@ -3,6 +3,7 @@ var userData;
 function init()
 {
 	getData();
+    getDetail();
 }
 function getData()
 {
@@ -20,7 +21,6 @@ function getData()
             var get_json = JSON.parse(return_data);
 
             userData = get_json.data;
-
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
