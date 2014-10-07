@@ -78,7 +78,7 @@ function getEvent()
                         var t = document.createTextNode("回報人統計");
                         bt.appendChild(t); 
                         bt.onclick = function(){
-                            alert(responseData.data[this.id].id);
+                            location.href = 'emergency_detail.php?username='+userName+'&id='+responseData.data[this.id].id; 
                             return false;
                         };
 
