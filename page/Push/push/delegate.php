@@ -133,7 +133,7 @@ mysql_close($objConnect);
 function back_space_and_br($str)
 {
 //將空白還原
-    $str=str_replace("<br />"," ","$str");
+    $str=str_replace("<br/>"," ","$str");
 //將換行還原
     return $str;
 }
