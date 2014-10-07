@@ -60,6 +60,8 @@ function getDetail()
                         
                         nameDiv.innerHTML = obj.name;
 
+                        nameDiv.style.top = i * 10 + "%";
+
                         var idDiv = document.createElement("div");
 
                         idDiv.className = 'list_user_id';
