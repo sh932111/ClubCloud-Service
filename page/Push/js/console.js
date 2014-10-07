@@ -72,9 +72,7 @@ function pushData()
 
 	            var return_data = xmlhttp.responseText;
 
-				var get_json = JSON.parse(return_data);
-
-				console.log(get_json);
+				console.log(return_data);
 
 				pushCalendar();
 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
