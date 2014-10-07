@@ -9,8 +9,9 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 
 #listTitle
 {
+	margin-left: 10%;
 	position: fixed;
-	width: 100%;
+	width: 80%;
 	height: 10%;
 	top: 0;
 	right: 0;
