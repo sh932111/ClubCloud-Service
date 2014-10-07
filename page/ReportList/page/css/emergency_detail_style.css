@@ -16,6 +16,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	right: 0;
 	bottom: auto;
 	left: 0;
+	background-color: #FFEFD5;
 }
 #list
 {
@@ -31,7 +32,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 15%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
@@ -41,7 +42,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 25%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
@@ -51,7 +52,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
@@ -61,7 +62,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
@@ -71,7 +72,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
