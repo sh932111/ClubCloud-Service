@@ -21,7 +21,7 @@ var eventID = '<?php echo $event_id; ?>';
 	<link rel="stylesheet" href="css/emergency_detail_style.css">
 </head>
 <body onload="init()">
-	<div id="title"><h3>事件回報人</h3></div>
+	<h3>事件回報人</h3>
 	<div id="listTitle">
 		<div class="user"><h4>使用者</h4></div>
 		<div class="user_id"><h4>身分證字號</h4></div>
