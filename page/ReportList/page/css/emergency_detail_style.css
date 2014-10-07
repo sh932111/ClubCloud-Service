@@ -27,7 +27,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 0;
 }
-.user
+#user
 {
 	position: fixed;
 	width: 15%;
@@ -36,9 +36,8 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	right: 0;
 	bottom: auto;
 	left: 0;	
-	color: red;
 }
-.user_id
+#user_id
 {
 	position: fixed;
 	width: 25%;
@@ -48,7 +47,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 15%;
 }
-.latidute
+#latidute
 {
 	position: fixed;
 	width: 20%;
@@ -58,7 +57,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 40%;
 }
-.longitude
+#longitude
 {
 	position: fixed;
 	width: 20%;
@@ -68,7 +67,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 60%;
 }
-.check
+#check
 {
 	position: fixed;
 	width: 20%;
