@@ -48,67 +48,38 @@ function getDetail()
             {
                 if (responseData.data.num != 0)
                 {
+
+                    var listView = document.getElementById('listView');
+
                     for (var i = 0; i < responseData.data.num; i++) 
                     {
                         var obj = responseData.data[i];
 
-                        var listView = document.getElementById('listView');
+                        var result = "<table border='1'>";
 
-                        var boxDiv = document.createElement("div");
+                        result += "<tr><td>使用者</td><td>身分證字號</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td></tr>";
 
-                        var nameDiv = document.createElement("div");
+                        var status = "";
 
-                        // nameDiv.className = 'list_user';
-                        
-                        nameDiv.innerHTML = obj.name;
-
-                        nameDiv.style.top = i * 10 + 20+"%";
-
-                        var idDiv = document.createElement("div");
-
-                        // idDiv.className = 'list_user_id';
-                        
-                        idDiv.innerHTML = obj.user_id;
-                        idDiv.style.top = i * 10 + 20+"%";
-
-                        var latDiv = document.createElement("div");
-
-                        // latDiv.className = 'list_latidute';
-                        
-                        latDiv.style.top = i * 10 + 20+"%";
-                        latDiv.innerHTML = obj.latitude;
-
-                        var longDiv = document.createElement("div");
-
-                        // longDiv.className = 'list_longitude';
-                        
-                        longDiv.style.top = i * 10 + 20+"%";
-                        longDiv.innerHTML = obj.longitude;
-
-                        var checkDiv = document.createElement("div");
-
-                        // checkDiv.className = 'list_check';
-                        
-                        checkDiv.style.top = i * 10 + 20+"%";
                         if (obj.t_check == 0)
                         {
-                            checkDiv.innerHTML = "未回報";
+                            status = "未回報";
                         }
                         else if (obj.t_check == 1)
                         {
-                            checkDiv.innerHTML = "手機自行回報";
+                            status = "手機自行回報";
                         }
                         else if (obj.t_check == 2)
                         {
-                            checkDiv.innerHTML = "使用者已回報";
+                            status = "使用者已回報";
                         }
 
-                        listView.appendChild(nameDiv);
-                        listView.appendChild(idDiv);
-                        listView.appendChild(latDiv);
-                        listView.appendChild(longDiv);
-                        listView.appendChild(checkDiv);
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+            
                     }
+                    result += "</table>";
+
+                    listView.innerHTML = result;
                 }
             }
 
