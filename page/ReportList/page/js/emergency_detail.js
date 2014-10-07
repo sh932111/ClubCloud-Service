@@ -54,31 +54,31 @@ function getDetail()
 
                         var nameDiv = document.createElement("div");
 
-                        nameDiv.className = '.user';
+                        nameDiv.className = 'user';
                         
                         nameDiv.innerHTML = obj.name;
 
                         var idDiv = document.createElement("div");
 
-                        idDiv.className = '.user_id';
+                        idDiv.className = 'user_id';
                         
                         idDiv.innerHTML = obj.user_id;
 
                         var latDiv = document.createElement("div");
 
-                        latDiv.className = '.latitude';
+                        latDiv.className = 'latitude';
                         
                         latDiv.innerHTML = obj.latitude;
 
                         var longDiv = document.createElement("div");
 
-                        longDiv.className = '.longitude';
+                        longDiv.className = 'longitude';
                         
                         longDiv.innerHTML = obj.longitude;
 
                         var checkDiv = document.createElement("div");
 
-                        checkDiv.className = '.check';
+                        checkDiv.className = 'check';
                         
                         if (obj.t_check == 0)
                         {
