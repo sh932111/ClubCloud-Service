@@ -32,30 +32,30 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 .user
 {
 	position: fixed;
-	width: 15%;
+	width: 10%;
 	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
-	left: 0;	
+	left: 10%;	
 	text-align:center;
 
 }
 .user_id
 {
 	position: fixed;
-	width: 25%;
+	width: 20%;
 	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
-	left: 15%;
+	left: 20%;
 	text-align:center;
 }
 .latidute
 {
 	position: fixed;
-	width: 20%;
+	width: 15%;
 	height: 10%;
 	top: 0;
 	right: 0;
@@ -66,12 +66,12 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 .longitude
 {
 	position: fixed;
-	width: 20%;
+	width: 15%;
 	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
-	left: 60%;
+	left: 55%;
 	text-align:center;
 }
 .check
