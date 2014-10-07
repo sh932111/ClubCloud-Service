@@ -89,7 +89,7 @@ function getDetailData()
             document.getElementById("msg_title").innerHTML = "標題："+requestData.title;
             document.getElementById("msg_address").innerHTML = "活動地址："+requestData.city + requestData.area+requestData.address;
             document.getElementById("msg_time").innerHTML = "活動時間："+requestData.date + "  "+requestData.time;
-            document.getElementById("msg_list").innerHTML = "內文："+requestData.detail;
+            document.getElementById("msg_list").innerHTML = "內文：<br>"+requestData.detail;
             
             var img_check = requestData.image;
             imgCheck = img_check;
