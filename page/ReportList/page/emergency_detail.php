@@ -23,11 +23,11 @@ var eventID = '<?php echo $event_id; ?>';
 <body onload="init()">
 	<h3>事件回報人</h3>
 	<div id="listTitle">
-		<div id="user"><h4>使用者</h4></div>
-		<div id="user_id"><h4>身分證字號</h4></div>
-		<div id="latidute"><h4>Latidute</h4></div>
-		<div id="longitude"><h4>Longitude</h4></div>
-		<div id="check"><h4>回報狀況</h4></div>
+		<div class="user"><h4>使用者</h4></div>
+		<div class="user_id"><h4>身分證字號</h4></div>
+		<div class="latidute"><h4>Latidute</h4></div>
+		<div class="longitude"><h4>Longitude</h4></div>
+		<div class="check"><h4>回報狀況</h4></div>
 	</div>
 	<hr>
 	<div id="list">
