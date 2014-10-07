@@ -50,7 +50,7 @@ else
 
 		$data["id"] = $id;
 		$data["title"] = $title;
-		$data["list"] = $detail;
+		$data["list"] = back_space_and_br($detail);
 		$data["date"] = $date;
 		$data["time"] = $time;
 
@@ -72,5 +72,14 @@ else
 	exit();
 }
 
+
+function back_space_and_br($str)
+{
+//將空白還原
+	$str=str_replace(" ","&nbsp;","$str");
+//將換行還原
+	$str=nl2br($str);   //注意!是L不是1
+	return $str;
+}
 
 ?>
