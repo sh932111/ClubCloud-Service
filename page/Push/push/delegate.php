@@ -42,7 +42,9 @@ while($row = mysql_fetch_array($objQuery))
         $fields = array('registration_ids'  => $regID,
             'data'              => array('data_id' => $id,'title' => $title,'detail' => back_space_and_br($detail),'time' => $time,'time_detail' => $time_detail,'image' => $image,'type' => $type)
             );
-
+        $arr["test"] = back_space_and_br($detail);
+        echo json_encode($arr);
+            
         $headers = array('Content-Type: application/json',
             'Authorization: key='.$apiKey
             );
@@ -133,7 +135,7 @@ mysql_close($objConnect);
 function back_space_and_br($str)
 {
 //將空白還原
-    $str=str_replace("<br/>"," ","$str");
+    $str=str_replace("<br />"," ","$str");
 //將換行還原
     return $str;
 }

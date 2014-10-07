@@ -171,6 +171,8 @@ function pushMsg()
             {
 
                 var return_data = xmlhttp.responseText;
+
+                console.log(return_data);
                 pushCalendar();
                 //console.log(return_data);
                 deleteMsg(1);
