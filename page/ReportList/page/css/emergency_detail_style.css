@@ -34,7 +34,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 10%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 10%;	
@@ -46,7 +46,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 20%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 20%;
