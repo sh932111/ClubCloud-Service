@@ -13,7 +13,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 80%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 0;
@@ -24,7 +24,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 100%;
 	height: 90%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 0;
@@ -57,7 +57,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 15%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 40%;
@@ -68,7 +68,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 15%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 55%;
@@ -79,7 +79,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	position: fixed;
 	width: 20%;
 	height: 10%;
-	top: 10%;
+	top: 0%;
 	right: 0;
 	bottom: auto;
 	left: 70%;	
