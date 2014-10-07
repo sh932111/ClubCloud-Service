@@ -34,8 +34,8 @@ echo json_encode($arr);
 while($row = mysql_fetch_array($objQuery))
 {
 
-    // if ($row['device_os'] == "android" ) 
-    // {
+    if ($row['device_os'] == "android" ) 
+    {
         (string)$regID = array();
         
         array_push($regID, $row['device_token']);
@@ -66,74 +66,72 @@ while($row = mysql_fetch_array($objQuery))
 
         $result = curl_exec($ch);
         
-        //curl_close($ch);
-    // }
-    // if ($row['device_os'] == "ios") 
-    // {
+        curl_close($ch);
+    }
+    if ($row['device_os'] == "ios") 
+    {
 
-    //     $deviceToken = $row['device_token'];
+        $deviceToken = $row['device_token'];
     
-    //     $passphrase = 'enough306';
+        $passphrase = 'enough306';
     
 
-    //     $ctx = stream_context_create();
-    //     stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
-    //     stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
+        $ctx = stream_context_create();
+        stream_context_set_option($ctx, 'ssl', 'local_cert', 'ck.pem');
+        stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
-    //     $fp = stream_socket_client(
-    //         'ssl://gateway.sandbox.push.apple.com:2195', $err,
-    //         $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
-    //    if (!$fp)
-    //         exit("Failed to connect: $err $errstr" . PHP_EOL);
+        $fp = stream_socket_client(
+            'ssl://gateway.sandbox.push.apple.com:2195', $err,
+            $errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
+       if (!$fp)
+            exit("Failed to connect: $err $errstr" . PHP_EOL);
 
-    //     echo 'Connected to APNS' . PHP_EOL;
+        echo 'Connected to APNS' . PHP_EOL;
 
-    // // Create the payload body
-    //     $body['aps'] = array(
-    //         'alert' => $title,
-    //         'badge' => "0",
-    //         'soubd' => "default",
-    //         'data_id' => $id,
-    //         'title' => $title,
-    //         'detail' => back_space_and_br($detail),
-    //         'time' => $time,
-    //         'time_detail' => $time_detail,
-    //         'image' => $image,
-    //         'type' => $type
-    //         );
+    // Create the payload body
+        $body['aps'] = array(
+            'alert' => $title,
+            'badge' => "0",
+            'soubd' => "default",
+            'data_id' => $id,
+            'title' => $title,
+            'detail' => back_space_and_br($detail),
+            'time' => $time,
+            'time_detail' => $time_detail,
+            'image' => $image,
+            'type' => $type
+            );
 
-    // // Encode the payload as JSON
-    //     $payload = json_encode($body);
+    // Encode the payload as JSON
+        $payload = json_encode($body);
 
-    // // Build the binary notification
-    //     $msg = chr(0) . pack('n', 32) . pack('H*', $deviceToken) . pack('n', strlen($payload)) . $payload;
+    // Build the binary notification
+        $msg = chr(0) . pack('n', 32) . pack('H*', $deviceToken) . pack('n', strlen($payload)) . $payload;
 
-    // // Send it to the server
-    //     $result = fwrite($fp, $msg, strlen($msg));
+    // Send it to the server
+        $result = fwrite($fp, $msg, strlen($msg));
 
-    //     if (!$result)
-    //     {
-    //         $arr["result"] = FALSE;
+        if (!$result)
+        {
+            $arr["result"] = FALSE;
 
-    //         echo json_encode($arr);
-    //         exit();
+            echo json_encode($arr);
 
-    //         echo 'Message not delivered' . PHP_EOL;
-    //     }
-    //     else
-    //     {
-    //         $arr["result"] = TRUE;
+            echo 'Message not delivered' . PHP_EOL;
+        }
+        else
+        {
+            $arr["result"] = TRUE;
 
-    //         echo json_encode($arr);
-    //         exit();
+            echo json_encode($arr);
 
-    //         echo 'Message successfully delivered' . PHP_EOL;
+            echo 'Message successfully delivered' . PHP_EOL;
 
-    //     }
+        }
 
-    // // Close the connection to the server
-    //     //fclose($fp);
-    // }
+    // Close the connection to the server
+        fclose($fp);
+    }
 }
 
 mysql_close($objConnect);
