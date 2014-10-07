@@ -32,8 +32,8 @@
 
 		$data["name"] = $objResult["name"];
 		$data["username"] = $objResult["username"];
-		$data["title"] = $objResult["title"];
-		$data["detail"] = $objResult["detail"];
+		$data["title"] = back_space_and_br($objResult["title"]);
+		$data["detail"] =  back_space_and_br($objResult["detail"]);
 		$data["date"] = $objResult["date"];
 		
 		$data["time"] = $objResult["time"];//territory_name
@@ -52,6 +52,16 @@
 	}
 	
 	mysql_close($objConnect);
+
+
+function back_space_and_br($str)
+{
+//將空白還原
+	$str=str_replace(" ","&nbsp;","$str");
+//將換行還原
+	$str=nl2br($str);   //注意!是L不是1
+	return $str;
+}
 
 ?>
 
