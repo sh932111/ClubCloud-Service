@@ -29,8 +29,8 @@ var userName = '<?php echo $username; ?>';
 		<p><input type="button" value="活動行事曆" onclick="checkCalendar()" /></p>
 		<p><input type="button" value="訊息查詢" onclick="selectMsg()" /></p>
 		<p><input type="button" value="訊息傳送" onclick="pushMsg()" /></p>
-		<p><input type="button" value="社刊製作" onclick="makebook()" /></p>
 		<p><input type="button" value="資料清單" onclick="crashMsg()" /></p>
+		<p><input type="button" value="社刊製作" onclick="makebook()" /></p>
 	</div>
 	<div id="main">
 

@@ -40,7 +40,7 @@ while($row = mysql_fetch_array($objQuery))
         $url = 'https://android.googleapis.com/gcm/send';
 
         $fields = array('registration_ids'  => $regID,
-            'data'              => array('data_id' => $id,'title' => $title,'detail' => $detail,'time' => $time,'time_detail' => $time_detail,'image' => $image,'type' => $type)
+            'data'              => array('data_id' => $id,'title' => $title,'detail' => back_space_and_br($detail),'time' => $time,'time_detail' => $time_detail,'image' => $image,'type' => $type)
             );
 
         $headers = array('Content-Type: application/json',
@@ -88,7 +88,7 @@ while($row = mysql_fetch_array($objQuery))
             'soubd' => "default",
             'data_id' => $id,
             'title' => $title,
-            'detail' => $detail,
+            'detail' => back_space_and_br($detail),
             'time' => $time,
             'time_detail' => $time_detail,
             'image' => $image,
@@ -130,5 +130,11 @@ while($row = mysql_fetch_array($objQuery))
 }
 
 mysql_close($objConnect);
-
+function back_space_and_br($str)
+{
+//將空白還原
+    $str=str_replace("<br>"," ","$str");
+//將換行還原
+    return $str;
+}
 ?> 
