@@ -38,6 +38,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 0;	
 	text-align:center;
+	line-height:10%;
 }
 #user_id
 {
@@ -49,6 +50,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 15%;
 	text-align:center;
+	line-height:10%;
 }
 #latidute
 {
@@ -60,6 +62,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 40%;
 	text-align:center;
+	line-height:10%;
 }
 #longitude
 {
@@ -71,6 +74,7 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 60%;
 	text-align:center;
+	line-height:10%;
 }
 #check
 {
@@ -82,4 +86,5 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 	bottom: auto;
 	left: 80%;	
 	text-align:center;
+	line-height:10%;
 }
