@@ -60,30 +60,34 @@ function getDetail()
                         
                         nameDiv.innerHTML = obj.name;
 
-                        nameDiv.style.top = i * 10 + "%";
+                        nameDiv.style.top = i * 10 + 20+"%";
 
                         var idDiv = document.createElement("div");
 
                         idDiv.className = 'list_user_id';
                         
                         idDiv.innerHTML = obj.user_id;
+                        idDiv.style.top = i * 10 + 20+"%";
 
                         var latDiv = document.createElement("div");
 
                         latDiv.className = 'list_latidute';
                         
+                        latDiv.style.top = i * 10 + 20+"%";
                         latDiv.innerHTML = obj.latitude;
 
                         var longDiv = document.createElement("div");
 
                         longDiv.className = 'list_longitude';
                         
+                        longDiv.style.top = i * 10 + 20+"%";
                         longDiv.innerHTML = obj.longitude;
 
                         var checkDiv = document.createElement("div");
 
                         checkDiv.className = 'list_check';
                         
+                        checkDiv.style.top = i * 10 + 20+"%";
                         if (obj.t_check == 0)
                         {
                             checkDiv.innerHTML = "未回報";
