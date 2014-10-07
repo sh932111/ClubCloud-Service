@@ -45,12 +45,7 @@ if (!$db_selected)
 else
 {
 	$creat_query  ="CREATE TABLE `$userName`(
-		`type` VARCHAR(20) NOT NULL,
-		`title` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-		`id` VARCHAR(200) NOT NULL PRIMARY KEY,
-		`list` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci,
-		`date` VARCHAR(20) NOT NULL,
-		`time` VARCHAR(20) NOT NULL
+		`id` VARCHAR(200) NOT NULL PRIMARY KEY
 		);";
 	
 	$table_selected = mysql_query($creat_query, $link);

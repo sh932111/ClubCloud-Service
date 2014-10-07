@@ -35,6 +35,10 @@
 
 	$link = mysql_connect('localhost','root','sh3599033');
 
+	$sql = 'CREATE DATABASE UserCategory';
+	
+	mysql_query($sql, $link);
+
 	mysql_query("SET NAMES 'utf8'",$link);
 	if (!$link) 
 	{
@@ -85,6 +89,14 @@
 			}
 			else
 			{
+				$db_selected = mysql_select_db('UserCategory');
+
+				$creat_query  ="CREATE TABLE `$username`(
+				`id` VARCHAR(200) NOT NULL PRIMARY KEY
+				);";
+			
+				$table_selected = mysql_query($creat_query, $link);
+
 				$arr["Message"] = '新增會員成功！';
 				$arr["result"] = true;
 				echo json_encode($arr);
