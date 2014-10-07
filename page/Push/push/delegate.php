@@ -26,6 +26,11 @@ $objQuery = mysql_query($select_action);
 
 $intNumRows = mysql_num_rows($objQuery);
 
+$arr["city_id"] = $city_id;
+$arr["city_detail_id"] = $city_detail_id;
+
+echo json_encode($arr);
+
 while($row = mysql_fetch_array($objQuery))
 {
 
