@@ -21,11 +21,16 @@ var eventID = '<?php echo $event_id; ?>';
 	<link rel="stylesheet" href="css/emergency_detail_style.css">
 </head>
 <body onload="init()">
-	<nav>
+	<h3>事件回報人</h3>
+	<div id="listTitle"></div>
+	<hr>
+	<div id="list">
+		<nav>
 		<ul id="listView">
 			
 		</ul>
 	</nav>
+	</div>
 </body>
 
 <script src="js/emergency_detail.js"></script>
