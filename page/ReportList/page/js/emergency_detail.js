@@ -51,11 +51,11 @@ function getDetail()
 
                     var listView = document.getElementById('listView');
 
+                    var result = "<table border='1'>";
+
                     for (var i = 0; i < responseData.data.num; i++) 
                     {
                         var obj = responseData.data[i];
-
-                        var result = "<table border='1'>";
 
                         result += "<tr><td>使用者</td><td>身分證字號</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td></tr>";
 
