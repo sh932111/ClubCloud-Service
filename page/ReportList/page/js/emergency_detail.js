@@ -45,5 +45,6 @@ function getDetail()
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
-    xmlhttp.send("postId="+eventID); 
+    var post = "postId="+eventID;
+    xmlhttp.send(post); 
 }
