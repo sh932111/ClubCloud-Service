@@ -42,6 +42,8 @@ function getDetail()
 
             responseData = JSON.parse(return_data);
 
+            console.log(responseData.data);
+
             if (responseData.result)
             {
                 if (responseData.data.num != 0)
