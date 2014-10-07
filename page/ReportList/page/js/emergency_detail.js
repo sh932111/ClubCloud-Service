@@ -40,6 +40,8 @@ function getDetail()
             var return_data = xmlhttp.responseText;
 
             var get_json = JSON.parse(return_data);
+
+            console.log(get_json);
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
