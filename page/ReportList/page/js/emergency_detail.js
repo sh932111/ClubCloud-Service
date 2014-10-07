@@ -68,7 +68,7 @@ function getDetail()
 
                         var latDiv = document.createElement("div");
 
-                        latDiv.className = 'list_latitude';
+                        latDiv.className = 'list_latidute';
                         
                         latDiv.innerHTML = obj.latitude;
 
