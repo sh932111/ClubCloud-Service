@@ -34,7 +34,7 @@ echo json_encode($arr);
 while($row = mysql_fetch_array($objQuery))
 {
 
-    if ($row['device_os'] == "android" && $row['city_id'] == $city_id && $row['city_detail_id'] == $city_detail_id) 
+    if ($row['device_os'] == "android" ) 
     {
         (string)$regID = array();
         
@@ -66,9 +66,9 @@ while($row = mysql_fetch_array($objQuery))
 
         $result = curl_exec($ch);
         
-        curl_close($ch);
+        //curl_close($ch);
     }
-    if ($row['device_os'] == "ios" && $row['city_id'] == $city_id && $row['city_detail_id']== $city_detail_id) 
+    if ($row['device_os'] == "ios") 
     {
 
         $deviceToken = $row['device_token'];
@@ -132,7 +132,7 @@ while($row = mysql_fetch_array($objQuery))
         }
 
     // Close the connection to the server
-        fclose($fp);
+        //fclose($fp);
     }
 }
 
