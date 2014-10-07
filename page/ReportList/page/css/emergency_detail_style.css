@@ -32,49 +32,54 @@ nav ul{overflow:hidden; overflow-y:scroll;}
 {
 	position: fixed;
 	width: 15%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
 	left: 0;	
+	text-align:center;
 }
 #user_id
 {
 	position: fixed;
 	width: 25%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
 	left: 15%;
+	text-align:center;
 }
 #latidute
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
 	left: 40%;
+	text-align:center;
 }
 #longitude
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
 	left: 60%;
+	text-align:center;
 }
 #check
 {
 	position: fixed;
 	width: 20%;
-	height: 100%;
+	height: 10%;
 	top: 0;
 	right: 0;
 	bottom: auto;
 	left: 80%;	
+	text-align:center;
 }
