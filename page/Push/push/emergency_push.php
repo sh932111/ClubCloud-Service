@@ -91,9 +91,10 @@ if ($db_selected)
 
         $db_selected_3 = mysql_select_db('user_data');
 
-        $us_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
-        AND city_detail_id = '$area_id'  
-        ";
+        $us_select_action = "SELECT * FROM user_table";
+        // $us_select_action = "SELECT * FROM user_table WHERE city_id = '$city_id'  
+        // AND city_detail_id = '$area_id'  
+        // ";
 
         $obj_Query = mysql_query($us_select_action);
     
