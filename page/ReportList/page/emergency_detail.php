@@ -35,7 +35,7 @@ var eventID = '<?php echo $event_id; ?>';
 		<ul id="listView">
 			
 		</ul>
-	</nav>
+		</nav>
 	</div>
 </body>
 
