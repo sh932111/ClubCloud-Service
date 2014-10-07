@@ -1,4 +1,5 @@
 var userData;
+var responseData;
 
 function init()
 {
@@ -41,6 +42,8 @@ function getEvent()
 
             var get_json = JSON.parse(return_data);
 
+            responseData = get_json;
+
             if (get_json.result)
             {
                 if (get_json.data.num != 0)
@@ -75,7 +78,7 @@ function getEvent()
                         var t = document.createTextNode("回報人統計");
                         bt.appendChild(t); 
                         bt.onclick = function(){
-                            //alert(this.id);
+                            alert(responseData.data[this.id]);
                             return false;
                         };
 
