@@ -15,7 +15,13 @@ $username = $_GET['username'];
 <script type="text/javascript">
 
 var userName = "<?php echo $username; ?>";
-
+function upimg(imgfile)
+{
+	var picshow = document.getelementbyid("picshow");
+	picshow.filters.item("dximagetransform.microsoft.alphaimageloader").src = imgfile.value;
+	picshow.style.width = "88px";
+	picshow.style.height = "125px";
+} 
 </script>
 
 <title>發送訊息</title>
@@ -43,9 +49,10 @@ var userName = "<?php echo $username; ?>";
 </div>
 <div id="view">
 	<form action="upload.php" method="post" id="ajaxForm">
-		<input type="file" id="pic" name="pic"><br>
+		<input type="file" id="pic" name="pic"  onchange="previewImage(this)"><br>
 		<input name="item" id="item" type="text" value="" style = "display:none"><br>
 	</form>
+	<div id="picshow"></div> 
 </div>
 <script>
 // 按上傳才上傳
