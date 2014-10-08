@@ -65,22 +65,20 @@ else
 		}
 		else
 		{
-			$data["name"] = $objResult["name"];
-			$data["username"] = $objResult["username"];
-			$data["data_id"] = $objResult["data_id"];
-			$data["title"] = $objResult["title"];
-			$data["detail"] = $objResult["detail"];
-			$data["date"] = $objResult["date"];
+			$arr["name"] = $objResult["name"];
+			$arr["username"] = $objResult["username"];
+			$arr["data_id"] = $objResult["data_id"];
+			$arr["title"] = $objResult["title"];
+			$arr["detail"] = $objResult["detail"];
+			$arr["date"] = $objResult["date"];
 			
-			$data["time"] = $objResult["time"];//territory_name
-			$data["city"] = $objResult["city"];//district_name
-			$data["area"] = $objResult["area"];//city_id
-			$data["liner"] = $objResult["liner"];//district_id
+			$arr["time"] = $objResult["time"];//territory_name
+			$arr["city"] = $objResult["city"];//district_name
+			$arr["area"] = $objResult["area"];//city_id
+			$arr["liner"] = $objResult["liner"];//district_id
 			
-			$data["address"] = $objResult["address"];//district_id
-			$data["image"] = $objResult["image"];//district_id
-		
-			$arr["data"] = $data;
+			$arr["address"] = $objResult["address"];//district_id
+			$arr["image"] = $objResult["image"];//district_id
 
 		    $arr["result"] = TRUE;
 			$arr["Message"] = "點名成功!";
