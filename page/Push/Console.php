@@ -25,6 +25,15 @@ function previewImage(imgfile)
 </script>
 
 <title>發送訊息</title>
+<style type="text/css" media="screen">
+#picshow
+{
+filter:progid:dximagetransform.microsoft.alphaimageloader(sizingmethod=scale);
+width:88px;
+height:125px;
+} 
+</style>
+
 <head>
 	<link rel="stylesheet" href="css/style.css">
 </head>
