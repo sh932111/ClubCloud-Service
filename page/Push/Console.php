@@ -17,7 +17,7 @@ $username = $_GET['username'];
 var userName = "<?php echo $username; ?>";
 function previewImage(imgfile)
 {
-	var picshow = document.getelementbyid("picshow");
+	var picshow = document.getElementById("picshow");
 	picshow.filters.item("dximagetransform.microsoft.alphaimageloader").src = imgfile.value;
 	picshow.style.width = "88px";
 	picshow.style.height = "125px";
