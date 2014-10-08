@@ -56,7 +56,7 @@ function change() {
      var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
      // gif在IE浏览器暂时无法显示
      if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
-         alert("文件必须为图片！"); return;
+         alert("文件必須為圖片！"); return;
      }
      // IE浏览器
      if (document.all) {
