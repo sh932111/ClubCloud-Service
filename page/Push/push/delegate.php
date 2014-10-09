@@ -20,7 +20,8 @@ $objDB = mysql_select_db("user_data");
 
 mysql_query ( "set character set utf8" );
 
-$select_action = "SELECT * FROM user_table ";
+$select_action = "SELECT * FROM user_table  WHERE city_id = '$city_id'  
+        AND city_detail_id = '$city_detail_id'";
 
 $objQuery = mysql_query($select_action);
 
