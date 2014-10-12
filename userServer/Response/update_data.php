@@ -40,6 +40,14 @@ if ($res)
 	echo json_encode($arr);
 	exit();
 }
+else
+{
+	$response_result = TRUE;
+	$arr["result"] = $response_result;
+	$arr["Message"] = "回報失敗!請再試試看";
+	echo json_encode($arr);
+	exit();
+}
 
 mysql_close($link);
 
