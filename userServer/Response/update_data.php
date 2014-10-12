@@ -36,7 +36,7 @@ if ($res)
 {
 	$response_result = TRUE;
 	$arr["result"] = $response_result;
-	$arr["Message"] = "回報成功！";
+	$arr["Message"] = "回報成功!如需救援請待在原地或找安全地點避難，並注意手機訊息！";
 	echo json_encode($arr);
 	exit();
 }

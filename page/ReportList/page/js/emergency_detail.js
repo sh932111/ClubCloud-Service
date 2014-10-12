@@ -71,7 +71,12 @@ function getDetail()
                         }
                         else if (obj.t_check == 2)
                         {
-                            status = "使用者已回報";
+                            status = "使用者平安回報";
+                        }
+
+                        else if (obj.t_check == 3)
+                        {
+                            status = "使用者需立刻需救援";
                         }
 
                         result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
