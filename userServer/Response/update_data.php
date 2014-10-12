@@ -28,7 +28,7 @@ $query = sprintf("UPDATE `$table_id` SET
 					`latitude` = '$latitude' ,
 					`longitude` = '$longitude' ,
 					`t_check` = '$user_status' 
-					WHERE `username` = '$username';");
+					WHERE `username` = '$username'");
 
 $res = mysql_query($query,$link);
 
