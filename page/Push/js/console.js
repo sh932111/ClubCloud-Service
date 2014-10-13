@@ -145,9 +145,9 @@ function pushCalendar()
 
 	            if (get_json.result) 
 	            {
-	            	 alert("推送成功");
+	            	alert("推送成功");
 	            	 
-                    history.go(-1);
+                	window.location.reload();
 	            }
 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
 	        }

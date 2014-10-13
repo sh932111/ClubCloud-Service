@@ -97,7 +97,7 @@ function PushSQL(ID,date,time)
  
                 alert("推送成功");
                      
-                history.go(-1);
+                window.location.reload();
             }
         }
         // Send the data to PHP now... and wait for response to update the status div
