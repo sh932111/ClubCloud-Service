@@ -30,71 +30,88 @@ if (!$db_selected)
 }
 else
 {
-	$query = sprintf("SELECT * FROM `$userName`");
-	
-	$res = mysql_query($query,$link);
+	$creat_query  ="CREATE TABLE `$userName`(
+		`id` VARCHAR(200) NOT NULL PRIMARY KEY
+		);";
 
-	if ($res) 
+	$table_selected = mysql_query($creat_query, $link);
+
+	if ($table_selected) 
 	{
-		$data = array();
-		$list = array();
-
-		$i = 0;
-		$intNumRows = mysql_num_rows($res);
-
-		while ($objResult = mysql_fetch_array($res)) 
-		{
-			$data_id = $objResult["id"];
-
-			$db_selected2 = mysql_select_db('user_data');
-
-    		$select_action2 = "SELECT * FROM calendar_table WHERE data_id = '$data_id'";
-
-			$objQuery = mysql_query($select_action2);
-			$objResult2 = mysql_fetch_array($objQuery);
-			$intNumRows2 = mysql_num_rows($objQuery);
-	    
-			$data["name"] = $objResult2["name"];
-			$data["username"] = $objResult2["username"];
-			$data["data_id"] = $objResult2["data_id"];
-			$data["title"] = $objResult2["title"];
-			$data["detail"] = $objResult2["detail"];
-			$data["date"] = $objResult2["date"];
-			
-			$data["time"] = $objResult2["time"];//territory_name
-			$data["city"] = $objResult2["city"];//district_name
-			$data["area"] = $objResult2["area"];//city_id
-			$data["liner"] = $objResult2["liner"];//district_id
-			
-			$data["address"] = $objResult2["address"];//district_id
-			$data["image"] = $objResult2["image"];//district_id
-
-			$list[$i] = $data;
-
-			$i = $i + 1;
-		}
-
-		$arr["result"] = TRUE;
-
-		$arr["Message"] = "抓取資料成功";
-
-		$arr["num"] = $i;
-
-		$arr["data"] = $list;
-
+		$response_result = TRUE;
+		$arr["result"] = $response_result;
+		$arr["Message"] = "使用者尚無資料";
 		echo json_encode($arr);
-
 		exit();
 	}
 	else
 	{
-		$response_result = TRUE;
-		$arr["result"] = $response_result;
-		$arr["Message"] = "失敗!";
-		echo json_encode($arr);
-		exit();
+		$query = sprintf("SELECT * FROM `$userName`");
+		
+		$res = mysql_query($query,$link);
+
+		if ($res) 
+		{
+			$data = array();
+			$list = array();
+
+			$i = 0;
+			$intNumRows = mysql_num_rows($res);
+
+			while ($objResult = mysql_fetch_array($res)) 
+			{
+				$data_id = $objResult["id"];
+
+				$db_selected2 = mysql_select_db('user_data');
+
+				$select_action2 = "SELECT * FROM calendar_table WHERE data_id = '$data_id'";
+
+				$objQuery = mysql_query($select_action2);
+				$objResult2 = mysql_fetch_array($objQuery);
+				$intNumRows2 = mysql_num_rows($objQuery);
+
+				$data["name"] = $objResult2["name"];
+				$data["username"] = $objResult2["username"];
+				$data["data_id"] = $objResult2["data_id"];
+				$data["title"] = $objResult2["title"];
+				$data["detail"] = $objResult2["detail"];
+				$data["date"] = $objResult2["date"];
+				
+				$data["time"] = $objResult2["time"];//territory_name
+				$data["city"] = $objResult2["city"];//district_name
+				$data["area"] = $objResult2["area"];//city_id
+				$data["liner"] = $objResult2["liner"];//district_id
+				
+				$data["address"] = $objResult2["address"];//district_id
+				$data["image"] = $objResult2["image"];//district_id
+
+				$list[$i] = $data;
+
+				$i = $i + 1;
+			}
+
+			$arr["result"] = TRUE;
+
+			$arr["Message"] = "抓取資料成功";
+
+			$arr["num"] = $i;
+
+			$arr["data"] = $list;
+
+			echo json_encode($arr);
+
+			exit();
+		}
+		else
+		{
+			$response_result = FALSE;
+			$arr["result"] = $response_result;
+			$arr["Message"] = "失敗!";
+			echo json_encode($arr);
+			exit();
+		}
 	}
 
-	mysql_close($link);
+mysql_close($link);
 }
 ?>
