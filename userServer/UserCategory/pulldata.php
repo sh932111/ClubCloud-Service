@@ -44,7 +44,28 @@ else
 
 		while ($objResult = mysql_fetch_array($res)) 
 		{
-			$data["id"] = $objResult["id"];
+			// $data["id"] = $objResult["id"];
+
+			$toURL = "pushRollCall";
+			$post = array(
+			  "id"=> $objResult["id"]
+			);
+			$ch = curl_init();
+			$options = array(
+			  CURLOPT_URL=>$toURL,
+			  CURLOPT_HEADER=>0,
+			  CURLOPT_VERBOSE=>0,
+			  CURLOPT_RETURNTRANSFER=>true,
+			  CURLOPT_USERAGENT=>"Mozilla/4.0 (compatible;)",
+			  CURLOPT_POST=>true,
+			  CURLOPT_POSTFIELDS=>http_build_query($post),
+			);
+			curl_setopt_array($ch, $options);
+			// CURLOPT_RETURNTRANSFER=true 會傳回網頁回應,
+			// false 時只回傳成功與否
+			$result = curl_exec($ch);
+			$data["response"] = $result;
+			curl_close($ch);
 			// $data["name"] = $objResult["name"];
 			// $data["username"] = $objResult["username"];
 			// $data["data_id"] = $objResult["data_id"];
