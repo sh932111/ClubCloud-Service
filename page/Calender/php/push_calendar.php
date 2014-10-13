@@ -59,7 +59,7 @@ if ($db_selected)
 		`date` VARCHAR(10) NOT NULL,
 		`time` VARCHAR(20) NOT NULL,
 		`city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci   NOT NULL,
-		`area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,,
+		`area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`address_city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci   NOT NULL,
 		`address_area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`liner` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
