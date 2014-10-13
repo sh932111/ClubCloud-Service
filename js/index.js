@@ -28,8 +28,6 @@ function login ()
             
             var msg = JSON.parse(return_data);
 
-            alert(msg.data.name);
-
 			if (msg.result)
 			{
 				location.href = 'page/home.php?username='+username;
