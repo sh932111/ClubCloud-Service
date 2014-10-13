@@ -12,6 +12,7 @@ var getCityId;
 var getCityDetailId;
 var imgCheck;
 
+
 function init() 
 {
     getData();

@@ -13,6 +13,7 @@ $city_id = $_POST["city_id"];
 $city_detail_id = $_POST["city_detail_id"];
 $image = $_POST["image"];
 $type = $_POST["type"];
+$address = $_POST["address"];
 
 $objConnect = mysql_connect("localhost","root","sh3599033");
 
@@ -46,7 +47,14 @@ while($row = mysql_fetch_array($objQuery))
         $url = 'https://android.googleapis.com/gcm/send';
 
         $fields = array('registration_ids'  => $regID,
-            'data'              => array('data_id' => $id,'title' => $title,'detail' => back_space_and_br($detail),'time' => $time,'time_detail' => $time_detail,'image' => $image,'type' => $type)
+            'data' => array('data_id' => $id,
+                            'title' => $title,
+                            'detail' => back_space_and_br($detail),
+                            'time' => $time,
+                            'time_detail' => $time_detail,
+                            'image' => $image,
+                            'type' => $type,
+                            'address' => $address)
             );
         $arr["test"] = back_space_and_br($detail);
         echo json_encode($arr);
@@ -101,7 +109,8 @@ while($row = mysql_fetch_array($objQuery))
             'time_detail' => $time_detail,
             'image' => $image,
             'type' => $type,
-            'check_img'=>"0"
+            'check_img'=>"0",
+            'address' => $address
             );
 
     // Encode the payload as JSON
