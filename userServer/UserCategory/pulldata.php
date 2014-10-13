@@ -78,7 +78,7 @@ else
 
 		$arr["Message"] = "抓取資料成功";
 
-		$list["num"] = $i;
+		$arr["num"] = $i;
 
 		$arr["data"] = $list;
 
