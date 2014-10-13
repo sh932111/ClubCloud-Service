@@ -44,42 +44,30 @@ else
 
 		while ($objResult = mysql_fetch_array($res)) 
 		{
-			// $data["id"] = $objResult["id"];
+			$data_id = $objResult["id"];
 
-			$toURL = "pushRollCall.php";
-			$post = array(
-			  "id"=> $objResult["id"]
-			);
-			$ch = curl_init();
-			$options = array(
-			  CURLOPT_URL=>$toURL,
-			  CURLOPT_HEADER=>0,
-			  CURLOPT_VERBOSE=>0,
-			  CURLOPT_RETURNTRANSFER=>true,
-			  CURLOPT_USERAGENT=>"Mozilla/4.0 (compatible;)",
-			  CURLOPT_POST=>true,
-			  CURLOPT_POSTFIELDS=>http_build_query($post),
-			);
-			curl_setopt_array($ch, $options);
-			// CURLOPT_RETURNTRANSFER=true 會傳回網頁回應,
-			// false 時只回傳成功與否
-			$result = curl_exec($ch);
-			$data["response"] = $result;
-			curl_close($ch);
-			// $data["name"] = $objResult["name"];
-			// $data["username"] = $objResult["username"];
-			// $data["data_id"] = $objResult["data_id"];
-			// $data["title"] = $objResult["title"];
-			// $data["detail"] = $objResult["detail"];
-			// $data["date"] = $objResult["date"];
+			$db_selected2 = mysql_select_db('user_data');
+
+    		$select_action2 = "SELECT * FROM calendar_table WHERE data_id = '$data_id'";
+
+			$objQuery = mysql_query($select_action2);
+			$objResult2 = mysql_fetch_array($objQuery);
+			$intNumRows2 = mysql_num_rows($objQuery);
+	    
+			$data["name"] = $objResult2["name"];
+			$data["username"] = $objResult2["username"];
+			$data["data_id"] = $objResult2["data_id"];
+			$data["title"] = $objResult2["title"];
+			$data["detail"] = $objResult2["detail"];
+			$data["date"] = $objResult2["date"];
 			
-			// $data["time"] = $objResult["time"];//territory_name
-			// $data["city"] = $objResult["city"];//district_name
-			// $data["area"] = $objResult["area"];//city_id
-			// $data["liner"] = $objResult["liner"];//district_id
+			$data["time"] = $objResult2["time"];//territory_name
+			$data["city"] = $objResult2["city"];//district_name
+			$data["area"] = $objResult2["area"];//city_id
+			$data["liner"] = $objResult2["liner"];//district_id
 			
-			// $data["address"] = $objResult["address"];//district_id
-			// $data["image"] = $objResult["image"];//district_id
+			$data["address"] = $objResult2["address"];//district_id
+			$data["image"] = $objResult2["image"];//district_id
 
 			$list[$i] = $data;
 
