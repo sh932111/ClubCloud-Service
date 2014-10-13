@@ -109,7 +109,20 @@ function pushData()
 
 		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
-	    var post = "id="+ID+"&title="+div_title+"&detail="+div_detail+"&time="+day+"&time_detail="+div_time_detail+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ImageCheck+"&type="+"1"+"&address="+address;
+	    var post = "id="+ID
+	    +"&title="+div_title
+	    +"&detail="+div_detail
+	    +"&time="+day
+	    +"&time_detail="+div_time_detail
+	    +"&city="+getCity
+	    +"&city_detail="+getCityDetail
+	    +"&city_id="+getCityId
+	    +"&city_detail_id="+getCityDetailId
+	    +"&image="+ImageCheck
+	    +"&type="+"1"
+	    +"&address="+address
+	    +"&address_city="+addressCity
+	    +"&address_area="+addressCityDetail;
 
 	    xmlhttp.send(post); 
 }
@@ -146,6 +159,7 @@ function pushCalendar()
 	    var div_time = document.getElementById('time').value;
 	    var div_time_detail = document.getElementById('time_detail').value;
 	   	var item = document.getElementById('item').value;
+	    var address = document.getElementById('address').value;
 
 	   	var myDate = new Date(div_time);
 
@@ -165,7 +179,22 @@ function pushCalendar()
 
 		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
-	    var post = "id="+item+"&title="+div_title+"&detail="+div_detail+"&date="+day+"&time="+div_time_detail+"&city="+getCity+"&area="+getCityDetail+"&address="+"福利中心"+"&name="+userData.name+"&username="+userData.username+"&liner="+"某某里"+"&image="+ ImageCheck+"&city_id="+getCityId+"&area_id="+ getCityDetailId;
+	    var post = "id="+item
+	    +"&title="+div_title
+	    +"&detail="+div_detail
+	    +"&date="+day
+	    +"&time="+div_time_detail
+	    +"&city="+getCity
+	    +"&area="+getCityDetail
+	    +"&address="+address
+	    +"&name="+userData.name
+	    +"&username="+userData.username
+	    +"&liner="+"某某里"
+	    +"&image="+ ImageCheck
+	    +"&city_id="+getCityId
+	    +"&area_id="+ getCityDetailId
+	    +"&address_city="+addressCity
+	    +"&address_area="+addressCityDetail;
 
 	    xmlhttp.send(post); 
 

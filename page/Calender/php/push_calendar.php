@@ -25,6 +25,8 @@ $address = $_POST["address"];//地點
 $image = $_POST["image"];//是否有圖 1 or 0
 $city_id = $_POST["city_id"];
 $area_id = $_POST["area_id"];
+$address_city = $_POST["address_city"];
+$address_area = $_POST["address_area"];
 
 if (!$objConnect) 
 {
@@ -57,7 +59,9 @@ if ($db_selected)
 		`date` VARCHAR(10) NOT NULL,
 		`time` VARCHAR(20) NOT NULL,
 		`city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci   NOT NULL,
-		`area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
+		`area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,,
+		`address_city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci   NOT NULL,
+		`address_area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`liner` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`address` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
 		`image` INT NOT NULL
@@ -65,9 +69,9 @@ if ($db_selected)
 
 $table_selected = mysql_query($creat_query, $objConnect);
 
-$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`) 
-	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-	$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image);
+$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`,`address_city`,`address_area`) 
+	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+	$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image,$address_city,$address_area);
 
 $res = mysql_query($query,$objConnect);
 

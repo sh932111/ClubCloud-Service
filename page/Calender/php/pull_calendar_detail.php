@@ -44,6 +44,9 @@
 		$data["address"] = $objResult["address"];//district_id
 		$data["image"] = $objResult["image"];//district_id
 	
+		$data["address_city"] = $objResult["address_city"];//district_id
+		$data["address_area"] = $objResult["address_area"];//district_id
+	
 		$arr["data"] = $data;
 		
 		echo json_encode($arr);

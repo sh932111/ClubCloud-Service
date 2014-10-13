@@ -88,27 +88,31 @@ function getDetailData()
             document.getElementById("msg_name").innerHTML = "訊息發送人："+requestData.name;
             document.getElementById("msg_username").innerHTML = "帳號："+requestData.username;
             document.getElementById("msg_title").innerHTML = "標題："+requestData.title;
-            document.getElementById("msg_address").innerHTML = "活動地址："+requestData.city + requestData.area+requestData.address;
+            if (linkClass == 0)
+            {
+                document.getElementById("msg_address").innerHTML = "活動地址："+requestData.address_city + requestData.address_area+requestData.address;
+            }
+            else if (linkClass == 1)
+            {
+                document.getElementById("msg_address").innerHTML = "活動地址："+requestData.city + requestData.area+requestData.address;
+            }
             document.getElementById("msg_time").innerHTML = "活動時間："+requestData.date + "  "+requestData.time;
             document.getElementById("msg_list").innerHTML = "內文：<br>"+requestData.detail;
             
             var img_check = requestData.image;
             imgCheck = img_check;
             
-	console.log(imgCheck);
-	if (img_check == 1)
+	           if (img_check == 1)
             {
                 var msg_image = document.getElementById("msg_image");
 
                 msg_image.innerHTML = "活動圖片：<br>";
 
                 var p = document.createElement("p");
-		
-		console.log(postId);
 
                 var img = document.getElementById("uploadImg");
                 //img.setAttribute("src","../../userServer/Request/request_img/"+postId+".png");
-	img.src = "../../userServer/Request/request_img/"+postId+".png";	
+	           img.src = "../../userServer/Request/request_img/"+postId+".png";	
 		
                 //img.setAttribute("height","768");
                 //img.setAttribute("width","1024");
@@ -181,7 +185,20 @@ function pushMsg()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
-        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&time="+requestData.date+"&time_detail="+requestData.time+"&city="+getCity+"&city_detail="+getCityDetail+"&city_id="+getCityId+"&city_detail_id="+getCityDetailId+"&image="+ imgCheck+"&type="+"1";
+        var post = "id="+postId
+        +"&title="+requestData.title
+        +"&detail="+requestData.detail
+        +"&time="+requestData.date
+        +"&time_detail="+requestData.time
+        +"&city="+getCity
+        +"&city_detail="+getCityDetail
+        +"&city_id="+getCityId
+        +"&city_detail_id="+getCityDetailId
+        +"&image="+ imgCheck
+        +"&type="+"1"
+        +"&address="+requestData.address
+        +"&address_city="+requestData.city
+        +"&address_area="+requestData.area;
 
         xmlhttp.send(post); 
 }
@@ -206,7 +223,22 @@ function pushCalendar()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
-        var post = "id="+postId+"&title="+requestData.title+"&detail="+requestData.detail+"&date="+requestData.date+"&time="+requestData.time+"&city="+getCity+"&area="+getCityDetail+"&address="+requestData.address+"&name="+requestData.name+"&username="+requestData.username+"&liner="+"某某里"+"&image="+ imgCheck+"&city_id="+getCityId+"&area_id="+ getCityDetailId;
+        var post = "id="+postId
+        +"&title="+requestData.title
+        +"&detail="+requestData.detail
+        +"&date="+requestData.date
+        +"&time="+requestData.time
+        +"&city="+getCity
+        +"&area="+getCityDetail
+        +"&name="+requestData.name
+        +"&username="+requestData.username
+        +"&liner="+"某某里"
+        +"&image="+ imgCheck
+        +"&city_id="+getCityId
+        +"&area_id="+ getCityDetailId
+        +"&address="+requestData.address
+        +"&address_city="+requestData.city
+        +"&address_area="+requestData.area;
 
         xmlhttp.send(post); 
 }

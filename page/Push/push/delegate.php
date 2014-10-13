@@ -13,6 +13,8 @@ $city_id = $_POST["city_id"];
 $city_detail_id = $_POST["city_detail_id"];
 $image = $_POST["image"];
 $type = $_POST["type"];
+$address_city = $_POST["address_city"];
+$address_area = $_POST["address_area"];
 $address = $_POST["address"];
 
 $objConnect = mysql_connect("localhost","root","sh3599033");
@@ -54,6 +56,8 @@ while($row = mysql_fetch_array($objQuery))
                             'time_detail' => $time_detail,
                             'image' => $image,
                             'type' => $type,
+                            'city' => $address_city,
+                            'area' => $address_area,
                             'address' => $address)
             );
         $arr["test"] = back_space_and_br($detail);
@@ -110,6 +114,8 @@ while($row = mysql_fetch_array($objQuery))
             'image' => $image,
             'type' => $type,
             'check_img'=>"0",
+            'city' => $address_city,
+            'area' => $address_area,
             'address' => $address
             );
 
