@@ -11,7 +11,7 @@ function init()
 function setValue(e)
 {
     selected_value = e.value;
-    getDetail();
+    //getDetail();
 }
 
 function getData()
