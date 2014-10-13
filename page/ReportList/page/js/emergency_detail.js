@@ -1,15 +1,17 @@
 var userData;
 var responseData;
-
+var selected_value;
 function init()
 {
+    selected_value = 1;
 	getData();
     getDetail();
 }
 
-function setValue(event)
+function setValue(e)
 {
-    console.log(event.value);
+    selected_value = e.value;
+    getDetail();
 }
 
 function getData()
@@ -33,6 +35,20 @@ function getData()
     // Send the data to PHP now... and wait for response to update the status div
     xmlhttp.send("username="+userName); 
 }
+
+// function getRequestData()
+// {
+//     var es = new EventSource('php/pull_event_detail.php'); 
+
+//     es.onmessage = function(e) 
+//     {
+//         var get_json = JSON.parse(e.data);
+
+        
+//     };
+        
+// }
+
 function getDetail() 
 {
     var xmlhttp = new XMLHttpRequest();
@@ -64,6 +80,7 @@ function getDetail()
                     for (var i = 0; i < responseData.data.num; i++) 
                     {
                         var obj = responseData.data[i];
+                        
 
                         var status = "";
 
@@ -85,7 +102,39 @@ function getDetail()
                             status = "使用者需立刻需救援";
                         }
 
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        if (selected_value == 1)
+                        {
+                            result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        }
+                        else if (selected_value == 2)
+                        {
+                            if (obj.t_check == 0)
+                            {
+                                result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                            }
+                        }
+                        else if (selected_value == 3)
+                        {
+                            if (obj.t_check == 1)
+                            {
+                                result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                            }
+                        }
+                        else if (selected_value == 4)
+                        {
+                            if (obj.t_check == 2)
+                            {
+                                result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                            }
+                        }
+                        else if (selected_value == 5)
+                        {
+                            if (obj.t_check == 3)
+                            {
+                                result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                            }
+                        }
+
             
                     }
                     result += "</table>";

@@ -23,11 +23,11 @@ var eventID = '<?php echo $event_id; ?>';
 <body onload="init()">
 	<h3>事件回報人</h3>
 	<p><select id="check_event" onChange="setValue(this)" >
-		<option value="all">全部</option>
-		<option value="no">未回報</option>
-		<option value="phone">手機自行回報</option>
-		<option value="help">需救援</option>
-		<option value="peace">平安</option>
+		<option value="1">全部</option>
+		<option value="2">未回報</option>
+		<option value="3">手機自行回報</option>
+		<option value="4">使用者平安</option>
+		<option value="5">使用者需救援</option>
 	</select></p>
 	<div id="list">
 		<nav>
