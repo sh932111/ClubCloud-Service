@@ -46,7 +46,7 @@ else
 		{
 			// $data["id"] = $objResult["id"];
 
-			$toURL = "pushRollCall";
+			$toURL = "pushRollCall.php";
 			$post = array(
 			  "id"=> $objResult["id"]
 			);
