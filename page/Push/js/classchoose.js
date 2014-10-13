@@ -1,13 +1,13 @@
 function init () 
 {
-	
+	document.getElementById('iframe').setAttribute('src','Console.php?username='+userName);
 }
 function MsgPush () 
 {
-	location.href = 'Console.php?username='+userName;
+	document.getElementById('iframe').setAttribute('src','Console.php?username='+userName);
 }
 
 function EmergencyPush () 
 {
-	location.href = 'Emergency.php?username='+userName;	
+	document.getElementById('iframe').setAttribute('src','Emergency.php?username='+userName);
 }

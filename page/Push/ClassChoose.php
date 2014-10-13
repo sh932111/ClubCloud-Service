@@ -15,10 +15,17 @@ var userName = "<?php echo $username; ?>";
 </script>
 <title>類型選擇</title>
 <head>
+	<link rel="stylesheet" href="css/class_style.css">
 </head>
 <body onload="init()">
+	<div id="menu">
 	<input type="button" value="普通訊息" onclick="MsgPush()" />
-	<input type="button" value="緊急事件" onclick="EmergencyPush()" /><br />
+	<input type="button" value="緊急事件" onclick="EmergencyPush()" />
+	</div>
+	<div id="main">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
+		</iframe>
+	</div>
 </body>
 <script src="js/classchoose.js"></script>
 </html>
