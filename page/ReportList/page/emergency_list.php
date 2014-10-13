@@ -20,13 +20,7 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<h3>緊急事件清單</h3>
-	<p><select id="check_event" onChange="setValue(this)" >
-		<option value="all">全部</option>
-		<option value="no">未回報</option>
-		<option value="phone">手機自行回報</option>
-		<option value="help">需救援</option>
-		<option value="peace">平安</option>
-	</select></p>
+	
 	
 	<nav>
 		<ul id="listView">
