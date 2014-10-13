@@ -100,7 +100,8 @@ while($row = mysql_fetch_array($objQuery))
             'time' => $time,
             'time_detail' => $time_detail,
             'image' => $image,
-            'type' => $type
+            'type' => $type,
+            'check_img'=>"0"
             );
 
     // Encode the payload as JSON
