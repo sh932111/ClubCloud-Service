@@ -17,20 +17,6 @@ if (!$link)
 	echo json_encode($arr);
 	exit();
 }
-$sql = 'CREATE DATABASE UserCategory';
-
-if (mysql_query($sql, $link)) 
-{
-	$db_selected = mysql_select_db('UserCategory');
-	
-	if (!$db_selected)
-	{
-		$arr["result"] = FALSE;
-		$arr["Message"] = "初始化失敗";
-		echo json_encode($arr);
-		exit();
-	}
-} 
 $db_selected = mysql_select_db('UserCategory');
 
 if (!$db_selected)
@@ -44,14 +30,27 @@ if (!$db_selected)
 }
 else
 {
-	$creat_query  ="CREATE TABLE `$userName`(
-		`title` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
-		`id` VARCHAR(200) NOT NULL PRIMARY KEY,
-		`list` VARCHAR(200)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
-		`date` VARCHAR(20) NOT NULL,
-		`time` VARCHAR(20) NOT NULL
-		);";
+	$query = sprintf("SELECT * FROM `$userName`");
 	
-	$table_selected = mysql_query($creat_query, $link);
+	$res = mysql_query($query,$link);
+
+	if ($res) 
+	{
+		$response_result = TRUE;
+		$arr["result"] = $response_result;
+		$arr["Message"] = "成功!";
+		echo json_encode($arr);
+		exit();
+	}
+	else
+	{
+		$response_result = TRUE;
+		$arr["result"] = $response_result;
+		$arr["Message"] = "失敗!";
+		echo json_encode($arr);
+		exit();
+	}
+
+	mysql_close($link);
 }
 ?>
