@@ -5,7 +5,6 @@ function init()
 {
     selected_value = 1;
 	getData();
-    getDetail();
     getRequestData();
 }
 
@@ -45,7 +44,7 @@ function getRequestData()
     {
         var get_json = JSON.parse(e.data);
 
-        console.log(get_json);
+        getDetail();
     };
         
 }
