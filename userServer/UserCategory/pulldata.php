@@ -36,10 +36,45 @@ else
 
 	if ($res) 
 	{
-		$response_result = TRUE;
-		$arr["result"] = $response_result;
-		$arr["Message"] = "成功!";
+		$data = array();
+		$list = array();
+
+		$i = 0;
+		$intNumRows = mysql_num_rows($res);
+
+		while ($objResult = mysql_fetch_array($res)) 
+		{
+			$data["id"] = $objResult["id"];
+			// $data["name"] = $objResult["name"];
+			// $data["username"] = $objResult["username"];
+			// $data["data_id"] = $objResult["data_id"];
+			// $data["title"] = $objResult["title"];
+			// $data["detail"] = $objResult["detail"];
+			// $data["date"] = $objResult["date"];
+			
+			// $data["time"] = $objResult["time"];//territory_name
+			// $data["city"] = $objResult["city"];//district_name
+			// $data["area"] = $objResult["area"];//city_id
+			// $data["liner"] = $objResult["liner"];//district_id
+			
+			// $data["address"] = $objResult["address"];//district_id
+			// $data["image"] = $objResult["image"];//district_id
+
+			$list[$i] = $data;
+
+			$i = $i + 1;
+		}
+
+		$arr["result"] = TRUE;
+
+		$arr["Message"] = "抓取資料成功";
+
+		$list["num"] = $i;
+
+		$arr["data"] = $list;
+
 		echo json_encode($arr);
+
 		exit();
 	}
 	else
