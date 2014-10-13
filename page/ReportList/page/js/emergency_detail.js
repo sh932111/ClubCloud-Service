@@ -6,6 +6,7 @@ function init()
     selected_value = 1;
 	getData();
     getDetail();
+    getRequestData();
 }
 
 function setValue(e)
@@ -36,18 +37,18 @@ function getData()
     xmlhttp.send("username="+userName); 
 }
 
-// function getRequestData()
-// {
-//     var es = new EventSource('php/pull_event_detail.php'); 
+function getRequestData()
+{
+    var es = new EventSource('php/pull_request.php'); 
 
-//     es.onmessage = function(e) 
-//     {
-//         var get_json = JSON.parse(e.data);
+    es.onmessage = function(e) 
+    {
+        var get_json = JSON.parse(e.data);
 
+        console.log(get_json);
+    };
         
-//     };
-        
-// }
+}
 
 function getDetail() 
 {
