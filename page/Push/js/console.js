@@ -229,7 +229,7 @@ function loaddata(get_city)
 
 	var xmlhttp = new XMLHttpRequest();
 	    
-	xmlhttp.open("POST", "../Push/data/GetCityDetail.php", true);
+	xmlhttp.open("POST", "data/GetCityDetail.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 
