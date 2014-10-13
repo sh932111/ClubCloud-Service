@@ -6,6 +6,12 @@ function init()
 	getData();
     getDetail();
 }
+
+function setValue(event)
+{
+    console.log(event.value);
+}
+
 function getData()
 {
 	var xmlhttp = new XMLHttpRequest();
