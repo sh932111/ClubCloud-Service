@@ -32,6 +32,10 @@ function login ()
 			{
 				location.href = 'page/home.php?username='+username;
 			}
+			else
+			{
+				alert(msg.Message);
+			}
         }
     }
     var post = "password="+password+"&username="+username;
