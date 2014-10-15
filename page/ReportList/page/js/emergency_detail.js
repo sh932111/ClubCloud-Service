@@ -95,7 +95,7 @@ function setUI()
                 {
                     if (obj.t_check == 0)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
                     }
                 }
                 else if (selected_value == 3)
