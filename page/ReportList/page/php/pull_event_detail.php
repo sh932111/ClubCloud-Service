@@ -29,6 +29,7 @@
 		$latitude = $record['latitude'];
 		$longitude = $record['longitude'];
 		$t_check = $record['t_check'];
+		$cellphone = $record['cellphone'];
 
 		$data["username"] = $username;
 		$data["name"] = $name;
@@ -36,6 +37,7 @@
 		$data["latitude"] = $latitude;
 		$data["longitude"] = $longitude;
 		$data["t_check"] = $t_check;
+		$data["cellphone"] = $cellphone;
 
 		$list[$i] = $data;
 

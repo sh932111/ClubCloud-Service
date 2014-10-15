@@ -61,7 +61,7 @@ function setUI()
 
             var result = "<table border='1'>";
 
-            result += "<tr><td>使用者</td><td>身分證字號</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td></tr>";
+            result += "<tr><td>使用者</td><td>身分證字號</td><td>聯絡電話</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td></tr>";
 
             for (var i = 0; i < responseData.data.num; i++) 
             {
@@ -90,34 +90,34 @@ function setUI()
 
                 if (selected_value == 1)
                 {
-                    result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                    result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
                 }
                 else if (selected_value == 2)
                 {
                     if (obj.t_check == 0)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
                     }
                 }
                 else if (selected_value == 3)
                 {
                     if (obj.t_check == 1)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
                     }
                 }
                 else if (selected_value == 4)
                 {
                     if (obj.t_check == 2)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
                     }
                 }
                 else if (selected_value == 5)
                 {
                     if (obj.t_check == 3)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
                     }
                 }
 
