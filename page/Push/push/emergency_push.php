@@ -83,7 +83,8 @@ if ($db_selected)
             `user_id` VARCHAR(200) NOT NULL,
             `latitude` VARCHAR(200),
             `longitude` VARCHAR(200),
-            `t_check` VARCHAR(20) NOT NULL
+            `t_check` VARCHAR(20) NOT NULL,
+            `cellphone` VARCHAR(20) NOT NULL
             );";
 
         $db_table_selected = mysql_query($sq_creat_query, $link);
@@ -108,9 +109,9 @@ if ($db_selected)
             {
                 $db_selected_4 = mysql_select_db('emergency_data');
 
-                $user_query = sprintf("INSERT INTO `$table_id`(`username`,`name`,`user_id`,`latitude`,`longitude`,`t_check`) 
-                VALUES ('%s','%s','%s','%s','%s','%s')",
-                $record["username"],$record["name"],$record["user_id"],"0","0","0");
+                $user_query = sprintf("INSERT INTO `$table_id`(`username`,`name`,`user_id`,`latitude`,`longitude`,`t_check`,`cellphone`) 
+                VALUES ('%s','%s','%s','%s','%s','%s','%s')",
+                $record["username"],$record["name"],$record["user_id"],"0","0","0",$record["cellphone"]);
                 $user_query_res = mysql_query($user_query,$link);
             }
         } 
