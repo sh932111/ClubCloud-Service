@@ -52,6 +52,7 @@
 		$arr["user_city_detail"] = $objResult["user_city_detail"];//district_name
 		$arr["city_id"] = $objResult["city_id"];//city_id
 		$arr["city_detail_id"] = $objResult["city_detail_id"];//district_id
+		$arr["cellphone"] = $objResult["cellphone"];//district_id
 		
 		echo json_encode($arr);
 		exit();
