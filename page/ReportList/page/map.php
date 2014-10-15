@@ -30,7 +30,7 @@ $longitude = $_GET['longitude'];
     var mapOptions = {
           //center: new google.maps.LatLng(22.763392, 120.375816),
           center: myLatlng,
-          zoom: 15,
+          zoom: 17,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
@@ -41,8 +41,17 @@ $longitude = $_GET['longitude'];
           map: map,
           title: "name:"+name+" phone:"+cellphone
         });
+        
+        var infowindow = new google.maps.InfoWindow(); 
 
         google.maps.event.addDomListener(window, 'load', initialize);
+        google.maps.event.addListener(marker, 'click', function() { 
+                 
+                  /*this就是指marker*/
+                  infowindow.setContent(this.title);
+                  infowindow.open(map,this);
+                  
+                   });//
       }
       </script>
     </head>
