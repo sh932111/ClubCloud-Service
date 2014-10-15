@@ -27,7 +27,7 @@ $longitude = $_GET['longitude'];
 
         var mapOptions = {
           center: new google.maps.LatLng(latitude, longitude),
-          zoom: 15,
+          zoom: 17,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
