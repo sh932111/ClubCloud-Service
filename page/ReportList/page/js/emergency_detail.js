@@ -61,12 +61,11 @@ function setUI()
 
             var result = "<table border='1'>";
 
-            result += "<tr><td>使用者</td><td>身分證字號</td><td>聯絡電話</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td></tr>";
+            result += "<tr><td>使用者</td><td>身分證字號</td><td>聯絡電話</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td><td>位置查詢</td></tr>";
 
             for (var i = 0; i < responseData.data.num; i++) 
             {
                 var obj = responseData.data[i];
-
 
                 var status = "";
 
@@ -90,7 +89,7 @@ function setUI()
 
                 if (selected_value == 1)
                 {
-                    result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                    result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
                 }
                 else if (selected_value == 2)
                 {
@@ -103,21 +102,21 @@ function setUI()
                 {
                     if (obj.t_check == 1)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
                     }
                 }
                 else if (selected_value == 4)
                 {
                     if (obj.t_check == 2)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
                     }
                 }
                 else if (selected_value == 5)
                 {
                     if (obj.t_check == 3)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td></tr>";
+                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
                     }
                 }
 
@@ -152,4 +151,14 @@ function getDetail()
     // Send the data to PHP now... and wait for response to update the status div
     var post = "postId="+eventID;
     xmlhttp.send(post); 
+}
+
+function goPage(i)
+{
+    var index = i.id;
+
+    var obj = responseData.data[i];
+
+    location.href = 'map.php?name='+obj.name+'&cellphone='+obj.latitude+'&cellphone='+obj.latitude+'&longitude='+obj.longitudelongitude;
+
 }
