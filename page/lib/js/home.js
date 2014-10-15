@@ -22,11 +22,6 @@ function checkCalendar()
     
 }
 
-function makebook()
-{
-    
-}
-
 function crashMsg()
 {
     document.getElementById('iframe').setAttribute('src','ReportList/choose_report.php?username='+userName);
