@@ -159,6 +159,6 @@ function goPage(i)
 
     var obj = responseData.data[index];
 
-    location.href = 'map.php?name='+obj.name+'&cellphone='+obj.latitude+'&cellphone='+obj.latitude+'&longitude='+obj.longitudelongitude;
+    location.href = 'map.php?name='+obj.name+'&cellphone='+obj.cellphone+'&latitude='+obj.latitude+'&longitude='+obj.longitude;
 
 }
