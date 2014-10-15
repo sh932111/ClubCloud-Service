@@ -24,7 +24,8 @@
 			`user_city` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 			`user_city_detail` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 			`city_id` VARCHAR(20) NOT NULL,
-			`city_detail_id` VARCHAR(20) NOT NULL
+			`city_detail_id` VARCHAR(20) NOT NULL,
+			`cellphone`  VARCHAR(20) NOT NULL
 			);";
 		$table_selected = mysql_query($creat_query, $objConnect);
 
