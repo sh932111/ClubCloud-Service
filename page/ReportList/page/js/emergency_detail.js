@@ -157,7 +157,7 @@ function goPage(i)
 {
     var index = i.id;
 
-    var obj = responseData.data[i];
+    var obj = responseData.data[index];
 
     location.href = 'map.php?name='+obj.name+'&cellphone='+obj.latitude+'&cellphone='+obj.latitude+'&longitude='+obj.longitudelongitude;
 
