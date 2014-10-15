@@ -36,10 +36,12 @@ $longitude = $_GET['longitude'];
         var map = new google.maps.Map(document.getElementById("map_canvas"),
           mapOptions);
 
+        var title_map = "name:"+name+"phone:"+cellphone;
+
         var marker = new google.maps.Marker({
           position: myLatlng,
           map: map,
-          title: "name:"+name+" phone:"+cellphone
+          title: title_map
         });
         
         var infowindow = new google.maps.InfoWindow(); 
