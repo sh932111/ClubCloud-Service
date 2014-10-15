@@ -42,7 +42,3 @@ function login ()
 
     xmlhttp.send(post); 
 }
-function register()
-{
-	location.href = "page/Register/register.html";
-}

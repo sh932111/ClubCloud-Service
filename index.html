@@ -7,13 +7,21 @@
 <script src="js/index.js"></script>
 <title>里長管理系統</title>
 <head>
-	<h1>里長管理系統</h1>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-	<p>帳號：<input type="text" size="20" id="username" /></p>
-	<p>密碼：<input type="password" size="20" id="password" /></p>
-	<input type="button" value="登入" onclick="login()" />
-	<input type="button" value="註冊" onclick="register()" /><br />
+	<div id="header">
+	<img src="page/lib/img/ClubCould-Service.png" id="logo"> 
+	<div id="Title">社區雲端事務系統</div>
+	<div id="Login">
+		帳號：<input type="text" size="20" id="username" />
+		密碼：<input type="password" size="20" id="password" />
+		<input type="button" id="loginBT" value="登入" onclick="login()" />
+	</div>
+	</div>
+	<div id="main">
+		<iframe id="iframe" src="page/Register/register.html" scrolling="yes" frameborder="0">
+		</iframe>
+	</div>
 </body>
 </html>

@@ -21,7 +21,7 @@ var userName = '<?php echo $username; ?>';
 <body onload="init()">
 
 	<div id="header">
-		<h1>首頁</h1>
+		 <img src="lib/img/ClubCould-Service.png" id="logo"> 
 	</div>
 	<div id="sidebar">
 		<p><div id="username"></div></p>
@@ -32,7 +32,6 @@ var userName = '<?php echo $username; ?>';
 		<p><input type="button" value="資料清單" onclick="crashMsg()" /></p>
 	</div>
 	<div id="main">
-
 		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
 		</iframe>
 	</div>
