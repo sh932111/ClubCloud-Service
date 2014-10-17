@@ -33,8 +33,9 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background:-webkit-gradient(linear, left top, left bottom, from(#97CBFF), to(#ECF5FF));
-	background:-moz-linear-gradient(top, #97CBFF, #ECF5FF);
+	background-color: #ECF5FF;
+	/*background:-webkit-gradient(linear, left top, left bottom, from(#97CBFF), to(#ECF5FF));
+	background:-moz-linear-gradient(top, #97CBFF, #ECF5FF);*/
 }
 #Login
 {
@@ -131,13 +132,13 @@
 	padding: 5px;
 	font-size: 15px;
 	line-height: 1;
-	color: #6C6C6C; 
+	color: #6C6C6C;
 	border: 0;
 	border-radius: 0;
 	height: 30px;
 	text-indent: 36.5%;
 }
 @media only screen and (min-width: 1000px) and (max-width: 1280px) {
-	
+
 
 }
