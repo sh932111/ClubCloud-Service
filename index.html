@@ -14,23 +14,26 @@
 	<img src="page/lib/img/ClubCould-Service.png" id="logo"> 
 	<div id="Title">社區雲端事務系統</div>
 	<div id="Login">
-		帳號：<input type="text" size="20" id="username" />
-		密碼：<input type="password" size="20" id="password" />
+		帳號：<input type="text" size="20" id="username" class="loginInput" />
+		密碼：<input type="password" size="20" id="password" class="loginInput" />
 		<input type="button" id="loginBT" value="登入" onclick="login()" />
 	</div>
 	</div>
 	<div id="main">
 		<div id="register">
-		<p><input type="text" size="20" id="name" placeholder="姓名" /></p>
-		<p><input type="text" size="20" id="set_username" placeholder="帳號"/></p>
-		<p><input type="password" size="20" id="set_password"  placeholder="密碼"/></p>
-		<p><input type="password" size="20" id="set_password2" placeholder="確認密碼" /></p>
-		<p><input type="text" size="20" id="user_id" placeholder="身分證字號"/></p>
-		<p><select id="citylist" onChange="setValue(this)" ></select></p>
-		<p><select id="citydetaillist" onChange="getDetailValue(this)" ></select></p>
-		<p><input type="text" size="20" id="address" placeholder="住址"/></p>
-		<input type="button" value="送出" onclick="post()" /><br />
-	</div>
+			<div id="registerTitle">管理員註冊</div>
+			<p><input type="text" size="20" id="name" placeholder="姓名" class="registerInput" /></p>
+			<p><input type="text" size="20" id="set_username" placeholder="帳號" class="registerInput" /></p>
+			<p><input type="password" size="20" id="set_password"  placeholder="密碼" class="registerInput" /></p>
+			<p><input type="password" size="20" id="set_password2" placeholder="確認密碼"  class="registerInput" /></p>
+			<p><input type="text" size="20" id="user_id" placeholder="身分證字號" class="registerInput" /></p>
+			<div class="styled-select">
+		   	<select id="citylist" onChange="setValue(this)"></select>
+		   	<p><select id="citydetaillist" onChange="getDetailValue(this)" ></select></p>
+			</div>
+			<p><input type="text" size="20" id="address" placeholder="住址" class="registerInput" /></p>
+			<input type="button" value="送出" onclick="post()" id="registerBT"/><br />
+		</div>
 	</div>
 </body>
 </html>

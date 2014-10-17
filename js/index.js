@@ -79,7 +79,8 @@ function init()
 					getCity = city;
 					getCityId = city_id;
 				}
-
+				
+				items.className="lt";
 			    document.getElementById('citylist').options.add(items);
 
             }
@@ -134,7 +135,7 @@ function loaddata(get_city)
 					getCityDetail = district_name;
 					getCityDetailId = district_id;
 				}
-
+				items.className="lt";
 				document.getElementById('citydetaillist').options.add(items);
 	        }
 	    }
