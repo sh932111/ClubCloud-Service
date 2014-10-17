@@ -9,7 +9,7 @@
 <head>
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body  onload="init()">
 	<div id="header">
 	<img src="page/lib/img/ClubCould-Service.png" id="logo"> 
 	<div id="Title">社區雲端事務系統</div>
@@ -20,8 +20,17 @@
 	</div>
 	</div>
 	<div id="main">
-		<iframe id="iframe" src="page/Register/register.html" scrolling="yes" frameborder="0">
-		</iframe>
+		<div id="register">
+		<p><input type="text" size="20" id="name" placeholder="姓名" /></p>
+		<p><input type="text" size="20" id="set_username" placeholder="帳號"/></p>
+		<p><input type="password" size="20" id="set_password"  placeholder="密碼"/></p>
+		<p><input type="password" size="20" id="set_password2" placeholder="確認密碼" /></p>
+		<p><input type="text" size="20" id="user_id" placeholder="身分證字號"/></p>
+		<p><select id="citylist" onChange="setValue(this)" ></select></p>
+		<p><select id="citydetaillist" onChange="getDetailValue(this)" ></select></p>
+		<p><input type="text" size="20" id="address" placeholder="住址"/></p>
+		<input type="button" value="送出" onclick="post()" /><br />
+	</div>
 	</div>
 </body>
 </html>
