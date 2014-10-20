@@ -44,8 +44,8 @@ while($row = mysql_fetch_array($objQuery))
         
         array_push($regID, $row['device_token']);
 
-        $apiKey = "AIzaSyBxsBeuTGrDiAABbP18zUVe3ZGb7QTvTlE";
-
+        $apiKey = "AIzaSyCnIL1LtZq9KdcTOK105NQjpL3pFdPDC-A";
+ 
         $url = 'https://android.googleapis.com/gcm/send';
 
         $fields = array('registration_ids'  => $regID,
