@@ -3,7 +3,7 @@
 nav ul{overflow:hidden; overflow-y:scroll;}
 nav ul
 {
-	height:100%; 
+	height:50%; 
 	width:100%;
 }
 
