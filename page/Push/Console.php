@@ -24,39 +24,44 @@ var userName = "<?php echo $username; ?>";
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body onload="init()">
-	<div id="main">
-		<p><div id="city"></div></p>
-		<div id="city_detail"></div>
-		<p>標題：</p>
-		<input type="text" name="title" size="20" id="title"  class="registerInput"/>
-		<p>訊息：</p>
-		<p><textarea size="20" id="detail" name="detail" class="textareaInput"></textarea></p>
-		<p>
-		<div class="styled-select">
-		活動地點：
-			<select id="citylist" onChange="setValue(this);" >
-			</select>
-			<select id="citydetaillist" onChange="getDetailValue(this);" >
-			</select>
-			<input type="text" name="address" size="20" id="address"  class="addressInput"/>
+	<nav>
+		<ul id="listView">
+			<div id="main">
+				<p><div id="city"></div></p>
+				<div id="city_detail"></div>
+				<p>標題：</p>
+				<input type="text" name="title" size="20" id="title"  class="registerInput"/>
+				<p>訊息：</p>
+				<p><textarea size="20" id="detail" name="detail" class="textareaInput"></textarea></p>
+				<p>
+					<div class="styled-select">
+						活動地點：
+						<select id="citylist" onChange="setValue(this);" >
+						</select>
+						<select id="citydetaillist" onChange="getDetailValue(this);" >
+						</select>
+						<input type="text" name="address" size="20" id="address"  class="addressInput"/>
+					</div>
+				</p>
+				<p>日期：<input type="date" name="time" size="20" id="time" class="dateInput" /></p>
+				<p>時間：<input type="time" name="time_detail" size="20" id="time_detail" class="timeInput" /></p>
+				<input id="go_ajs" name="Submit1" type="submit" value="傳送事件" onClick="ajs_upload()"  class="EmergencyPushBt"/><br />
 			</div>
-			</p>
-			<p>日期：<input type="date" name="time" size="20" id="time" class="dateInput" /></p>
-			<p>時間：<input type="time" name="time_detail" size="20" id="time_detail" class="timeInput" /></p>
-			<input id="go_ajs" name="Submit1" type="submit" value="傳送事件" onClick="ajs_upload()"  class="EmergencyPushBt"/><br />
-		</div>
-		<div id="view">
-			<form action="upload.php" method="post" id="ajaxForm">
-				<input type="file" id="pic" name="pic"  onchange="change()"><br>
-				<input name="item" id="item" type="text" value="" style = "display:none"><br>
-			</form>
-			預覽：<img id="preview" alt="" name="pic" />
-		</div>
-		<script>
-		function change() {
-			var pic = document.getElementById("preview");
-			var file = document.getElementById("pic");
-			var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
+			<div id="view">
+				<form action="upload.php" method="post" id="ajaxForm">
+					<input type="file" id="pic" name="pic"  onchange="change()"><br>
+					<input name="item" id="item" type="text" value="" style = "display:none"><br>
+				</form>
+				預覽：<img id="preview" alt="" name="pic" />
+			</div>
+		</ul>
+	</nav>
+	
+	<script>
+	function change() {
+		var pic = document.getElementById("preview");
+		var file = document.getElementById("pic");
+		var ext=file.value.substring(file.value.lastIndexOf(".")+1).toLowerCase();
      // gif在IE浏览器暂时无法显示
      if(ext!='png'&&ext!='jpg'&&ext!='jpeg'){
      	alert("文件必須為圖片！"); return;
