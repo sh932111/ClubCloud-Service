@@ -27,8 +27,8 @@ var userName = "<?php echo $username; ?>";
 	<div id="main">
 		<p><div id="city"></div></p>
 		<div id="city_detail"></div>
-		<p>標題：</p>
-		<input type="text" name="title" size="20" id="title"  class="registerInput"/>
+		<p>
+		標題：<input type="text" name="title" size="20" id="title"  class="registerInput"/></p>
 		<p>訊息：</p>
 		<p><textarea size="20" id="detail" name="detail" class="textareaInput"></textarea></p>
 		<p>
