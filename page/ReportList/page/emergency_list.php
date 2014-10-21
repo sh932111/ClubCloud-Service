@@ -20,8 +20,6 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<h3>緊急事件清單</h3>
-	
-	
 	<nav>
 		<ul id="listView">
 		</ul>
