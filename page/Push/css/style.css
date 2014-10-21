@@ -1,12 +1,5 @@
 
 
-nav ul{overflow:hidden; overflow-y:scroll;}
-nav ul
-{
-	height:50%; 
-	width:100%;
-}
-
 #main
 {
 	position: fixed;
