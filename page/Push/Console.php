@@ -26,22 +26,24 @@ var userName = "<?php echo $username; ?>";
 <body onload="init()">
 	<div id="main">
 		<p><div id="city"></div></p>
-		<p><div id="city_detail"></div></p>
-
-		<p>標題：<input type="text" name="title" size="20" id="title" /></p>
+		<div id="city_detail"></div>
+		<p>標題：</p>
+		<input type="text" name="title" size="20" id="title"  class="registerInput"/>
 		<p>訊息：</p>
-		<p><textarea size="20" id="detail" name="detail"></textarea></p>
-		<p>活動地點：
+		<p><textarea size="20" id="detail" name="detail" class="textareaInput"></textarea></p>
+		<p>
+		<div class="styled-select">
+		活動地點：
 			<select id="citylist" onChange="setValue(this);" >
 			</select>
 			<select id="citydetaillist" onChange="getDetailValue(this);" >
 			</select>
-			<input type="text" name="address" size="20" id="address" /></p>
-			<p>日期：<input type="date" name="time" size="20" id="time" /></p>
-			<p>時間：<input type="time" name="time_detail" size="20" id="time_detail" /></p>
-
-
-			<input id="go_ajs" name="Submit1" type="submit" value="Send" onClick="ajs_upload()"/><br />
+			<input type="text" name="address" size="20" id="address"  class="addressInput"/>
+			</div>
+			</p>
+			<p>日期：<input type="date" name="time" size="20" id="time" class="dateInput" /></p>
+			<p>時間：<input type="time" name="time_detail" size="20" id="time_detail" class="timeInput" /></p>
+			<input id="go_ajs" name="Submit1" type="submit" value="傳送事件" onClick="ajs_upload()"  class="EmergencyPushBt"/><br />
 		</div>
 		<div id="view">
 			<form action="upload.php" method="post" id="ajaxForm">

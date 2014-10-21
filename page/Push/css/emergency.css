@@ -1,0 +1,46 @@
+body
+{
+	background-color: #ECF5FF;
+}
+.registerInput
+{	
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 25%;
+	height: 30px;
+	color: #5B5B5B;
+}
+
+.textareaInput
+{
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 30%;
+	height: 100px;
+	color: #5B5B5B;
+}
+#main
+{
+	margin-left:10%; 
+	margin-top: 5%;
+}
+.EmergencyPushBt
+{
+	border-radius: 5px;
+	background-color: #FFAF60;
+	color: #6C6C6C;
+	border:1px #d0d0d0 solid;
+	width: 25%;
+	height: 35px;
+	font-size: 16px;
+}

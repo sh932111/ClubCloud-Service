@@ -12,6 +12,8 @@ iframe
 	right: 0;
 	bottom: auto;
 	left: 0;
+	background-color: #4F4F4F;
+	text-align: center;
 }
 #main
 {
@@ -22,4 +24,26 @@ iframe
 	right: 0;
 	bottom: auto;
 	left: 0%;
+}
+.Selected
+{
+	background-color: #ECF5FF;
+	color: white;
+	border:0px solid;
+	width: 15%;
+	height: 100%;
+	font-size: 24px;
+	color: #4F4F4F;
+	outline: none;
+}
+.noSelected
+{
+	background-color: #4F4F4F;
+	color: white;
+	border:0px solid;
+	width: 15%;
+	height: 100%;
+	font-size: 24px;
+	color: #ECF5FF;
+	outline: none;
 }

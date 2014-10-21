@@ -19,11 +19,11 @@ var userName = "<?php echo $username; ?>";
 </head>
 <body onload="init()">
 	<div id="menu">
-	<input type="button" value="普通訊息" onclick="MsgPush()" />
-	<input type="button" value="緊急事件" onclick="EmergencyPush()" />
+	<input type="button" value="普通訊息" onclick="MsgPush()" class="Selected" id="MsgPush" />
+	<input type="button" value="緊急事件" onclick="EmergencyPush()"  class="noSelected" id="EmergencyPush" />
 	</div>
 	<div id="main">
-		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="0">
 		</iframe>
 	</div>
 </body>

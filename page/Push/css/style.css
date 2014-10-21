@@ -18,3 +18,95 @@
 	bottom: auto;
 	left: 50%;
 }
+body
+{
+	background-color: #ECF5FF;
+}
+.EmergencyPushBt
+{
+	border-radius: 5px;
+	background-color: #FFAF60;
+	color: #6C6C6C;
+	border:1px #d0d0d0 solid;
+	width: 40%;
+	height: 35px;
+	font-size: 16px;
+}
+
+.registerInput
+{	
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 40%;
+	height: 30px;
+	color: #5B5B5B;
+}
+.addressInput
+{	
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 30%;
+	height: 30px;
+	color: #5B5B5B;
+}
+.dateInput
+{	
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 35%;
+	height: 30px;
+	color: #5B5B5B;
+}
+.timeInput
+{	
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 25%;
+	height: 30px;
+	color: #5B5B5B;
+}
+.textareaInput
+{
+	font-size: 15px;
+	border: 1px solid #BBBBBB;
+	background: #fff; 
+	-moz-border-radius:3px; 
+	-webkit-border-radius: 3px; 
+	border-radius: 3px; 
+	font-family:微軟正黑體;
+	width: 50%;
+	height: 80px;
+	color: #5B5B5B;
+}
+.styled-select select 
+{
+	background: #FFAF60;
+	width: 20%;
+	padding: 5px;
+	font-size: 15px;
+	line-height: 1;
+	color: #6C6C6C;
+	border: 0;
+	border-radius: 0;
+	height: 30px;
+}
