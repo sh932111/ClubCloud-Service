@@ -57,7 +57,7 @@ function getRequestData()
 
         var list = document.getElementById("msg3");
 
-        var result = "<table border='0'>";
+        var result = "<table >";
 
         result += "<tr><td>發送人</td><td>帳號</td><td>標題</td><td>日期</td><td>時間</td><td>前往</td></tr>";
 
