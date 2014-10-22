@@ -86,6 +86,8 @@ function getRequestData()
                 var node_name = document.createTextNode(name+"("+username+")");
                 div_name.appendChild(node_name);
 
+                var hr = document.createElement("hr");
+
                 var div_title = document.createElement("div");
                 var node_title = document.createTextNode(title);
                 div_title.appendChild(node_title);
@@ -93,9 +95,10 @@ function getRequestData()
                 var div_date = document.createElement("div");
                 var node_date = document.createTextNode(date+" "+time);
                 div_date.appendChild(node_date);
-                              
-                help_div.appendChild(div_name);
+                            
                 help_div.appendChild(div_title);
+                help_div.appendChild(hr);
+                help_div.appendChild(div_name);
                 help_div.appendChild(div_date);
                 help_div.addEventListener("click", function(e){
                     goPage(this);
