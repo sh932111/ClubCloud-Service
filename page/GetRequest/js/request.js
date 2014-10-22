@@ -91,17 +91,12 @@ function getRequestData()
                 div_title.appendChild(node_title);
                                 
                 var div_date = document.createElement("div");
-                var node_date = document.createTextNode(date);
+                var node_date = document.createTextNode(date+" "+time);
                 div_date.appendChild(node_date);
-                                  
-                var div_time = document.createElement("div");
-                var node_time = document.createTextNode(time);
-                div_time.appendChild(node_time);
                               
                 help_div.appendChild(div_name);
                 help_div.appendChild(div_title);
                 help_div.appendChild(div_date);
-                help_div.appendChild(div_time);
                 help_div.addEventListener("click", function(e){
                     goPage(this);
                 });
