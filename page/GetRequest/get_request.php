@@ -16,7 +16,7 @@ var userName = "<?php echo $username; ?>";
 
 <title>訊息查詢</title>
 <head>
-	<link rel="stylesheet" href="css/get_request.css">
+
 </head>
 <body onload="init()">
 	<p><div>  
@@ -25,4 +25,5 @@ var userName = "<?php echo $username; ?>";
 </body>
 
 <script src="js/request.js"></script>
+<link rel="stylesheet" href="css/get_request.css">
 </html>
