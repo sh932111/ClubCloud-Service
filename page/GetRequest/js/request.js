@@ -87,7 +87,6 @@ function getRequestData()
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
-                hr.color = "red";
 
                 var div_title = document.createElement("div");
                 var node_title = document.createTextNode(title);
@@ -106,6 +105,7 @@ function getRequestData()
                 });
                 updateDiv.appendChild(help_div);
                 var hr = document.createElement("hr");
+                hr.color = "red";
                 updateDiv.appendChild(hr);
             }
         }
