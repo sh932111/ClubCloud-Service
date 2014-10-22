@@ -111,6 +111,8 @@ function getRequestData()
                     goPage(this);
                 });
                 updateDiv.appendChild(help_div);
+                var hr = document.createElement("hr");
+                updateDiv.appendChild(hr);
             }
         }
         list.appendChild(updateDiv);
