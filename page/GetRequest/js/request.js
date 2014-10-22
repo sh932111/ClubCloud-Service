@@ -87,6 +87,7 @@ function getRequestData()
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
+                hr.color = "#F0F0F0";
 
                 var div_title = document.createElement("div");
                 div_title.className = "title";
