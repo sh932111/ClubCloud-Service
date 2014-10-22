@@ -49,8 +49,7 @@ function getData()
             var city_div = document.getElementById("city");
             var city_detail_div = document.getElementById("city_detail");
 
-			city_div.innerHTML = "市："+user_data.user_city;
-			city_detail_div.innerHTML = "區："+user_data.user_city_detail;
+			city_div.innerHTML = "區域："+user_data.user_city +" "+ user_data.user_city_detail;
 
 			getCity = user_data.user_city;
 			getCityDetail = user_data.user_city_detail;
