@@ -83,13 +83,13 @@ function getRequestData()
                 help_div.id = i;
 
                 var div_name = document.createElement("div");
-                div_name.className = "title";
                 var node_name = document.createTextNode(name+"("+username+")");
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
 
                 var div_title = document.createElement("div");
+                div_title.className = "title";
                 var node_title = document.createTextNode(title);
                 div_title.appendChild(node_title);
                                 
