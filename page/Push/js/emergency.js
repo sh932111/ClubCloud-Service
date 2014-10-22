@@ -33,6 +33,9 @@ function getData()
 
             city_div.innerHTML = "區域："+user_data.user_city +" "+ user_data.user_city_detail;
 
+            var user_div = document.getElementById("user");
+            user_div.innerHTML = "發佈人："+user_data.name;
+
 			getCity = user_data.user_city;
 			getCityDetail = user_data.user_city_detail;
 			getCityId = user_data.city_id;
@@ -57,7 +60,7 @@ function EmergencyPush()
         var date = year +"/"+ month +"/"+ day;
         var time = dt.getHours() +":"+ dt.getMinutes();
         
-    var xmlhttp = new XMLHttpRequest();
+        var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.open("POST", "push/delegate.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");

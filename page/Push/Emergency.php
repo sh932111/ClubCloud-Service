@@ -19,6 +19,7 @@ var userName = "<?php echo $username; ?>";
 </head>
 <body onload="init()">
 	<div id="main">
+		<p><div id="user"></div></p>
 		<p><div id="city"></div></p>
 		<p>標題：</p>
 		<p><input type="text" name="title" size="20" id="title" class="registerInput"/></p>
