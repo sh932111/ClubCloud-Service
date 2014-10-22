@@ -8,6 +8,12 @@ body {
 	margin-left: 10%;
 	width: 80%;
 }
+.book{
+	background-color: white;
+}
+.book:hover {	/* 當滑鼠移過時 */
+	background-color: red;
+}
 
 h2
 {
