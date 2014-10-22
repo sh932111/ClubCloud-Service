@@ -84,7 +84,7 @@ function getRequestData()
 
                 var div_name = document.createElement("div");
                 div_name.className = "list";
-                var node_name = document.createTextNode(name+"("+username+")");
+                var node_name = document.createTextNode("發送者："+name+"("+username+")");
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
@@ -92,12 +92,12 @@ function getRequestData()
 
                 var div_title = document.createElement("div");
                 div_title.className = "title";
-                var node_title = document.createTextNode(title);
+                var node_title = document.createTextNode("標題："+title);
                 div_title.appendChild(node_title);
                                 
                 var div_date = document.createElement("div");
                 div_date.className = "list";
-                var node_date = document.createTextNode(date+" "+time);
+                var node_date = document.createTextNode("時間："+date+" "+time);
                 div_date.appendChild(node_date);
                             
                 var p = document.createElement("p");
