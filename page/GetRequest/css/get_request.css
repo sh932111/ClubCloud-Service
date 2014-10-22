@@ -13,6 +13,7 @@ body {
 }
 .book:hover {	/* 當滑鼠移過時 */
 	background-color: #97CBFF;
+	cursor: pointer;
 }
 
 h2
