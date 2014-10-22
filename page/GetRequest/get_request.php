@@ -21,7 +21,6 @@ var userName = "<?php echo $username; ?>";
 <body onload="init()">
 	<h2>訊息查詢</h2>
 	<p><div>  
-		<hr color="#2894FF">
 		<div id="msg3"></div>   
 	</div></p>
 </body>

@@ -106,7 +106,7 @@ function getRequestData()
                 });
                 updateDiv.appendChild(help_div);
                 var hr = document.createElement("hr");
-                hr.color = "#2894FF";
+                hr.color = "#FFAF60";
                 updateDiv.appendChild(hr);
             }
         }
