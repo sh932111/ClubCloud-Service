@@ -44,7 +44,7 @@ $username = $_GET['username'];
 					return true; 
 				},
 				onEventBlockClick: function(event) { 
-					console.log(event);
+					console.log(event.URL);
 					alert("block clicked");
 					return true; 
 				},
