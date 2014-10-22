@@ -112,7 +112,7 @@ function getDetailData()
 
                 var img = document.getElementById("uploadImg");
                 //img.setAttribute("src","../../userServer/Request/request_img/"+postId+".png");
-	           img.src = "../../userServer/Request/request_img/"+postId+".png";	
+	           img.src = "../../../userServer/Request/request_img/"+postId+".png";	
 		
                 //img.setAttribute("height","768");
                 //img.setAttribute("width","1024");
