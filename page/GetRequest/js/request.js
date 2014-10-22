@@ -87,7 +87,7 @@ function getRequestData()
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
-                hr.color = "#84C1FF";
+                hr.color = "#C4E1FF";
 
                 var div_title = document.createElement("div");
                 div_title.className = "title";
@@ -110,7 +110,7 @@ function getRequestData()
                 });
                 updateDiv.appendChild(help_div);
                 var hr = document.createElement("hr");
-                hr.color = "#C4E1FF";
+                hr.color = "#84C1FF";
                 updateDiv.appendChild(hr);
             }
         }
