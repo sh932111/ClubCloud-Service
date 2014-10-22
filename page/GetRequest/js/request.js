@@ -98,9 +98,12 @@ function getRequestData()
                 var node_date = document.createTextNode(date+" "+time);
                 div_date.appendChild(node_date);
                             
+                var p = document.createElement("p");
+
                 help_div.appendChild(div_title);
                 help_div.appendChild(hr);
                 help_div.appendChild(div_name);
+                help_div.appendChild(p);
                 help_div.appendChild(div_date);
                 help_div.addEventListener("click", function(e){
                     goPage(this);
