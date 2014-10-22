@@ -83,6 +83,7 @@ function getRequestData()
                 help_div.id = i;
 
                 var div_name = document.createElement("div");
+                div_name.className = "list";
                 var node_name = document.createTextNode(name+"("+username+")");
                 div_name.appendChild(node_name);
 
@@ -95,6 +96,7 @@ function getRequestData()
                 div_title.appendChild(node_title);
                                 
                 var div_date = document.createElement("div");
+                div_date.className = "list";
                 var node_date = document.createTextNode(date+" "+time);
                 div_date.appendChild(node_date);
                             
