@@ -83,12 +83,8 @@ function getRequestData()
                 help_div.id = i;
 
                 var div_name = document.createElement("div");
-                var node_name = document.createTextNode(name);
+                var node_name = document.createTextNode(name+"("+username+")");
                 div_name.appendChild(node_name);
-
-                var div_username = document.createElement("div");
-                var node_username = document.createTextNode(username);
-                div_username.appendChild(node_username);
 
                 var div_title = document.createElement("div");
                 var node_title = document.createTextNode(title);
@@ -103,7 +99,6 @@ function getRequestData()
                 div_time.appendChild(node_time);
                               
                 help_div.appendChild(div_name);
-                help_div.appendChild(div_username);
                 help_div.appendChild(div_title);
                 help_div.appendChild(div_date);
                 help_div.appendChild(div_time);
