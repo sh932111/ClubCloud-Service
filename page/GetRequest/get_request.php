@@ -16,12 +16,9 @@ var userName = "<?php echo $username; ?>";
 
 <title>訊息查詢</title>
 <head>
-	<h2>訊息查詢</h2>
+	<link rel="stylesheet" href="css/get_request.css">
 </head>
 <body onload="init()">
-
-	<!-- <p><div id="username"></div></p>
-	<p><div id="user"></div></p> -->
 	<p><div>  
 		<div id="msg3"></div>   
 	</div></p>
