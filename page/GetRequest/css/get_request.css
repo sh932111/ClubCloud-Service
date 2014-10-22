@@ -9,10 +9,11 @@ body {
 	width: 80%;
 }
 .book{
-	background-color: white;
+	background-color: transparent;
 }
 .book:hover {	/* 當滑鼠移過時 */
-	background-color: red;
+	background-color: #FFDCB9;
+	color:#FFA042;
 }
 
 h2
