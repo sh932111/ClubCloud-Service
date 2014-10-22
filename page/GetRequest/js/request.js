@@ -110,6 +110,7 @@ function getRequestData()
                 help_div.addEventListener("click", function(e){
                     goPage(this);
                 });
+                updateDiv.appendChild(help_div);
             }
         }
         list.appendChild(updateDiv);
