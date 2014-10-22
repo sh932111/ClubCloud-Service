@@ -87,6 +87,7 @@ function getRequestData()
                 div_name.appendChild(node_name);
 
                 var hr = document.createElement("hr");
+                hr.width = "60%";
 
                 var div_title = document.createElement("div");
                 var node_title = document.createTextNode(title);
