@@ -18,12 +18,14 @@ h2
 
 .title
 {
+	margin-left: 5%;
 	font-size: 24px;
 	font-family:微軟正黑體;
 	color:#007AFA;
 }
 .list
 {
+	margin-left: 8%;
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
