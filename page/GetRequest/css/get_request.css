@@ -2,3 +2,18 @@ body {
 	
 	background-color: #ECF5FF;
 }
+
+table { 
+  border: 0; 
+  font-family: arial; 
+  font-size:14px; 
+} 
+th { 
+  background-color:yellow; 
+} 
+td { 
+  border-bottom:1 solid #000000; 
+} 
+.fail { 
+  color:#FF0000; 
+}
