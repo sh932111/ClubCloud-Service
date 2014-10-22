@@ -80,10 +80,10 @@ function getRequestData()
                 var time  = get_json[i]["time"];  
 
                 var help_div = document.createElement("div");
-                help_div.className = "title";
                 help_div.id = i;
 
                 var div_name = document.createElement("div");
+                div_name.className = "title";
                 var node_name = document.createTextNode(name+"("+username+")");
                 div_name.appendChild(node_name);
 
