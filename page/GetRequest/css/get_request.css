@@ -12,8 +12,7 @@ body {
 	background-color: transparent;
 }
 .book:hover {	/* 當滑鼠移過時 */
-	background-color: #FFDCB9;
-	color:#FFA042;
+	background-color: #66B3FF;
 }
 
 h2
