@@ -4,6 +4,9 @@ var user_data;
 
 var cityId;
 var areaId;
+
+var updateDiv = 0;
+
 function init() 
 {
 	// var user_div = document.getElementById("username");
@@ -57,10 +60,12 @@ function getRequestData()
 
         var list = document.getElementById("msg3");
 
-        var result = "<table>";
-
-        result += "<tr><td>發送人</td><td>帳號</td><td>標題</td><td>日期</td><td>時間</td><td>前往</td></tr>";
-
+        if (updateDiv != 0)
+        {
+            list.removeChild(updateDiv);
+        }
+        updateDiv = document.createElement("div");
+        
         for (var i = 0; i < num; i++) 
         {
             var city_id  = get_json[i]["city_id"];            
@@ -68,19 +73,46 @@ function getRequestData()
             
             if (city_id == cityId && area_id == areaId)
             {
-                
                 var name  = get_json[i]["name"];            
                 var username  = get_json[i]["username"];            
                 var title  = get_json[i]["title"];            
                 var date  = get_json[i]["date"];            
-                var time  = get_json[i]["time"];            
-                    
-                result += "<tr><td>" + name + "</td><td>" + username + "</td><td>" + title + "</td><td>" + date + "</td><td>"+ time  + "</td><td><button onclick='goPage(this)' id="+i+">go</button></td></tr>";
+                var time  = get_json[i]["time"];  
+
+                var help_div = document.createElement("div");
+                help_div.id = i;
+
+                var div_name = document.createElement("div");
+                var node_name = document.createTextNode(name);
+                div_name.appendChild(node_name);
+
+                var div_username = document.createElement("div");
+                var node_username = document.createTextNode(username);
+                div_username.appendChild(node_username);
+
+                var div_title = document.createElement("div");
+                var node_title = document.createTextNode(title);
+                div_title.appendChild(node_title);
+                                
+                var div_date = document.createElement("div");
+                var node_date = document.createTextNode(date);
+                div_date.appendChild(node_date);
+                                  
+                var div_time = document.createElement("div");
+                var node_time = document.createTextNode(time);
+                div_time.appendChild(node_time);
+                              
+                help_div.appendChild(div_name);
+                help_div.appendChild(div_username);
+                help_div.appendChild(div_title);
+                help_div.appendChild(div_date);
+                help_div.appendChild(div_time);
+                help_div.addEventListener("click", function(e){
+                    goPage(this);
+                });
             }
         }
-        result += "</table>";
-
-        list.innerHTML = result;
+        list.appendChild(updateDiv);
     };
         
 }
