@@ -36,6 +36,15 @@ function getData()
             var user_div = document.getElementById("user");
             user_div.innerHTML = "發佈人："+user_data.name;
 
+            var dt = new Date();
+            var month = dt.getMonth()+1;
+            var day = dt.getDate();
+            var year = dt.getFullYear();
+
+            var date_div = document.getElementById("date");
+            
+            date_div.innerHTML = "發佈日期："+year+"/"+month+"/"+day;
+
 			getCity = user_data.user_city;
 			getCityDetail = user_data.user_city_detail;
 			getCityId = user_data.city_id;
