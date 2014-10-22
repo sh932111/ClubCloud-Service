@@ -41,11 +41,10 @@ $username = $_GET['username'];
 					return true;
 				},
 				onEventLinkClick: function(event) {
-					//console.log(event.URL); 
-					alert("event link click");
 					return true; 
 				},
 				onEventBlockClick: function(event) { 
+					console.log(event);
 					alert("block clicked");
 					return true; 
 				},
