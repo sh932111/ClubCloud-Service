@@ -25,8 +25,7 @@ var userName = "<?php echo $username; ?>";
 </head>
 <body onload="init()">
 	<div id="main">
-		<p><div id="city"></div></p>
-		<div id="city_detail"></div>
+		<p><div id="city"></div><div id="city_detail"></div></p>
 		<p>
 		標題：<input type="text" name="title" size="20" id="title"  class="registerInput"/></p>
 		<p>訊息：</p>
