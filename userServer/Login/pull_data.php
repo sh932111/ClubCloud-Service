@@ -51,7 +51,7 @@
 
 			if (date('Y/m/d H:i:s', strtotime($get_time)) >= date('Y/m/d H:i:s', strtotime($old_time)) && date('Y/m/d H:i:s', strtotime($send_time)) >= date('Y/m/d H:i:s', strtotime($get_time))) 
 			{
-				$data["id"] = $record["id"];
+				$data["id"] = $record["data_id"];
 				
 				$data["name"] = $record["name"];
 				$data["username"] = $record["username"];
