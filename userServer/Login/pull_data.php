@@ -69,6 +69,7 @@
 			
 				$data["address_city"] = $record["address_city"];//district_id
 				$data["address_area"] = $record["address_area"];//district_id
+				$data["get_time"] = $get_time;//district_id
 
 				$list[$i] = $data;
 
