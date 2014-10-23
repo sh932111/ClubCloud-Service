@@ -5,7 +5,7 @@ function init ()
     getData();
 
     getUserData(function(obj) {
-        console.log("obj:"+obj);
+        console.log(obj);
     });
 }
 
