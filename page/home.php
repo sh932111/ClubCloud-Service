@@ -42,4 +42,5 @@ var userName = '<?php echo $username; ?>';
 </body>
 
 <script src="lib/js/home.js"></script>
+<script src="lib/js/get_data.js"></script>
 </html>

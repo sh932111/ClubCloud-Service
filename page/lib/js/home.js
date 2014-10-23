@@ -3,6 +3,7 @@ function init ()
    	document.getElementById('iframe').setAttribute('src','Calender/Calendar.php?username='+userName);
     
 	getData();
+    getUserData();
 }
 
 function selectMsg()
