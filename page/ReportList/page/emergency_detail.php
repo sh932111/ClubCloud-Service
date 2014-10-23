@@ -39,4 +39,5 @@ var eventID = '<?php echo $event_id; ?>';
 </body>
 
 <script src="js/emergency_detail.js"></script>
+<script src="../../lib/js/get_data.js"></script>
 </html>
