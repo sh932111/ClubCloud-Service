@@ -116,7 +116,8 @@ while($row = mysql_fetch_array($objQuery))
             'check_img'=>"0",
             'city' => $address_city,
             'area' => $address_area,
-            'address' => $address
+            'address' => $address,
+            'content-available' => 1
             );
 
     // Encode the payload as JSON
