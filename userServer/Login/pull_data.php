@@ -30,7 +30,7 @@
 		$response_result = TRUE;
 		$arr["result"] = $response_result;
 
-		$arr["Message"] = "登入成功";
+		$arr["Message"] = "抓取成功";
 
 		$old_time = $objResult["send_time"];
 		
