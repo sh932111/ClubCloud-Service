@@ -53,8 +53,6 @@ function pushData()
 
 	            var return_data = xmlhttp.responseText;
 
-				console.log(return_data);
-
 				pushCalendar();
 	            //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
 	        }
@@ -155,6 +153,8 @@ function pushCalendar()
 
 		var day =  myDate.getFullYear()+ "/" + d + "/" + m ;
 
+		var send_time = day +" "+ div_time_detail;
+
 	    var post = "id="+item
 	    +"&title="+div_title
 	    +"&detail="+div_detail
@@ -170,7 +170,8 @@ function pushCalendar()
 	    +"&city_id="+getCityId
 	    +"&area_id="+ getCityDetailId
 	    +"&address_city="+addressCity
-	    +"&address_area="+addressCityDetail;
+	    +"&address_area="+addressCityDetail
+	    +"&send_time="+send_time;
 
 	    xmlhttp.send(post); 
 

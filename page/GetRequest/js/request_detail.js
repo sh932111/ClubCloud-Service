@@ -200,6 +200,8 @@ function pushCalendar()
         }
         // Send the data to PHP now... and wait for response to update the status div
 
+        var send_time = requestData.date+ " "+requestData.time;
+        
         var post = "id="+postId
         +"&title="+requestData.title
         +"&detail="+requestData.detail
@@ -215,7 +217,8 @@ function pushCalendar()
         +"&area_id="+ getCityDetailId
         +"&address="+requestData.address
         +"&address_city="+requestData.city
-        +"&address_area="+requestData.area;
+        +"&address_area="+requestData.area
+        +"&send_time="+send_time;
 
         xmlhttp.send(post); 
 }

@@ -27,6 +27,7 @@ $city_id = $_POST["city_id"];
 $area_id = $_POST["area_id"];
 $address_city = $_POST["address_city"];
 $address_area = $_POST["address_area"];
+$send_time = $_POST["send_time"];
 
 if (!$objConnect) 
 {
@@ -64,14 +65,15 @@ if ($db_selected)
 		`address_area` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`liner` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`address` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
-		`image` INT NOT NULL
+		`image` INT NOT NULL,
+		`send_time` VARCHAR(10) NOT NULL
 		);";
 
 $table_selected = mysql_query($creat_query, $objConnect);
 
-$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`,`address_city`,`address_area`) 
-	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-	$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image,$address_city,$address_area);
+$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`,`address_city`,`address_area`,`send_time`) 
+	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+	$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image,$address_city,$address_area,$send_time);
 
 $res = mysql_query($query,$objConnect);
 
