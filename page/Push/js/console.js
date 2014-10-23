@@ -155,10 +155,10 @@ function pushCalendar()
 
 		var dt = new Date();
 		var month = dt.getMonth()+1;
-		var day = dt.getDate();
+		var day2 = dt.getDate();
 		var year = dt.getFullYear();
 	
-		var send_time = year +"/"+ month +"/"+ day + " " + dt.getHours()+":"+ dt.getMinutes()+":"+ dt.getSeconds();
+		var send_time = year +"/"+ month +"/"+ day2 + " " + dt.getHours()+":"+ dt.getMinutes()+":"+ dt.getSeconds();
 
 	    var post = "id="+item
 	    +"&title="+div_title
