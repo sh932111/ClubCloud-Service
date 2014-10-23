@@ -66,7 +66,7 @@ if ($db_selected)
 		`liner` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 		`address` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL ,
 		`image` INT NOT NULL,
-		`send_time` VARCHAR(10) NOT NULL
+		`send_time` VARCHAR(100) NOT NULL
 		);";
 
 $table_selected = mysql_query($creat_query, $objConnect);
