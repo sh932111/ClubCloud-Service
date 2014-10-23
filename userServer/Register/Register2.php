@@ -31,6 +31,8 @@
 	$city_detail_id = $_POST["city_detail_id"];//district_id
 
 	$cellphone = $_POST["cellphone"];
+
+	$send_time = $_POST["send_time"];
 //	mysql_query ( "set character set utf8" );
 	//mysql_query("SET NAMES 'UTF8'");
 
@@ -72,13 +74,14 @@
 			`user_city_detail` VARCHAR(20)CHARACTER SET utf8 COLLATE utf8_unicode_ci  NOT NULL,
 			`city_id` VARCHAR(20) NOT NULL,
 			`city_detail_id` VARCHAR(20) NOT NULL,
-			`cellphone`  VARCHAR(20) NOT NULL
+			`cellphone`  VARCHAR(20) NOT NULL,
+			`send_time`  VARCHAR(100) NOT NULL
 			);";
 		$table_selected = mysql_query($creat_query, $link);
 
-		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`,`device_token`,`device_os`,`user_city`,`user_city_detail`,`city_id`,`city_detail_id`,`cellphone`) 
-			VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
-			$name,$username,$password,$user_id,$device_token,$device_os,$user_city,$user_city_detail,$city_id,$city_detail_id,$cellphone);
+		$query = sprintf("INSERT INTO `user_table`(`name`,`username`,`password`,`user_id`,`device_token`,`device_os`,`user_city`,`user_city_detail`,`city_id`,`city_detail_id`,`cellphone`,`send_time`) 
+			VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+			$name,$username,$password,$user_id,$device_token,$device_os,$user_city,$user_city_detail,$city_id,$city_detail_id,$cellphone,$send_time);
 
 			$res = mysql_query($query,$link);
 
