@@ -199,8 +199,12 @@ function pushCalendar()
             }
         }
         // Send the data to PHP now... and wait for response to update the status div
-
-        var send_time = requestData.date+ " "+requestData.time;
+        var dt = new Date();
+        var month = dt.getMonth()+1;
+        var day = dt.getDate();
+        var year = dt.getFullYear();
+    
+        var send_time = year +"/"+ month +"/"+ day + " " + dt.getHours()+":"+ dt.getMinutes()+":"+ dt.getSeconds();
         
         var post = "id="+postId
         +"&title="+requestData.title
