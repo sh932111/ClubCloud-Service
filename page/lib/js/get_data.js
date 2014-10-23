@@ -1,5 +1,5 @@
 
-function getUserData(callback)
+function getUserData(user_name,callback)
 {
 	var xmlhttp = new XMLHttpRequest();
     
@@ -20,5 +20,5 @@ function getUserData(callback)
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
-    xmlhttp.send("username="+userName); 
+    xmlhttp.send("username="+user_name); 
 }
