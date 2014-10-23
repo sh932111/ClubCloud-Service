@@ -20,6 +20,7 @@ $username = $_GET['username'];
 	
 	    <script src="js/jquery-1.3.min.js" type="text/javascript"></script>
     	<script src="js/jMonthCalendar.js" type="text/javascript"></script>
+		<script src="../lib/js/get_data.js"></script>	
 
 
     <script type="text/javascript">
@@ -82,7 +83,13 @@ $username = $_GET['username'];
 			
 			$.jMonthCalendar.Initialize(options, events);
 			
-			getRootData();
+			getUserData(userName,function(user_data) 
+		    {
+		        userData = user_data;
+		        getCityId = userData.city_id;
+		        getCityDetailId = userData.city_detail_id;
+			    getData();
+		    });
 
 			// var events2 = [
 			// { "EventID": 3, "StartDateTime": new Date(2014, 8, 10), "Title": "9:30 pm - this is a much longer title", "URL": "#", "Description": "This is a sample event description", "CssClass": "Meeting" },
