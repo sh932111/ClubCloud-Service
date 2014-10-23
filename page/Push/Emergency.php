@@ -30,4 +30,5 @@ var userName = "<?php echo $username; ?>";
 	</div>
 </body>
 <script src="js/emergency.js"></script>
+<script src="../lib/js/get_data.js"></script>
 </html>

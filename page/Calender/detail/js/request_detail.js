@@ -15,40 +15,17 @@ var imgCheck;
 
 function init() 
 {
-    getData();
+    getUserData(userName,function(user_data) 
+    {
+        userData = user_data;
+
+        getCity = userData.user_city;
+        getCityDetail = userData.user_city_detail;
+        getCityId = userData.city_id;
+        getCityDetailId = userData.city_detail_id;
+    });
 
     getDetailData();
-}
-function getData()
-{
-	var xmlhttp = new XMLHttpRequest();
-    
-    xmlhttp.open("POST", "../../lib/get_data/get_data.php", true);
-    
-    xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-
-	xmlhttp.onreadystatechange = function() 
-    {
-        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
-        {
-            var return_data = xmlhttp.responseText;
-
-            var get_json = JSON.parse(return_data);
-
-            userData = get_json.data;
-
-            getCity = userData.user_city;
-            getCityDetail = userData.user_city_detail;
-            getCityId = userData.city_id;
-            getCityDetailId = userData.city_detail_id;
-
-            // var user_div = document.getElementById("user");
-            
-            // user_div.innerHTML = "管理人："+user_data.name;
-        }
-    }
-    // Send the data to PHP now... and wait for response to update the status div
-    xmlhttp.send("username="+userName); 
 }
 function getDetailData()
 {

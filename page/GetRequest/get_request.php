@@ -26,5 +26,6 @@ var userName = "<?php echo $username; ?>";
 </body>
 
 <script src="js/request.js"></script>
+<script src="../lib/js/get_data.js"></script>
 <link rel="stylesheet" href="css/get_request.css">
 </html>

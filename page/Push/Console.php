@@ -130,5 +130,6 @@ function ajs_upload()
 </script>
 </body>
 <script src="js/console.js" type="text/javascript"></script>
+<script src="../lib/js/get_data.js"></script>
 </html>
 

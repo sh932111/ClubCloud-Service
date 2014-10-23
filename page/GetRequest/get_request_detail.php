@@ -42,4 +42,5 @@ $link_class = $_GET['class'];
 	</body>
 
 	<script src="js/request_detail.js"></script>
+<script src="../lib/js/get_data.js"></script>
 </html>
