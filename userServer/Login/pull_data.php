@@ -49,7 +49,7 @@
 		{
 			$get_time = $record['send_time'];
 
-			if (date('Y/m/d H:i', strtotime($get_time)) >= date('Y/m/d H:i', strtotime($old_time)) && date('Y/m/d H:i', strtotime($send_time)) >= date('Y/m/d H:i', strtotime($get_time))) 
+			if (date('Y/m/d H:i:s', strtotime($get_time)) >= date('Y/m/d H:i:s', strtotime($old_time)) && date('Y/m/d H:i:s', strtotime($send_time)) >= date('Y/m/d H:i:s', strtotime($get_time))) 
 			{
 				$data["id"] = $record["id"];
 				
