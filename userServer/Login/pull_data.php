@@ -80,10 +80,10 @@
 
 		$arr["data"] = $list;
 		
-		$query = sprintf("UPDATE `user_table` SET 
-						`send_time` = '$send_time' 
-						WHERE `username` = '$user_name';");
-		$res = mysql_query($query,$objConnect);
+		// $query = sprintf("UPDATE `user_table` SET 
+		// 				`send_time` = '$send_time' 
+		// 				WHERE `username` = '$user_name';");
+		// $res = mysql_query($query,$objConnect);
 		echo json_encode($arr);
 		exit();
 	}
