@@ -51,15 +51,16 @@
 
 			if (date('Y/m/d H:i:s', strtotime($get_time)) >= date('Y/m/d H:i:s', strtotime($old_time)) && date('Y/m/d H:i:s', strtotime($send_time)) >= date('Y/m/d H:i:s', strtotime($get_time))) 
 			{
-				$data["id"] = $record["data_id"];
+			
+				$data["data_id"] = $record["data_id"];
 				
 				$data["name"] = $record["name"];
 				$data["username"] = $record["username"];
 				$data["title"] = $record["title"];
 				$data["detail"] = $record["detail"];
-				$data["date"] = $record["date"];
+				$data["time"] = $record["date"];
 				
-				$data["time"] = $record["time"];//territory_name
+				$data["time_detail"] = $record["time"];//territory_name
 				$data["city"] = $record["city"];//district_name
 				$data["area"] = $record["area"];//city_id
 				$data["liner"] = $record["liner"];//district_id
@@ -69,7 +70,6 @@
 			
 				$data["address_city"] = $record["address_city"];//district_id
 				$data["address_area"] = $record["address_area"];//district_id
-				$data["get_time"] = $get_time;//district_id
 
 				$list[$i] = $data;
 
