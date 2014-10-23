@@ -76,7 +76,7 @@
 				$i = $i + 1;
 			}
 		}
-		$list["num"] = $i;
+		$arr["num"] = $i;
 
 		$arr["data"] = $list;
 		
