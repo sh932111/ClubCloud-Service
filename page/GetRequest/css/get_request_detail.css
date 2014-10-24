@@ -28,6 +28,7 @@ h2
 	width: 20%;
 	height: 35px;
 	font-size: 16px;
+	margin-left: 5%;
 }
 #delete_bt
 {
@@ -46,10 +47,17 @@ h2
 	font-family:微軟正黑體;
 	color:#007AFA;
 }
-.list
+.data
 {
-	margin-left: 8%;
+	margin-left: 5%;
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
+}
+.list
+{
+	margin-left: 5%;
+	font-size: 20px;
+	font-family:微軟正黑體;
+	color:#3C3C3C;
 }

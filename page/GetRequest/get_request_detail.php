@@ -24,9 +24,9 @@ $post_id = $_GET['post_id'];
 		<h2>訊息資料查詢</h2>
 		<div id="main">
 			<p><div id="msg_title" class="title"></div></p>
-			<p><div id="msg_name" class="list"></div></p>
-			<p><div id="msg_address" class="list"></div></p>
-			<p><div id="msg_time" class="list"></div></p>
+			<p><div id="msg_name" class="data"></div></p>
+			<p><div id="msg_address" class="data"></div></p>
+			<p><div id="msg_time" class="data"></div></p>
 			<p><div id="msg_list" class="list"></div></p>
 			<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
 			<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
