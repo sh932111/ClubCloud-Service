@@ -42,9 +42,7 @@ function setUI()
 
             var listView = document.getElementById('listView');
 
-            var result = "<table border='1'>";
-
-            result += "<tr><td>使用者</td><td>身分證字號</td><td>聯絡電話</td><td>Latitude</td><td>Longitude</td><td>回報狀況</td><td>位置查詢</td></tr>";
+            var result += "<div class='css_tr'><div class='css_td'>使用者</div><div class='css_td'>身分證字號</div><div class='css_td'>聯絡電話</div><div class='css_td'>Latitude</div><div class='css_td'>Longitude</div><div class='css_td'>回報狀況</div><div class='css_td'>位置查詢</div></div>";
 
             for (var i = 0; i < responseData.data.num; i++) 
             {
@@ -72,40 +70,39 @@ function setUI()
 
                 if (selected_value == 1)
                 {
-                    result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
+                    result += "<div class='css_tr'><div class='css_td'>" + obj.name + "</div><div class='css_td'>" + obj.user_id + "</div><div class='css_td'>" + obj.cellphone + "</div><div class='css_td'>" + obj.latitude + "</div><div class='css_td'>" + obj.longitude + "</div><div class='css_td'>"+ status  + "</div><div class='css_td'><button onclick='goPage(this)' id="+i+">位置</button></div></div>";
                 }
                 else if (selected_value == 2)
                 {
                     if (obj.t_check == 0)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
+                    result += "<div class='css_tr'><div class='css_td'>" + obj.name + "</div><div class='css_td'>" + obj.user_id + "</div><div class='css_td'>" + obj.cellphone + "</div><div class='css_td'>" + obj.latitude + "</div><div class='css_td'>" + obj.longitude + "</div><div class='css_td'>"+ status  + "</div><div class='css_td'><button onclick='goPage(this)' id="+i+">位置</button></div></div>";
                     }
                 }
                 else if (selected_value == 3)
                 {
                     if (obj.t_check == 1)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
+                    result += "<div class='css_tr'><div class='css_td'>" + obj.name + "</div><div class='css_td'>" + obj.user_id + "</div><div class='css_td'>" + obj.cellphone + "</div><div class='css_td'>" + obj.latitude + "</div><div class='css_td'>" + obj.longitude + "</div><div class='css_td'>"+ status  + "</div><div class='css_td'><button onclick='goPage(this)' id="+i+">位置</button></div></div>";
                     }
                 }
                 else if (selected_value == 4)
                 {
                     if (obj.t_check == 2)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
+                    result += "<div class='css_tr'><div class='css_td'>" + obj.name + "</div><div class='css_td'>" + obj.user_id + "</div><div class='css_td'>" + obj.cellphone + "</div><div class='css_td'>" + obj.latitude + "</div><div class='css_td'>" + obj.longitude + "</div><div class='css_td'>"+ status  + "</div><div class='css_td'><button onclick='goPage(this)' id="+i+">位置</button></div></div>";
                     }
                 }
                 else if (selected_value == 5)
                 {
                     if (obj.t_check == 3)
                     {
-                        result += "<tr><td>" + obj.name + "</td><td>" + obj.user_id + "</td><td>" + obj.cellphone + "</td><td>" + obj.latitude + "</td><td>" + obj.longitude + "</td><td>"+ status  + "</td><td><button onclick='goPage(this)' id="+i+">位置</button></td></tr>";
+                    result += "<div class='css_tr'><div class='css_td'>" + obj.name + "</div><div class='css_td'>" + obj.user_id + "</div><div class='css_td'>" + obj.cellphone + "</div><div class='css_td'>" + obj.latitude + "</div><div class='css_td'>" + obj.longitude + "</div><div class='css_td'>"+ status  + "</div><div class='css_td'><button onclick='goPage(this)' id="+i+">位置</button></div></div>";
                     }
                 }
 
 
             }
-            result += "</table>";
 
             listView.innerHTML = result;
         }

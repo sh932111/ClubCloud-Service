@@ -8,3 +8,16 @@ h3
 	color: #4F4F4F;
 	font-family:微軟正黑體;
 }
+.css_table {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+	display:table;
+}
+.css_tr {
+	display: table-row;
+	height: 50px;
+}
+.css_td {
+	display: table-cell;
+}
