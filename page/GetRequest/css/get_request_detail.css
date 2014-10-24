@@ -8,3 +8,33 @@
 {
 	float: left;
 }
+body
+{
+	background-color: #ECF5FF;
+}
+h2
+{
+	text-align: center;
+	color: #4F4F4F;
+	font-family:微軟正黑體;
+}
+#push_bt
+{
+	border-radius: 5px;
+	background-color: #FFAF60;
+	color: #6C6C6C;
+	border:1px #d0d0d0 solid;
+	width: 40%;
+	height: 35px;
+	font-size: 16px;
+}
+#delete_bt
+{
+	border-radius: 5px;
+	background-color: #FFAF60;
+	color: #6C6C6C;
+	border:1px #d0d0d0 solid;
+	width: 40%;
+	height: 35px;
+	font-size: 16px;
+}

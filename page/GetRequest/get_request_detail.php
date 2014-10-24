@@ -21,8 +21,8 @@ $post_id = $_GET['post_id'];
 		<link rel="stylesheet" href="css/get_request_detail.css">
 	</head>
 	<body onload="init()">
+		<h2>訊息資料查詢</h2>
 		<div id="main">
-			<h2>訊息資料查詢</h2>
 			<p><div id="msg_name"></div></p>
 			<p><div id="msg_username"></div></p>
 			<p><div id="msg_title"></div></p>
