@@ -10,6 +10,7 @@ body {
 }
 .css_tr {
 	display: table-row;
+	height: 50px;
 }
 
 .title_css_td {
