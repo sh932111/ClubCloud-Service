@@ -19,27 +19,24 @@ $post_id = $_GET['post_id'];
 	<title>訊息資料查詢</title>
 	<head>
 		<link rel="stylesheet" href="css/get_request_detail.css">
-		
 	</head>
 	<body onload="init()">
-		<h2>訊息資料查詢</h2>
-		<!-- <p><div id="username"></div></p>
-		<p><div id="user"></div></p> -->
-		<p><div id="msg_name"></div></p>
-		<p><div id="msg_username"></div></p>
-		<p><div id="msg_title"></div></p>
-		<p><div id="msg_address"></div></p>
-		<p><div id="msg_time"></div></p>
-		<p><div id="msg_list"></div></p>
-		<p><div id="msg_image"></div></p>
-
-		<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
-		
-		<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
-		<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
-		
+		<div id="main">
+			<h2>訊息資料查詢</h2>
+			<p><div id="msg_name"></div></p>
+			<p><div id="msg_username"></div></p>
+			<p><div id="msg_title"></div></p>
+			<p><div id="msg_address"></div></p>
+			<p><div id="msg_time"></div></p>
+			<p><div id="msg_list"></div></p>
+			<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
+			<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
+		</div>
+		<div id="view">
+			<p><div id="msg_image"></div></p>
+			<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
+		</div>
 	</body>
-
 	<script src="js/request_detail.js"></script>
-<script src="../lib/js/get_data.js"></script>
+	<script src="../lib/js/get_data.js"></script>
 </html>
