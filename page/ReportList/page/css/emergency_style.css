@@ -19,6 +19,8 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#FF8000;
+	border-bottom-style:solid;
+	border-bottom-color:#007AFA;
 }
 .up_list_css_td {
 	display: table-cell;
