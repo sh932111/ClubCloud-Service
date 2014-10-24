@@ -13,6 +13,13 @@ body {
 	height: 50px;
 }
 
+.css_tr:hover {
+	display: table-row;
+	height: 50px;
+	background-color: #97CBFF;
+	cursor: pointer;
+}
+
 .up_title_css_td {
 	display: table-cell;
 	width: 30%;
@@ -35,7 +42,6 @@ body {
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 	border-width:2px;
-	text-indent: 2%;
 }
 .up_date_css_td {
 	display: table-cell;
@@ -80,7 +86,6 @@ body {
 	font-family:微軟正黑體;
 	color:#4F4F4F;
 	vertical-align:middle;
-	text-indent: 2%;
 	border-bottom-style:solid;
 	border-bottom-color:#C4E1FF;
 	border-width:1px;
