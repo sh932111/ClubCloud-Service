@@ -48,13 +48,13 @@ function getEvent()
 
                         var dateDiv = document.createElement("div");
 
-                        dateDiv.innerHTML = "日期："+obj.date;
+                        dateDiv.innerHTML = obj.date;
                         
                         dateDiv.className = "css_td";
 
                         var timeDiv = document.createElement("div");
 
-                        timeDiv.innerHTML = "時間："+obj.time;
+                        timeDiv.innerHTML = obj.time;
                         
                         timeDiv.className = "css_td";
 
