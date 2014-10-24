@@ -17,19 +17,19 @@ $post_id = $_GET['post_id'];
 
 	<title>訊息資料查詢</title>
 	<head>
-		<h2>訊息資料查詢</h2>
+		<link rel="stylesheet" href="css/get_request_detail.css">
+		
 	</head>
 	<body onload="init()">
-
+		<h2>訊息資料查詢</h2>
 		<!-- <p><div id="username"></div></p>
 		<p><div id="user"></div></p> -->
-		<p><div id="msg_name"></div></p>
-		<p><div id="msg_username"></div></p>
-		<p><div id="msg_title"></div></p>
-		<p><div id="msg_address"></div></p>
-		<p><div id="msg_time"></div></p>
-		<p><div id="msg_list"></div></p>
-		<p><div id="msg_image"></div></p>
+		<p><div id="msg_title" class="title"></div></p>
+		<p><div id="msg_name"  class="data"></div></p>
+		<p><div id="msg_address" class="data"></div></p>
+		<p><div id="msg_time" class="data"></div></p>
+		<p><div id="msg_list" class="list"></div></p>
+		<p><div id="msg_image" class="data"></div></p>
 
 		<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
 		

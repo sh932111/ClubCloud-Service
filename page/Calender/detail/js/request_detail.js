@@ -46,8 +46,7 @@ function getDetailData()
             
             requestData = get_json.data;
             
-            document.getElementById("msg_name").innerHTML = "訊息發送人："+requestData.name;
-            document.getElementById("msg_username").innerHTML = "帳號："+requestData.username;
+            document.getElementById("msg_name").innerHTML = "訊息發送人："+requestData.name + "("+requestData.username+")";
             document.getElementById("msg_title").innerHTML = "標題："+requestData.title;
             document.getElementById("msg_address").innerHTML = "活動地址："+requestData.address_city + requestData.address_area+requestData.address;
             
