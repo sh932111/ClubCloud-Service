@@ -29,7 +29,6 @@ function getEvent()
             {
                 if (get_json.data.num != 0)
                 {
-
                     var listView = document.getElementById('listView');
 
                     for (var i = 0; i < get_json.data.num; i++) 
@@ -62,11 +61,13 @@ function getEvent()
 
                         listDiv.innerHTML = "內文："+obj.list;
 
+                        listDiv.className = "list_css_td";
+
                         trDiv.appendChild(titleDiv);
-                        trDiv.appendChild(dateDiv);
+                        trDiv.appendChild(listDiv);
                         trDiv.appendChild(timeDiv);
+                        trDiv.appendChild(dateDiv);
                         listView.appendChild(trDiv);
-                        listView.appendChild(listDiv);
                     }
                }
            }
