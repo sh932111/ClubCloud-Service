@@ -9,21 +9,23 @@
 }
 .date_css_td {
 	display: table-cell;
-	width: 15%;
+	width: 20%;
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
+	text-align: center;
 }
 .time_css_td {
+	text-align: center;
 	display: table-cell;
-	width: 10%;
+	width: 15%;
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
 }
 .title_css_td {
 	display: table-cell;
-	width: 75%;
+	width: 65%;
 	font-size: 24px;
 	font-family:微軟正黑體;
 	color:#007AFA;
