@@ -13,7 +13,7 @@ $username = $_GET['username'];
     <link rel="stylesheet" href="css/core.css" type="text/css" />
 
 	<style type="text/css" media="screen">
-		#jMonthCalendar .Meeting { background-color: #2894FF; color: white}
+		#jMonthCalendar .Meeting { background-color: #2894FF;}
 		#jMonthCalendar .Birthday { background-color: #DD00FF;}
 		#jMonthCalendar #Event_3 { background-color:#0000FF; }
 	</style>
