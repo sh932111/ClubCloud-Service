@@ -58,22 +58,22 @@ function getEvent()
                         
                         timeDiv.className = "time_css_td";
 
-                        var list_trDiv = document.createElement("div");
+                        // var list_trDiv = document.createElement("div");
                         
-                        list_trDiv.className = "css_tr";
+                        // list_trDiv.className = "css_tr";
 
-                        var listDiv = document.createElement("div");
+                        // var listDiv = document.createElement("div");
 
-                        listDiv.innerHTML = obj.list;
+                        // listDiv.innerHTML = obj.list;
 
-                        listDiv.className = "list_css_td";
+                        // listDiv.className = "list_css_td";
 
                         trDiv.appendChild(titleDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        list_trDiv.appendChild(listDiv);
+                        // list_trDiv.appendChild(listDiv);
                         listView.appendChild(trDiv);
-                        listView.appendChild(listDiv);
+                        // listView.appendChild(listDiv);
                     }
                }
            }
