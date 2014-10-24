@@ -32,7 +32,7 @@ h3
 	display: table-cell;
 	text-align: center;
 	border-bottom-style:solid;
-	border-bottom-color:#d0d0d0;
+	border-bottom-color:#7B7B7B;
 	vertical-align:middle;
 	border-width:2px;
 	font-size: 14px;
@@ -43,10 +43,10 @@ h3
 	display: table-cell;
 	text-align: center;
 	border-bottom-style:solid;
-	border-bottom-color:#7B7B7B;
+	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 	border-width:2px;
 	font-size: 14px;
 	font-family:微軟正黑體;
-	color:#C4E1FF;
+	color:#7B7B7B;
 }
