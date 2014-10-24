@@ -14,7 +14,7 @@ var userName = '<?php echo $username; ?>';
 //console.log(userName);
 </script>
 
-<title>首頁</title>
+<title>社區雲端事務系統</title>
 <head>
 	<link rel="stylesheet" href="lib/css/style.css">
 	<link rel="shortcut icon" href="lib/img/icon.png">  
