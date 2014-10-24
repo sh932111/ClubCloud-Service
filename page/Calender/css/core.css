@@ -17,7 +17,7 @@ a { font-size:11px; }
 .MonthlyCalendar #CalendarHead .DateHeader { width:14%; text-align:center; }
 
 .MonthlyCalendar #CalendarBody { }
-.DateBox { vertical-align:top; border:solid 1px #ddd;  background:red}
+.DateBox { vertical-align:top; border:solid 1px #ddd;  background:white}
 .DateLabel { height:16px; width:100%; background:#F7F7F7 none repeat scroll 0 0; text-align:right; }
 .DateLabel a { cursor:pointer; padding:0 5px 2px; text-decoration:none; line-height:16px; }
 
