@@ -33,7 +33,7 @@ $post_id = $_GET['post_id'];
 		</div>
 		<div id="view">
 			<p><div id="msg_image" class="data"＃></div></p>
-			<p><img src="" id="uploadImg" alt="" /></p>
+			<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
 		</div>
 	</body>
 	<script src="js/request_detail.js"></script>
