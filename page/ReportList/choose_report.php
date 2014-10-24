@@ -20,10 +20,10 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<div id="menu">
-		<input type="button" value="緊急回報清單" onclick="emList()" />
+		<input type="button" value="緊急回報清單" onclick="emList()" class="Selected" />
 	</div>
 	<div id="main">
-		<iframe id="iframe" src="" scrolling="yes" frameborder="1">
+		<iframe id="iframe" src="" scrolling="yes" frameborder="0">
 		</iframe>
 	</div>
 </body>
