@@ -23,7 +23,7 @@ body {
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 	border-width:2px;
-	text-indent: 1%;
+	text-indent: 2%;
 }
 .up_list_css_td {
 	display: table-cell;
@@ -35,7 +35,7 @@ body {
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 	border-width:2px;
-	text-indent: 1%;
+	text-indent: 2%;
 }
 .up_date_css_td {
 	display: table-cell;
@@ -68,7 +68,7 @@ body {
 	font-family:微軟正黑體;
 	color:#4F4F4F;
 	vertical-align:middle;
-	text-indent: 1%;
+	text-indent: 2%;
 }
 .list_css_td {
 	display: table-cell;
@@ -77,7 +77,7 @@ body {
 	font-family:微軟正黑體;
 	color:#4F4F4F;
 	vertical-align:middle;
-	text-indent: 1%;
+	text-indent: 2%;
 }
 .date_css_td {
 	display: table-cell;
