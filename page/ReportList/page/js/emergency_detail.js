@@ -42,7 +42,7 @@ function setUI()
 
             var listView = document.getElementById('listView');
 
-            var result += "<div class='css_tr'><div class='css_td'>使用者</div><div class='css_td'>身分證字號</div><div class='css_td'>聯絡電話</div><div class='css_td'>Latitude</div><div class='css_td'>Longitude</div><div class='css_td'>回報狀況</div><div class='css_td'>位置查詢</div></div>";
+            var result = "<div class='css_tr'><div class='css_td'>使用者</div><div class='css_td'>身分證字號</div><div class='css_td'>聯絡電話</div><div class='css_td'>Latitude</div><div class='css_td'>Longitude</div><div class='css_td'>回報狀況</div><div class='css_td'>位置查詢</div></div>";
 
             for (var i = 0; i < responseData.data.num; i++) 
             {
