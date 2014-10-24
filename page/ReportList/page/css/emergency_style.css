@@ -21,6 +21,7 @@ body {
 	color:#FF8000;
 	border-bottom-style:solid;
 	border-bottom-color:#007AFA;
+	vertical-align:middle;
 }
 .up_list_css_td {
 	display: table-cell;
@@ -30,6 +31,7 @@ body {
 	color:#FF8000;
 	border-bottom-style:solid;
 	border-bottom-color:#007AFA;
+	vertical-align:middle;
 }
 .up_date_css_td {
 	display: table-cell;
@@ -40,6 +42,7 @@ body {
 	text-align: center;
 	border-bottom-style:solid;
 	border-bottom-color:#007AFA;
+	vertical-align:middle;
 }
 .up_time_css_td {
 	text-align: center;
@@ -50,6 +53,7 @@ body {
 	color:#FF9224;
 	border-bottom-style:solid;
 	border-bottom-color:#007AFA;
+	vertical-align:middle;
 }
 .title_css_td {
 	display: table-cell;
