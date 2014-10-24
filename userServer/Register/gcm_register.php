@@ -37,9 +37,9 @@ if (strlen( $userName) > 0 )
 		$query = sprintf("UPDATE `user_table` SET 
 			`device_token` = '$regId'
 			WHERE `username` = '$userName';");
-		$res = mysql_query($query,$objConnect);
+		$res = mysql_query($query,$link);
 
-		mysql_close($objConnect);
+		mysql_close($link);
 
 	}
 }
