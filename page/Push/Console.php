@@ -85,7 +85,7 @@ var userName = "<?php echo $username; ?>";
  	reader.readAsDataURL(file);
  	reader.onload = function(e){
  		var pic = document.getElementById("preview");
- 		pic.style.width = "400px";
+ 		pic.style.width = "250px";
  		pic.src=this.result;
  	}
  }
