@@ -95,13 +95,7 @@ function deleteMsg(check)
             {
                 alert("推送成功");
             }
-
-            if (get_json.Result)
-            {
-                window.location.reload();
-            }
-                //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
-            }
+            window.history.back();
         }
 
         var post = "id="+postId;
