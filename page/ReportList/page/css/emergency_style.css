@@ -11,6 +11,7 @@ body {
 .css_tr {
 	display: table-row;
 	height: 50px;
+	background-color: #C4E1FF;
 }
 
 .css_tr:hover {
