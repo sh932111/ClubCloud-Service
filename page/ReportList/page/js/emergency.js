@@ -40,19 +40,23 @@ function getEvent()
                         
                         trDiv.className = "css_tr";
 
-                        var nameDiv = document.createElement("div");
-                        
-                        nameDiv.className = "css_td";
-
-                        nameDiv.innerHTML = "標題："+obj.title;
-                        
-                        var oneDiv = document.createElement("div");
-
                         var titleDiv = document.createElement("div");
-
-                        titleDiv.innerHTML = "日期："+obj.date+"&nbsp;&nbsp;&nbsp;時間：" +obj.time;
                         
                         titleDiv.className = "css_td";
+
+                        titleDiv.innerHTML = obj.title;
+
+                        var dateDiv = document.createElement("div");
+
+                        dateDiv.innerHTML = "日期："+obj.date;
+                        
+                        dateDiv.className = "css_td";
+
+                        var timeDiv = document.createElement("div");
+
+                        timeDiv.innerHTML = "時間："+obj.time;
+                        
+                        timeDiv.className = "css_td";
 
                         var listDiv = document.createElement("div");
 
@@ -60,11 +64,10 @@ function getEvent()
 
                         listDiv.className = "css_td";
 
-                        oneDiv.appendChild(titleDiv);
-
-                        trDiv.appendChild(nameDiv);
-                        trDiv.appendChild(oneDiv);
-                        trDiv.appendChild(listDiv);
+                        trDiv.appendChild(titleDiv);
+                        trDiv.appendChild(dateDiv);
+                        trDiv.appendChild(timeDiv);
+                        //trDiv.appendChild(listDiv);
                         listView.appendChild(trDiv);
                     }
                }
