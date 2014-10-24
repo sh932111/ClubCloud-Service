@@ -28,6 +28,8 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#FF8000;
+	border-bottom-style:solid;
+	border-bottom-color:#007AFA;
 }
 .up_date_css_td {
 	display: table-cell;
@@ -36,6 +38,8 @@ body {
 	font-family:微軟正黑體;
 	color:#FF9224;
 	text-align: center;
+	border-bottom-style:solid;
+	border-bottom-color:#007AFA;
 }
 .up_time_css_td {
 	text-align: center;
@@ -44,6 +48,8 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#FF9224;
+	border-bottom-style:solid;
+	border-bottom-color:#007AFA;
 }
 .title_css_td {
 	display: table-cell;
