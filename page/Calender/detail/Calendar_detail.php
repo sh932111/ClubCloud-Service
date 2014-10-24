@@ -29,10 +29,8 @@ var dataID = "<?php echo $data_id; ?>";
 
 	<div id="demo">
 		<h3>活動QR Code：</h3>
-
 		<div id="code"></div>
-		
-		<a href="#" download="QRcode.png" onclick="this.href=cvs.toDataURL();" >下載</a>
+		<p><a href="#" download="QRcode.png" onclick="this.href=cvs.toDataURL();" >下載</a></p>
 	</div>
 	<div id="main">
 		<iframe id="iframe" src="" scrolling="yes" frameborder="0">
