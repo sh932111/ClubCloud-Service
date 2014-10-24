@@ -22,6 +22,7 @@ body {
 	border-bottom-style:solid;
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
+	border-width:2px;
 }
 .up_list_css_td {
 	display: table-cell;
@@ -32,6 +33,7 @@ body {
 	border-bottom-style:solid;
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
+	border-width:2px;
 }
 .up_date_css_td {
 	display: table-cell;
@@ -43,6 +45,7 @@ body {
 	border-bottom-style:solid;
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
+	border-width:2px;
 }
 .up_time_css_td {
 	text-align: center;
@@ -54,6 +57,7 @@ body {
 	border-bottom-style:solid;
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
+	border-width:2px;
 }
 .title_css_td {
 	display: table-cell;
@@ -61,6 +65,7 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
+	vertical-align:middle;
 }
 .list_css_td {
 	display: table-cell;
@@ -68,6 +73,7 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#4F4F4F;
+	vertical-align:middle;
 }
 .date_css_td {
 	display: table-cell;
@@ -76,6 +82,7 @@ body {
 	font-family:微軟正黑體;
 	color:#7B7B7B;
 	text-align: center;
+	vertical-align:middle;
 }
 .time_css_td {
 	text-align: center;
@@ -84,4 +91,5 @@ body {
 	font-size: 16px;
 	font-family:微軟正黑體;
 	color:#7B7B7B;
+	vertical-align:middle;
 }
