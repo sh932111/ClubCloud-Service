@@ -60,7 +60,7 @@ function getDetailData()
             {
 
                 var img = document.getElementById("uploadImg");
-                img.src = "../../userServer/Request/request_img/"+postId+".png";         
+                img.src = "../../../userServer/Request/request_img/"+postId+".png";         
             }
         }
     }
