@@ -62,18 +62,16 @@ function getEvent()
                         
                         // list_trDiv.className = "css_tr";
 
-                        // var listDiv = document.createElement("div");
+                        var listDiv = document.createElement("div");
 
-                        // listDiv.innerHTML = obj.list;
-
-                        // listDiv.className = "list_css_td";
+                        listDiv.innerHTML = obj.list;
 
                         trDiv.appendChild(titleDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
                         // list_trDiv.appendChild(listDiv);
                         listView.appendChild(trDiv);
-                        // listView.appendChild(listDiv);
+                        listView.appendChild(listDiv);
                     }
                }
            }
