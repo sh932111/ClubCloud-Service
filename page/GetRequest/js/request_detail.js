@@ -98,7 +98,7 @@ function deleteMsg(check)
 
             if (get_json.Result)
             {
-                window.location.reload();
+                history.go(-1);
             }
 
         }
