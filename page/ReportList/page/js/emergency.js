@@ -43,23 +43,23 @@ function getEvent()
                         
                         titleDiv.className = "title_css_td";
 
-                        titleDiv.innerHTML = "標題："+obj.title;
+                        titleDiv.innerHTML = obj.title;
 
                         var dateDiv = document.createElement("div");
 
-                        dateDiv.innerHTML = "日期："+obj.date;
+                        dateDiv.innerHTML = obj.date;
                         
                         dateDiv.className = "date_css_td";
 
                         var timeDiv = document.createElement("div");
 
-                        timeDiv.innerHTML = "時間："+obj.time;
+                        timeDiv.innerHTML = obj.time;
                         
                         timeDiv.className = "time_css_td";
 
                         var listDiv = document.createElement("div");
 
-                        listDiv.innerHTML = "內文："+obj.list;
+                        listDiv.innerHTML = obj.list;
 
                         listDiv.className = "list_css_td";
 
