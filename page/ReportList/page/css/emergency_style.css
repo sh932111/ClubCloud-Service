@@ -10,15 +10,25 @@
 .date_css_td {
 	display: table-cell;
 	width: 15%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#4F4F4F;
 }
 .time_css_td {
 	display: table-cell;
 	width: 10%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#4F4F4F;
 }
 .title_css_td {
 	display: table-cell;
 	width: 75%;
+	font-size: 24px;
+	font-family:微軟正黑體;
+	color:#007AFA;
 }
 .list_css_td {
 	display: table-cell;
+	width: 100%;
 }
