@@ -64,8 +64,7 @@ function getDetailData()
             var p = document.createElement("p");
 
             var img = document.getElementById("uploadImg");
-                //img.setAttribute("src","../../userServer/Request/request_img/"+postId+".png");
-                img.src = "../../userServer/Request/request_img/"+postId+".png"; 
+            img.src = "../../userServer/Request/request_img/"+postId+".png"; 
                 
             }
         }

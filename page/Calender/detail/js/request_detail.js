@@ -10,7 +10,6 @@ var getCity;
 var getCityDetail;
 var getCityId;
 var getCityDetailId;
-var imgCheck;
 
 
 function init() 
@@ -56,8 +55,13 @@ function getDetailData()
             document.getElementById("msg_list").innerHTML = "內文：<br>"+requestData.detail;
             
             var img_check = requestData.image;
-            imgCheck = img_check;
-                        
+
+            if (img_check == "1")
+            {
+
+                var img = document.getElementById("uploadImg");
+                img.src = "../../userServer/Request/request_img/"+postId+".png";         
+            }
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
