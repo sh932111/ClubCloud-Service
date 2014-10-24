@@ -2,23 +2,12 @@
 
 #main
 {
-	position: fixed;
-	width: 45%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: auto;
-	left: 5%;
+	width: 50%;	
+	float: left;
 }
 #view
 {
-	position: fixed;
-	width: 50%;
-	height: 100%;
-	top: 0;
-	right: 0;
-	bottom: auto;
-	left: 50%;
+	float: left;
 }
 body
 {
