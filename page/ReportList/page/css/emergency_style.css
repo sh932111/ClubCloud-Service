@@ -9,13 +9,15 @@
 }
 .date_css_td {
 	display: table-cell;
+	width: 15%;
 }
 .time_css_td {
 	display: table-cell;
+	width: 10%;
 }
 .title_css_td {
 	display: table-cell;
-	width: 60%;
+	width: 75%;
 }
 .list_css_td {
 	display: table-cell;
