@@ -95,7 +95,11 @@ function deleteMsg(check)
             {
                 alert("推送成功");
             }
-            window.history.back();
+
+            if (get_json.Result)
+            {
+                window.location.reload();
+            }
         }
 
         var post = "id="+postId;
