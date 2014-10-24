@@ -1,10 +1,10 @@
-nav ul
+body 
 {
-	margin-left: 10%;
-	height:100%; 
-	width:70%;
+	background-color: #ECF5FF;
 }
-
-nav ul{overflow:hidden; overflow-y:scroll;}
-
-
+h3
+{
+	text-align: center;
+	color: #4F4F4F;
+	font-family:微軟正黑體;
+}

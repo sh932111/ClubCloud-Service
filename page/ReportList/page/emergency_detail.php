@@ -29,13 +29,7 @@ var eventID = '<?php echo $event_id; ?>';
 		<option value="4">使用者平安</option>
 		<option value="5">使用者需救援</option>
 	</select></p>
-	<div id="list">
-		<nav>
-		<ul id="listView">
-			
-		</ul>
-		</nav>
-	</div>
+	<div id="listView"></div>
 </body>
 
 <script src="js/emergency_detail.js"></script>
