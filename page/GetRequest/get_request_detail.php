@@ -32,8 +32,8 @@ $post_id = $_GET['post_id'];
 			<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
 		</div>
 		<div id="view">
-			<p><div id="msg_image"></div></p>
-			<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
+			<p><div id="msg_image" class="data"＃></div></p>
+			<p><img src="" id="uploadImg" alt="" /></p>
 		</div>
 	</body>
 	<script src="js/request_detail.js"></script>
