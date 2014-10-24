@@ -86,9 +86,8 @@ function goPage(i)
 {
     var index = i.id;
 
-    var pull_id = responseData.data[index];
+    var pull_id = responseData.data[index].id;
 
-    console.log(pull_id);
-//    location.href = 'emergency_detail.php?username='+userName+'&id='+pull_id;
+    location.href = 'emergency_detail.php?username='+userName+'&id='+pull_id;
 
 }
