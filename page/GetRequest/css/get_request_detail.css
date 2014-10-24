@@ -1,1 +1,11 @@
 
+#main
+{
+	position: fixed;
+	width: 45%;
+	height: auto;
+	top: 0;
+	right: 0;
+	bottom: auto;
+	left: 5%;
+}
