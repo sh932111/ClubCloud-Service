@@ -4,6 +4,16 @@
 .css_tr {
 	display: table-row;
 }
-.css_td {
+.date_css_td {
+	display: table-cell;
+}
+.time_css_td {
+	display: table-cell;
+}
+.title_css_td {
+	display: table-cell;
+	width: 60%;
+}
+.list_css_td {
 	display: table-cell;
 }

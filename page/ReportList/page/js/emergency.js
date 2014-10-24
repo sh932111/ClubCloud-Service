@@ -42,7 +42,7 @@ function getEvent()
 
                         var titleDiv = document.createElement("div");
                         
-                        titleDiv.className = "css_td";
+                        titleDiv.className = "title_css_td";
 
                         titleDiv.innerHTML = obj.title;
 
@@ -50,13 +50,13 @@ function getEvent()
 
                         dateDiv.innerHTML = obj.date;
                         
-                        dateDiv.className = "css_td";
+                        dateDiv.className = "date_css_td";
 
                         var timeDiv = document.createElement("div");
 
                         timeDiv.innerHTML = obj.time;
                         
-                        timeDiv.className = "css_td";
+                        timeDiv.className = "time_css_td";
 
                         var list_trDiv = document.createElement("div");
                         
@@ -66,7 +66,7 @@ function getEvent()
 
                         listDiv.innerHTML = obj.list;
 
-                        listDiv.className = "css_td";
+                        listDiv.className = "list_css_td";
 
                         trDiv.appendChild(titleDiv);
                         trDiv.appendChild(dateDiv);
