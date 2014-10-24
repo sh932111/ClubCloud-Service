@@ -1,4 +1,4 @@
-#main
+#demo
 {
 	position: fixed;
 	width: 40%;
@@ -8,7 +8,7 @@
 	bottom: auto;
 	left: 0;
 }
-#demo
+#main
 {
 	position: fixed;
 	width: 60%;
