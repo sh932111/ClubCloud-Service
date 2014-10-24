@@ -39,3 +39,11 @@ h2
 	height: 35px;
 	font-size: 16px;
 }
+#msg_address
+{
+	float: left;
+}
+#msg_time
+{
+	float: left;
+}
