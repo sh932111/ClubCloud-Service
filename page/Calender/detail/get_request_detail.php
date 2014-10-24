@@ -22,19 +22,16 @@ $post_id = $_GET['post_id'];
 	</head>
 	<body onload="init()">
 		<h2>訊息資料查詢</h2>
-		<!-- <p><div id="username"></div></p>
-		<p><div id="user"></div></p> -->
-		<p><div id="msg_title" class="title"></div></p>
-		<p><div id="msg_name"  class="data"></div></p>
-		<p><div id="msg_address" class="data"></div></p>
-		<p><div id="msg_time" class="data"></div></p>
-		<p><div id="msg_list" class="list"></div></p>
-		<p><div id="msg_image" class="data"></div></p>
-
-		<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
-		
+		<div id="block">
+			<p><div id="msg_title" class="title"></div></p>
+			<p><div id="msg_name"  class="data"></div></p>
+			<p><div id="msg_address" class="data"></div></p>
+			<p><div id="msg_time" class="data"></div></p>
+			<p><div id="msg_list" class="list"></div></p>
+			<p><div id="msg_image" class="data"></div></p>
+			<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
+		</div>
 	</body>
-
 	<script src="js/request_detail.js"></script>
 	<script src="../../lib/js/get_data.js"></script>
 </html>
