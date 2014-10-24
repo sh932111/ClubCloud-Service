@@ -11,10 +11,7 @@ mysql_query("SET NAMES 'utf8'",$link);
 $userName = $_POST["username"];
 $regId = $_POST['regId'];
 
-if (strlen( $userName) > 0 ) 
-{
-
-	if (!$link) 
+if (!$link) 
 	{
 		$arr["result"] = FALSE;
 		$arr["Message"] = "初始化失敗";
@@ -36,12 +33,10 @@ if (strlen( $userName) > 0 )
 	{
 		$query = sprintf("UPDATE `user_table` SET 
 			`device_token` = '$regId'
-			WHERE `username` = '$userName';");
+			WHERE `username` = '$userName'");
 		$res = mysql_query($query,$link);
 
 		mysql_close($link);
 
 	}
-}
-
 ?>
