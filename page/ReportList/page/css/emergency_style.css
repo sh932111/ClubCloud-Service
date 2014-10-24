@@ -13,20 +13,49 @@ body {
 	height: 50px;
 }
 
+.up_title_css_td {
+	display: table-cell;
+	width: 30%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF8000;
+}
+.up_list_css_td {
+	display: table-cell;
+	width: 45%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF8000;
+}
+.up_date_css_td {
+	display: table-cell;
+	width: 15%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF9224;
+	text-align: center;
+}
+.up_time_css_td {
+	text-align: center;
+	display: table-cell;
+	width: 10%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF9224;
+}
 .title_css_td {
 	display: table-cell;
 	width: 30%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#4F4F4F;
+	color:#3C3C3C;
 }
 .list_css_td {
 	display: table-cell;
 	width: 45%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#4F4F4F;
-
+	color:#3C3C3C;
 }
 .date_css_td {
 	display: table-cell;
