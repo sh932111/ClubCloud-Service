@@ -38,6 +38,10 @@ function getEvent()
                         var trDiv = document.createElement("div");
                         
                         trDiv.className = "css_tr";
+                        trDiv.id = i;
+                        trDiv.addEventListener("click", function(e){
+                            goPage(this);
+                        });
 
                         var titleDiv = document.createElement("div");
                         
@@ -77,4 +81,13 @@ function getEvent()
     var post = "city_id="+userData.city_id+"&area_id="+userData.city_detail_id;
 
     xmlhttp.send(post); 
+}
+function goPage(i)
+{
+    var index = i.id;
+
+    var pull_id = responseData[index]["id"];
+
+    location.href = 'emergency_detail.php?username='+userName+'&id='+pull_id;
+
 }
