@@ -11,13 +11,26 @@ h3
 .css_table {
 	width: 80%;
 	margin-left: 10%;
-	margin-top: 5%;
 	display:table;
 }
 .css_tr {
 	display: table-row;
 	height: 50px;
 }
+.css_tr:hover {
+	display: table-row;
+	height: 50px;
+	background-color: #97CBFF;
+	cursor: pointer;
+}
 .css_td {
 	display: table-cell;
+	text-align: center;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+	font-size: 14px;
+	font-family:微軟正黑體;
+	color:#FF9224;
 }
