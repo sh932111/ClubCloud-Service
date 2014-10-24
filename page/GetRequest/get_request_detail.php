@@ -4,7 +4,6 @@
 
 $username = $_GET['username'];
 $post_id = $_GET['post_id'];
-$link_class = $_GET['class'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,7 +13,6 @@ $link_class = $_GET['class'];
 
 		var userName = "<?php echo $username; ?>";
 		var postId = "<?php echo $post_id; ?>";
-		var linkClass = "<?php echo $link_class; ?>";
 
 	</script>
 

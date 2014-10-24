@@ -31,23 +31,7 @@ function getDetailData()
 {
     var xmlhttp = new XMLHttpRequest();
 
-    if (linkClass == 0)
-    {
-        xmlhttp.open("POST", "../Calender/php/pull_calendar_detail.php", true);
-
-        var push_bt = document.getElementById("push_bt");
-
-        push_bt.style.display = 'none';
-        
-        var delete_bt = document.getElementById("delete_bt");
-
-        delete_bt.style.display = 'none';
-    }
-    else if (linkClass == 1)
-    {
-        xmlhttp.open("POST", "php/pull_request_detail.php", true);
-    }
-    
+    xmlhttp.open("POST", "php/pull_request_detail.php", true);
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     xmlhttp.onreadystatechange = function() 
@@ -65,39 +49,26 @@ function getDetailData()
             document.getElementById("msg_name").innerHTML = "訊息發送人："+requestData.name;
             document.getElementById("msg_username").innerHTML = "帳號："+requestData.username;
             document.getElementById("msg_title").innerHTML = "標題："+requestData.title;
-            if (linkClass == 0)
-            {
-                document.getElementById("msg_address").innerHTML = "活動地址："+requestData.address_city + requestData.address_area+requestData.address;
-            }
-            else if (linkClass == 1)
-            {
-                document.getElementById("msg_address").innerHTML = "活動地址："+requestData.city + requestData.area+requestData.address;
-            }
+            document.getElementById("msg_address").innerHTML = "活動地址："+requestData.city + requestData.area+requestData.address;
+            
             document.getElementById("msg_time").innerHTML = "活動時間："+requestData.date + "  "+requestData.time;
             document.getElementById("msg_list").innerHTML = "內文：<br>"+requestData.detail;
             
             var img_check = requestData.image;
             imgCheck = img_check;
             
-	           if (img_check == 1)
-            {
-                var msg_image = document.getElementById("msg_image");
+            var msg_image = document.getElementById("msg_image");
 
-                msg_image.innerHTML = "活動圖片：<br>";
+            msg_image.innerHTML = "活動圖片：<br>";
 
-                var p = document.createElement("p");
+            var p = document.createElement("p");
 
-                var img = document.getElementById("uploadImg");
+            var img = document.getElementById("uploadImg");
                 //img.setAttribute("src","../../userServer/Request/request_img/"+postId+".png");
-	           img.src = "../../userServer/Request/request_img/"+postId+".png";	
-		
-                //img.setAttribute("height","768");
-                //img.setAttribute("width","1024");
-
+                img.src = "../../userServer/Request/request_img/"+postId+".png"; 
+                
             }
-                        
         }
-    }
     // Send the data to PHP now... and wait for response to update the status div
     xmlhttp.send("postId="+postId); 
 }
@@ -107,42 +78,42 @@ function deleteMsg(check)
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.open("POST", "php/delete_request.php", true);
-        
+    
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
-        xmlhttp.onreadystatechange = function() 
+    xmlhttp.onreadystatechange = function() 
+    {
+        if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
         {
-            if(xmlhttp.readyState == 4 && xmlhttp.status == 200) 
+            var return_data = xmlhttp.responseText;
+
+            var get_json = JSON.parse(return_data);
+
+            if (check == 0)
             {
-                var return_data = xmlhttp.responseText;
+                alert(get_json.Message);
+            }
+            else
+            {
+                alert("推送成功");
+            }
 
-                var get_json = JSON.parse(return_data);
-
-                if (check == 0)
-                {
-                    alert(get_json.Message);
-                }
-                else
-                {
-                    alert("推送成功");
-                }
-
-                if (get_json.Result)
-                {
-                    window.location.reload();
-                }
+            if (get_json.Result)
+            {
+                window.location.reload();
+            }
                 //{"Result":true,"Message":"\u767b\u5165\u6210\u529f","username":"21115","password":"21115","name":"forte"}"
             }
         }
 
-    var post = "id="+postId;
+        var post = "id="+postId;
 
-    xmlhttp.send(post); 
-}
+        xmlhttp.send(post); 
+    }
 
-function pushMsg()
-{
-    var xmlhttp = new XMLHttpRequest();
+    function pushMsg()
+    {
+        var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.open("POST", "../Push/push/delegate.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -178,10 +149,10 @@ function pushMsg()
         +"&address_area="+requestData.area;
 
         xmlhttp.send(post); 
-}
-function pushCalendar()
-{
-    var xmlhttp = new XMLHttpRequest();
+    }
+    function pushCalendar()
+    {
+        var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.open("POST", "../Calender/php/push_calendar.php", true);
         xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
@@ -203,7 +174,7 @@ function pushCalendar()
         var month = dt.getMonth()+1;
         var day = dt.getDate();
         var year = dt.getFullYear();
-    
+        
         var send_time = year +"/"+ month +"/"+ day + " " + dt.getHours()+":"+ dt.getMinutes()+":"+ dt.getSeconds();
         
         var post = "id="+postId
@@ -225,5 +196,5 @@ function pushCalendar()
         +"&send_time="+send_time;
 
         xmlhttp.send(post); 
-}
+    }
 

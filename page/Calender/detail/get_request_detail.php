@@ -4,7 +4,6 @@
 
 $username = $_GET['username'];
 $post_id = $_GET['post_id'];
-$link_class = $_GET['class'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -14,8 +13,6 @@ $link_class = $_GET['class'];
 
 		var userName = "<?php echo $username; ?>";
 		var postId = "<?php echo $post_id; ?>";
-		var linkClass = "<?php echo $link_class; ?>";
-
 	</script>
 
 	<title>訊息資料查詢</title>
@@ -36,11 +33,8 @@ $link_class = $_GET['class'];
 
 		<p><img src="" id="uploadImg" alt=""  style="width:400px;"/></p>
 		
-		<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
-		<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
-		
 	</body>
 
 	<script src="js/request_detail.js"></script>
-<script src="../../lib/js/get_data.js"></script>
+	<script src="../../lib/js/get_data.js"></script>
 </html>
