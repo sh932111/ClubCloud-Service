@@ -13,11 +13,11 @@ h3
 button
 {
 	border-radius: 5px;
-	background-color: #FFAF60;
-	color: #6C6C6C;
+	background-color: #6C6C6C;
+	color: #55A8FF;
 	border:1px #d0d0d0 solid;
-	width: 60%;
-	height: 35px;
+	width: 50%;
+	height: 20px;
 	font-size: 12px;
 }
 
