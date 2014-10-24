@@ -20,7 +20,7 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<div id="listView" class="css_table">
-		<div class="css_tr">
+		<div class="up_css_tr">
           	<div class="up_title_css_td">標題</div>
           	<div class="up_list_css_td">內文</div>
           	<div class="up_date_css_td">日期</div>

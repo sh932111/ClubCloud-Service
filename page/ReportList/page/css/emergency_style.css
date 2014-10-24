@@ -12,6 +12,10 @@ body {
 	display: table-row;
 	height: 50px;
 }
+.up_css_tr {
+	display: table-row;
+	height: 50px;
+}
 
 .css_tr:hover {
 	display: table-row;
