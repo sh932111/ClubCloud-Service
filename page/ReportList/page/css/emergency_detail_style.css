@@ -10,6 +10,17 @@ h3
 	width: 88%;
 	float: left;
 }
+button
+{
+	border-radius: 5px;
+	background-color: #FFAF60;
+	color: #6C6C6C;
+	border:1px #d0d0d0 solid;
+	width: 60%;
+	height: 35px;
+	font-size: 12px;
+}
+
 .css_table {
 	width: 80%;
 	margin-left: 10%;
