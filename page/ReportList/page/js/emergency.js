@@ -36,43 +36,36 @@ function getEvent()
                     {
                         var obj = get_json.data[i];
 
+                        var trDiv = document.createElement("div");
+                        
+                        trDiv.className = "css_tr";
+
                         var nameDiv = document.createElement("div");
                         
-                        nameDiv.id="nameDiv";
+                        nameDiv.className = "css_td";
 
                         nameDiv.innerHTML = "標題："+obj.title;
                         
                         var oneDiv = document.createElement("div");
 
-                        oneDiv.id="oneDiv";
-
                         var titleDiv = document.createElement("div");
 
                         titleDiv.innerHTML = "日期："+obj.date+"&nbsp;&nbsp;&nbsp;時間：" +obj.time;
-                            
+                        
+                        titleDiv.className = "css_td";
+
                         var listDiv = document.createElement("div");
 
                         listDiv.innerHTML = obj.list;
-                        listDiv.id="listDiv";
 
-                        var bt = document.createElement("button");
-                        bt.id = i;
-                        var t = document.createTextNode("回報人統計");
-                        bt.appendChild(t); 
-                        bt.onclick = function(){
-                            location.href = 'emergency_detail.php?username='+userName+'&id='+responseData.data[this.id].id; 
-                            return false;
-                        };
+                        listDiv.className = "css_td";
 
                         oneDiv.appendChild(titleDiv);
 
-                        listView.appendChild(nameDiv);
-                        listView.appendChild(oneDiv);
-                        listView.appendChild(listDiv);
-                        listView.appendChild(bt);
-
-                        var hr = document.createElement("hr");
-                        listView.appendChild(hr);
+                        trDiv.appendChild(nameDiv);
+                        trDiv.appendChild(oneDiv);
+                        trDiv.appendChild(listDiv);
+                        listView.appendChild(trDiv);
                     }
                }
            }
