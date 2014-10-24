@@ -18,10 +18,11 @@ $post_id = $_GET['post_id'];
 
 	<title>訊息資料查詢</title>
 	<head>
-		<h2>訊息資料查詢</h2>
+		<link rel="stylesheet" href="css/get_request_detail.css">
+		
 	</head>
 	<body onload="init()">
-
+		<h2>訊息資料查詢</h2>
 		<!-- <p><div id="username"></div></p>
 		<p><div id="user"></div></p> -->
 		<p><div id="msg_name"></div></p>
