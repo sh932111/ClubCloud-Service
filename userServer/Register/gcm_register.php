@@ -43,7 +43,7 @@ if (!$link)
 		echo json_encode($arr);
 		exit();
 
-		mysql_close($link);
-
 	}
+	mysql_close($link);
+	
 ?>
