@@ -58,20 +58,21 @@ function getEvent()
                         
                         timeDiv.className = "time_css_td";
 
-                        // var list_trDiv = document.createElement("div");
-                        
-                        // list_trDiv.className = "css_tr";
-
                         var listDiv = document.createElement("div");
 
                         listDiv.innerHTML = "內文："+obj.list;
 
+                        var title_hr = document.createElement("hr");
+
+                        var list_hr = document.createElement("hr");
+
                         trDiv.appendChild(titleDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        // list_trDiv.appendChild(listDiv);
                         listView.appendChild(trDiv);
+                        listView.appendChild(title_hr);
                         listView.appendChild(listDiv);
+                        listView.appendChild(list_hr);
                     }
                }
            }
