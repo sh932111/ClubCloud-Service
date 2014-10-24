@@ -58,6 +58,10 @@ function getEvent()
                         
                         timeDiv.className = "css_td";
 
+                        var list_trDiv = document.createElement("div");
+                        
+                        list_trDiv.className = "css_tr";
+
                         var listDiv = document.createElement("div");
 
                         listDiv.innerHTML = obj.list;
@@ -67,8 +71,9 @@ function getEvent()
                         trDiv.appendChild(titleDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        //trDiv.appendChild(listDiv);
+                        list_trDiv.appendChild(listDiv);
                         listView.appendChild(trDiv);
+                        listView.appendChild(listDiv);
                     }
                }
            }

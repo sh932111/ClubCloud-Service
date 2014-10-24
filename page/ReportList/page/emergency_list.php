@@ -20,12 +20,7 @@ var userName = '<?php echo $username; ?>';
 </head>
 <body onload="init()">
 	<div id="listView" class="css_table">
-		<div class="css_tr">
-          	<div class="css_td">標題</div>
-          	<div class="css_td">日期</div>
-          	<div class="css_td">時間</div>
-      	</div>
-  </div>
+  	</div>
 </body>
 
 <script src="js/emergency.js"></script>
