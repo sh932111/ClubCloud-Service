@@ -25,7 +25,8 @@ $post_id = $_GET['post_id'];
 		<div id="main">
 			<p><div id="msg_title"></div></p>
 			<p><div id="msg_name"></div></p>
-			<p><div><div id="msg_address"></div><div id="msg_time"></div></div></p>
+			<p><div id="msg_address"></div></p>
+			<p><div id="msg_time"></div></p>
 			<p><div id="msg_list"></div></p>
 			<input id="push_bt" type="button" value="推送活動" onclick="pushMsg()" />
 			<input id="delete_bt" type="button" value="刪除活動" onclick="deleteMsg(0)" />
