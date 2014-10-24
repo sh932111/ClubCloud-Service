@@ -64,9 +64,9 @@ function getDetailData()
 
             var img = document.getElementById("uploadImg");
             img.src = "../../userServer/Request/request_img/"+postId+".png"; 
-                
-            }
+
         }
+    }
     // Send the data to PHP now... and wait for response to update the status div
     xmlhttp.send("postId="+postId); 
 }
@@ -100,15 +100,16 @@ function deleteMsg(check)
             {
                 window.location.reload();
             }
-        }
 
+        }
+    }
         var post = "id="+postId;
 
         xmlhttp.send(post); 
-    }
+}
 
-    function pushMsg()
-    {
+function pushMsg()
+{
         var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.open("POST", "../Push/push/delegate.php", true);
@@ -145,9 +146,9 @@ function deleteMsg(check)
         +"&address_area="+requestData.area;
 
         xmlhttp.send(post); 
-    }
-    function pushCalendar()
-    {
+}
+function pushCalendar()
+{
         var xmlhttp = new XMLHttpRequest();
         
         xmlhttp.open("POST", "../Calender/php/push_calendar.php", true);
@@ -192,5 +193,5 @@ function deleteMsg(check)
         +"&send_time="+send_time;
 
         xmlhttp.send(post); 
-    }
+}
 
