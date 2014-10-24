@@ -1,9 +1,4 @@
-nav ul
-{
-	margin-left: 10%;
-	height:100%; 
-	width:71%;
-}
+
 #nameDiv
 {
 	background-color: #FFEFD5;
@@ -16,5 +11,3 @@ nav ul
 {
 	background-color: #E6E6FA;
 }
-
-nav ul{overflow:hidden; overflow-y:scroll;}

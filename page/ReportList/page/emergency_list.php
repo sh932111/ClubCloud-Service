@@ -19,11 +19,7 @@ var userName = '<?php echo $username; ?>';
 	<link rel="stylesheet" href="css/emergency_style.css">
 </head>
 <body onload="init()">
-	<h3>緊急事件清單</h3>
-	<nav>
-		<ul id="listView">
-		</ul>
-	</nav>
+	<div id="listView"></div>
 </body>
 
 <script src="js/emergency.js"></script>
