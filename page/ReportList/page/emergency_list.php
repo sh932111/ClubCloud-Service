@@ -26,6 +26,7 @@ var userName = '<?php echo $username; ?>';
           	<div class="up_date_css_td">日期</div>
           	<div class="up_time_css_td">時間</div>
       	</div>
+      	<hr>
   </div>
 </body>
 
