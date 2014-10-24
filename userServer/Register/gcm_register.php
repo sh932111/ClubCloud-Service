@@ -36,6 +36,13 @@ if (!$link)
 			WHERE `username` = '$userName'");
 		$res = mysql_query($query,$link);
 
+		$arr["result"] = $res;		
+
+		$arr["Message"] = "更新資料!";
+
+		echo json_encode($arr);
+		exit();
+
 		mysql_close($link);
 
 	}
