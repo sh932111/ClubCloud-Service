@@ -29,11 +29,12 @@ function getEvent()
             {
                 if (get_json.data.num != 0)
                 {
+
+                    var listView = document.getElementById('listView');
+
                     for (var i = 0; i < get_json.data.num; i++) 
                     {
                         var obj = get_json.data[i];
-
-                        var listView = document.getElementById('listView');
 
                         var nameDiv = document.createElement("div");
                         
