@@ -20,7 +20,7 @@ body {
 	font-family:微軟正黑體;
 	color:#FF8000;
 	border-bottom-style:solid;
-	border-bottom-color:#007AFA;
+	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 }
 .up_list_css_td {
@@ -30,7 +30,7 @@ body {
 	font-family:微軟正黑體;
 	color:#FF8000;
 	border-bottom-style:solid;
-	border-bottom-color:#007AFA;
+	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 }
 .up_date_css_td {
@@ -41,7 +41,7 @@ body {
 	color:#FF9224;
 	text-align: center;
 	border-bottom-style:solid;
-	border-bottom-color:#007AFA;
+	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 }
 .up_time_css_td {
@@ -52,7 +52,7 @@ body {
 	font-family:微軟正黑體;
 	color:#FF9224;
 	border-bottom-style:solid;
-	border-bottom-color:#007AFA;
+	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
 }
 .title_css_td {
@@ -60,21 +60,21 @@ body {
 	width: 30%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#3C3C3C;
+	color:#4F4F4F;
 }
 .list_css_td {
 	display: table-cell;
 	width: 45%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#3C3C3C;
+	color:#4F4F4F;
 }
 .date_css_td {
 	display: table-cell;
 	width: 15%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#4F4F4F;
+	color:#7B7B7B;
 	text-align: center;
 }
 .time_css_td {
@@ -83,5 +83,5 @@ body {
 	width: 10%;
 	font-size: 16px;
 	font-family:微軟正黑體;
-	color:#4F4F4F;
+	color:#7B7B7B;
 }
