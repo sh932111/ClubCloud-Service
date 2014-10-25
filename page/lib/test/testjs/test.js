@@ -3,10 +3,10 @@ function post()
 
 	var hr = new XMLHttpRequest();
 
-	var url = "../../../userServer/UserCategory/pushRollCall.php";
+	var url = "../../../userServer/Register/gcm_register.php";
 
 //	var vars = "name="+"大瑋"+"&username="+"jkdww"+"&title="+"安安"+"&detail="+"佑22.636567, 120.335075來個大測試"+"&date="+"2014/10/02"+"&time="+"19:00"+"&city="+"高雄市"+"&area="+"三民區"+"&liner="+"鼎盛里"+"&address="+"鼎富路46號4F"+"&image="+1;
-	var vars = "id="+"20141007180328"+"&username="+"asdfg";
+	var vars = "regId="+"20141007180328"+"&username="+"790393564314510";
 
 	hr.open("POST", url, true);
 
