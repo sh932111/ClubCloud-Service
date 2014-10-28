@@ -45,6 +45,8 @@ function getEvent(index1,index2)
                 {
                     var listView = document.getElementById('listView');
 
+                    $("#listView").empty();
+
                     for (var i = 0; i < get_json.data.num; i++) 
                     {
                         var obj = get_json.data[i];
@@ -85,7 +87,8 @@ function getEvent(index1,index2)
                         trDiv.appendChild(listDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        listView.innerHTML = trDiv;
+                        listView.appendChild(trDiv);
+
                     }
                }
            }

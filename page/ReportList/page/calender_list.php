@@ -62,6 +62,8 @@ var userName = '<?php echo $username; ?>';
 </body>
 
 <script src="js/calender.js"></script>
+<script src="../../Push/lib/jquery.form.min.js"></script>
+<script src="../../Push/lib/jquery-1.11.1.min.js"></script>
 <script src="../../lib/js/get_data.js"></script>
 
 </html>
