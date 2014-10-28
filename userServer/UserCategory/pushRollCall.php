@@ -65,6 +65,16 @@ else
 		}
 		else
 		{
+			$user_status = "1";
+			
+			$db_selected_cal = mysql_select_db('calendar_data');
+
+			$query_cal = sprintf("UPDATE `$id` SET 
+								`t_check` = '$user_status' 
+								WHERE `username` = '$username'");
+
+			$res_cal = mysql_query($query_cal,$link);
+
 			$arr["name"] = $objResult["name"];
 			$arr["username"] = $objResult["username"];
 			$arr["data_id"] = $objResult["data_id"];
