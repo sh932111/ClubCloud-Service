@@ -118,7 +118,10 @@ body {
 	border-bottom-color:#C4E1FF;
 	border-width:1px;
 }
-
+.styled-select
+{
+	width: 12%;
+}
 .styled-select select 
 {
 	background: #FFAF60;
