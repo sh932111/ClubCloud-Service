@@ -77,7 +77,7 @@ function getEvent(index1,index2)
 
                         var listDiv = document.createElement("div");
 
-                        listDiv.innerHTML = obj.list;
+                        listDiv.innerHTML = obj.detail;
 
                         listDiv.className = "list_css_td";
 
