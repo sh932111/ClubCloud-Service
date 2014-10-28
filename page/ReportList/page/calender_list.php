@@ -22,18 +22,13 @@ var userName = '<?php echo $username; ?>';
 	<div id="selectView">
 		<div class="styled-select">
 			<select id="check_event" onChange="setValue(this)" >
-				<option value="1">1月</option>
-				<option value="2">2月</option>
-				<option value="3">3月</option>
-				<option value="4">4月</option>
-				<option value="5">5月</option>
-				<option value="6">6月</option>
-				<option value="7">7月</option>
-				<option value="8">8月</option>
-				<option value="9">9月</option>
-				<option value="10">10月</option>
-				<option value="11">11月</option>
-				<option value="12">12月</option>
+				<option value="2016">2016年</option>
+				<option value="2015">2015年</option>
+				<option value="2014">2014年</option>
+				<option value="2013">2013年</option>
+				<option value="2012">2012年</option>
+				<option value="2011">2011年</option>
+				<option value="2010">2010年</option>
 			</select>
 		</div>
 		<div class="styled-select">
