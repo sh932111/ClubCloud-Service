@@ -47,6 +47,40 @@ function getEvent(index1,index2)
 
                     $("#listView").empty();
 
+                    var tr_Div = document.createElement("div");
+
+                    tr_Div.className = "up_css_tr";
+
+                    var title_Div = document.createElement("div");
+
+                    title_Div.className = "up_title_css_td";
+
+                    title_Div.innerHTML = "標題";
+
+                    var date_Div = document.createElement("div");
+
+                    date_Div.innerHTML = "日期";
+
+                    date_Div.className = "up_date_css_td";
+
+                    var time_Div = document.createElement("div");
+
+                    time_Div.innerHTML = "時間";
+
+                    time_Div.className = "up_time_css_td";
+
+                    var list_Div = document.createElement("div");
+
+                    list_Div.innerHTML = "內文";
+
+                    list_Div.className = "up_list_css_td";
+
+                    tr_Div.appendChild(title_Div);
+                    tr_Div.appendChild(list_Div);
+                    tr_Div.appendChild(date_Div);
+                    tr_Div.appendChild(time_Div);
+                    listView.appendChild(tr_Div);
+
                     for (var i = 0; i < get_json.data.num; i++) 
                     {
                         var obj = get_json.data[i];
@@ -90,8 +124,8 @@ function getEvent(index1,index2)
                         listView.appendChild(trDiv);
 
                     }
-               }
-           }
+                }
+            }
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
