@@ -24,7 +24,7 @@ function init()
 function getEvent(index1,index2) 
 {
 	var xmlhttp = new XMLHttpRequest();
-	xmlhttp.open("POST", "../../Calender/pull_calendar_month.php", true);
+	xmlhttp.open("POST", "../../Calender/php/pull_calendar_month.php", true);
 	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
 	xmlhttp.onreadystatechange = function() 
