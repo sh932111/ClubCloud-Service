@@ -1,15 +1,27 @@
 var userData;
 var responseData;
+var year;
+var month;
+
 
 function init()
 {
     getUserData(userName,function(user_data) 
     {
         userData = user_data;
-        getEvent();
+
+        var dt = new Date();
+
+        month = dt.getMonth()+1;
+        year = dt.getFullYear();
+
+        var ymd  = year + "/"+month+"/1";
+        var ymd2  = year + "/"+month+"/31";
+
+        getEvent(ymd,ymd2);
     });
 }
-function getEvent(m_index) 
+function getEvent(index1,index2) 
 {
 	var xmlhttp = new XMLHttpRequest();
 	xmlhttp.open("POST", "../../Calender/pull_calendar_month.php", true);
@@ -78,7 +90,7 @@ function getEvent(m_index)
         }
     }
     // Send the data to PHP now... and wait for response to update the status div
-    var post = "city_id="+userData.city_id+"&area_id="+userData.city_detail_id;
+    var post = "city_id="+userData.city_id+"&area_id="+userData.city_detail_id+"&date_start="+index1+"&date_last="+index2;
 
     xmlhttp.send(post); 
 }
@@ -93,5 +105,20 @@ function goPage(i)
 }
 function setValue(e)
 {
-    selected_value = e.value;
+    month = e.value;
+
+    var ymd  = year + "/"+month+"/1";
+    var ymd2  = year + "/"+month+"/31";
+
+    getEvent(ymd,ymd2);
+}
+function setValueYear(e)
+{
+    year = e.value;
+
+    var ymd  = year + "/"+month+"/1";
+    var ymd2  = year + "/"+month+"/31";
+
+    getEvent(ymd,ymd2);
+
 }
