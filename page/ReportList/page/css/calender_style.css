@@ -121,6 +121,7 @@ body {
 .styled-select
 {
 	width: 12%;
+	float: left;
 }
 .styled-select select 
 {
