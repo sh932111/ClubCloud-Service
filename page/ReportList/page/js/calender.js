@@ -85,7 +85,7 @@ function getEvent(index1,index2)
                         trDiv.appendChild(listDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        listView.appendChild(trDiv);
+                        listView.innerHTML = trDiv;
                     }
                }
            }
