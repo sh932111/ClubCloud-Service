@@ -75,6 +75,8 @@ else
 	}
 
 	$list["num"] = $i;
+	$response_result = TRUE;
+	$arr["result"] = $response_result;
 
 	$arr["data"] = $list;
 	echo json_encode($arr);
