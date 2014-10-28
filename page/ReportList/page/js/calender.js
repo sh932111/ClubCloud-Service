@@ -2,7 +2,7 @@ var userData;
 var responseData;
 var year;
 var month;
-
+var updateDiv = "0";
 
 function init()
 {
@@ -35,8 +35,6 @@ function getEvent(index1,index2)
 
             var get_json = JSON.parse(return_data);
 
-            console.log(get_json);
-
             responseData = get_json;
 
             if (get_json.result)
@@ -45,6 +43,13 @@ function getEvent(index1,index2)
                 {
                     var listView = document.getElementById('listView');
 
+                    if (updateDiv != 0)
+                    {
+                        listView.removeChild(updateDiv);
+                    }
+                    
+                    updateDiv = document.createElement("div");
+        
                     for (var i = 0; i < get_json.data.num; i++) 
                     {
                         var obj = get_json.data[i];
@@ -85,7 +90,8 @@ function getEvent(index1,index2)
                         trDiv.appendChild(listDiv);
                         trDiv.appendChild(dateDiv);
                         trDiv.appendChild(timeDiv);
-                        listView.appendChild(trDiv);
+                        updateDiv.appendChild(trDiv);
+                        listView.appendChild(updateDiv);
                     }
                }
            }
