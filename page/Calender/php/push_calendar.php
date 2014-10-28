@@ -4,9 +4,9 @@ mysql_query ( "set character set utf8" );
 
 header("Content-Type: text/html;charset=utf-8"); 
 
-$objConnect = mysql_connect("localhost","root","sh3599033");
+$link = mysql_connect("localhost","root","sh3599033");
 
-mysql_query("SET NAMES 'UTF8'",$objConnect);
+mysql_query("SET NAMES 'UTF8'",$link);
 
 date_default_timezone_set('Asia/Taipei');
 
@@ -33,7 +33,7 @@ $sql = 'CREATE DATABASE calendar_data';
 
 mysql_query($sql, $link);
 
-if (!$objConnect) 
+if (!$link) 
 {
 	$arr["result"] = FALSE;
 	$arr["Message"] = "errpr open db";
@@ -73,13 +73,13 @@ if ($db_selected)
 		`send_time` VARCHAR(100) NOT NULL
 		);";
 
-	$table_selected = mysql_query($creat_query, $objConnect);
+	$table_selected = mysql_query($creat_query, $link);
 
 	$query = sprintf("INSERT INTO `calendar_table`(`data_id`,`name`,`username`,`city_id`,`area_id`,`title`,`detail`,`date`,`time`,`city`,`area`,`liner`,`address`,`image`,`address_city`,`address_area`,`send_time`) 
 		VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
 		$id,$name,$username,$city_id,$area_id,$title,$detail,$date,$time,$city,$area,$liner,$address,$image,$address_city,$address_area,$send_time);
 
-	$res = mysql_query($query,$objConnect);
+	$res = mysql_query($query,$link);
 
 	if (!$res) 
 	{
