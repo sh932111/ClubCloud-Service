@@ -1,0 +1,135 @@
+body {
+	
+	background-color: #ECF5FF;
+}
+.css_table {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+	display:table;
+}
+.css_tr {
+	display: table-row;
+	height: 50px;
+}
+.up_css_tr {
+	display: table-row;
+	height: 50px;
+}
+
+.css_tr:hover {
+	display: table-row;
+	height: 50px;
+	background-color: #97CBFF;
+	cursor: pointer;
+}
+
+.up_title_css_td {
+	display: table-cell;
+	width: 30%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF8000;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+	text-indent: 2%;
+}
+.up_list_css_td {
+	display: table-cell;
+	width: 45%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF8000;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+}
+.up_date_css_td {
+	display: table-cell;
+	width: 15%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF9224;
+	text-align: center;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+}
+.up_time_css_td {
+	text-align: center;
+	display: table-cell;
+	width: 10%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#FF9224;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+}
+.title_css_td {
+	display: table-cell;
+	width: 30%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#4F4F4F;
+	vertical-align:middle;
+	text-indent: 2%;
+	border-bottom-style:solid;
+	border-bottom-color:#C4E1FF;
+	border-width:1px;
+}
+.list_css_td {
+	display: table-cell;
+	width: 45%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#4F4F4F;
+	vertical-align:middle;
+	border-bottom-style:solid;
+	border-bottom-color:#C4E1FF;
+	border-width:1px;
+}
+.date_css_td {
+	display: table-cell;
+	width: 15%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#7B7B7B;
+	text-align: center;
+	vertical-align:middle;
+	border-bottom-style:solid;
+	border-bottom-color:#C4E1FF;
+	border-width:1px;
+}
+.time_css_td {
+	text-align: center;
+	display: table-cell;
+	width: 10%;
+	font-size: 16px;
+	font-family:微軟正黑體;
+	color:#7B7B7B;
+	vertical-align:middle;
+	border-bottom-style:solid;
+	border-bottom-color:#C4E1FF;
+	border-width:1px;
+}
+
+.styled-select select 
+{
+	background: #FFAF60;
+	width: 12%;
+	padding: 5px;
+	font-size: 15px;
+	line-height: 1;
+	color: #6C6C6C;
+	border: 0;
+	border-radius: 0;
+	height: 30px;
+	float: left;
+	margin-top: 1.5%;
+}
