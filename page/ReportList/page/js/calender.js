@@ -35,6 +35,8 @@ function getEvent(index1,index2)
 
             var get_json = JSON.parse(return_data);
 
+            console.log(get_json);
+
             responseData = get_json;
 
             if (get_json.result)
