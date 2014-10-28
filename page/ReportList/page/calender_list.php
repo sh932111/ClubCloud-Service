@@ -19,7 +19,7 @@ var userName = '<?php echo $username; ?>';
 	<link rel="stylesheet" href="css/calender_style.css">
 </head>
 <body onload="init()">
-	<div>
+	<div id="selectView">
 		<div class="styled-select">
 			<select id="check_event" onChange="setValue(this)" >
 				<option value="1">1月</option>
