@@ -21,7 +21,7 @@ var userName = '<?php echo $username; ?>';
 <body onload="init()">
 	<div id="selectView">
 		<div class="styled-select">
-			<select id="check_event" onChange="setValue(this)" >
+			<select id="check_event_month" onChange="setValue(this)" >
 				<option value="1">1月</option>
 				<option value="2">2月</option>
 				<option value="3">3月</option>
@@ -37,7 +37,7 @@ var userName = '<?php echo $username; ?>';
 			</select>
 		</div>
 		<div class="styled-select">
-			<select id="check_event" onChange="setValueYear(this)" >
+			<select id="check_event_year" onChange="setValueYear(this)" >
 				<option value="2016">2016年</option>
 				<option value="2015">2015年</option>
 				<option value="2014">2014年</option>
