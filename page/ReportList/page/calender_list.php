@@ -48,6 +48,9 @@ var userName = '<?php echo $username; ?>';
 			</select>
 		</div>
 	</div>
+	<div>
+
+	</div>
 	<div id="listView" class="css_table">
 		<div class="up_css_tr">
           	<div class="up_title_css_td">標題</div>
@@ -55,7 +58,7 @@ var userName = '<?php echo $username; ?>';
           	<div class="up_date_css_td">日期</div>
           	<div class="up_time_css_td">時間</div>
       	</div>
-  </div>
+  	</div>
 </body>
 
 <script src="js/calender.js"></script>
