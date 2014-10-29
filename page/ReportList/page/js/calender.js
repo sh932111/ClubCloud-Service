@@ -139,9 +139,9 @@ function goPage(i)
 
     var pull_id = responseData.data[index].id;
 
-    console.log(responseData.data[index]);
+    var date = responseData.data[index].date;
 
-    location.href = 'calender_detail.php?username='+userName+'&id='+pull_id;
+    location.href = 'calender_detail.php?username='+userName+'&id='+pull_id+'&date='+date;
 
 }
 function setValue(e)
