@@ -140,6 +140,7 @@ function reloadData()
             listView.appendChild(tr_Div);
         }
     }
+    drawChart();
 }
 function drawChart()
 {
