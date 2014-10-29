@@ -149,7 +149,7 @@ function drawChart()
    
     for (var i = 0; i < get_data.num; i++) 
     {
-        if (get_data.t_check == 1)
+        if (get_data[i].t_check == 1)
         {
             have ++;
         }
