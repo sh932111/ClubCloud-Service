@@ -152,6 +152,21 @@ function drawChart()
     data.addRows(1);
 
     data.setCell(0, 0, Day);
+    data.setCell(0, 1, parseFloat(3, 10));
+    data.setCell(0, 2, parseFloat(2, 10));
+    var options = 
+    {
+        title: '參與記錄百分比',
+        vAxis: 
+        {
+        title: '參與數值', titleTextStyle: {fontSize:18}, gridlines:{color: 'pink', count: 10}
+        },
+        hAxis:
+         {
+        title: '紀錄日期'},
+    };
 
+    new google.visualization.ColumnChart(document.getElementById("chart_div")).
+    draw(data, options);
 }
 

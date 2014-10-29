@@ -12,7 +12,7 @@ $date = $_GET['date'];
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
 	google.load("visualization", "1", {packages:["corechart"]});
-	google.setOnLoadCallback(drawChart);
+	//google.setOnLoadCallback(drawChart);
 		
 	var userName = '<?php echo $username; ?>';
 	var eventID = '<?php echo $event_id; ?>';
@@ -32,7 +32,7 @@ $date = $_GET['date'];
           	<div class="up_css_td">是否參與</div>
       	</div>
 	</div>
-	<div>
+	<div id="chart_div" > 
 	</div>
 </body>
 
