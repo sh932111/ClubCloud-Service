@@ -1,0 +1,56 @@
+body 
+{
+	background-color: #ECF5FF;
+}
+button
+{
+	border-radius: 5px;
+	background-color: #6C6C6C;
+	color: white;
+	border:1px #d0d0d0 solid;
+	width: 50%;
+	height: 25px;
+	font-size: 12px;
+}
+
+.css_table {
+	width: 80%;
+	margin-left: 10%;
+	display:table;
+}
+.up_css_tr {
+	display: table-row;
+	height: 50px;
+}
+.css_tr {
+	display: table-row;
+	height: 50px;
+}
+.css_tr:hover {
+	display: table-row;
+	height: 50px;
+	background-color: #97CBFF;
+}
+
+.up_css_td {
+	display: table-cell;
+	text-align: center;
+	border-bottom-style:solid;
+	border-bottom-color:#7B7B7B;
+	vertical-align:middle;
+	border-width:2px;
+	font-size: 14px;
+	font-family:微軟正黑體;
+	color:#FF9224;
+}
+.css_td {
+	display: table-cell;
+	text-align: center;
+	border-bottom-style:solid;
+	border-bottom-color:#d0d0d0;
+	vertical-align:middle;
+	border-width:2px;
+	font-size: 14px;
+	font-family:微軟正黑體;
+	color:#7B7B7B;
+}
