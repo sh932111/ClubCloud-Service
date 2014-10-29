@@ -2,6 +2,9 @@ var userData;
 var responseData;
 function init()
 {
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    
     getUserData(userName,function(user_data) 
     {
         userData = user_data;
