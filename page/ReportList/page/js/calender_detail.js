@@ -1,7 +1,13 @@
 var userData;
 var responseData;
+
+
 function init()
 {
+    google.load('visualization', '1.0', {'packages':['corechart']});
+    
+    google.setOnLoadCallback(drawChart);
+
     getUserData(userName,function(user_data) 
     {
         userData = user_data;
@@ -142,31 +148,27 @@ function reloadData()
     }
     drawChart();
 }
-function drawChart() 
+
+function drawChart()
 {
     var data = new google.visualization.DataTable();
 
-    data.addColumn("string", "記錄日期");
-    data.addColumn("number", "以參與");
-    data.addColumn("number", "未參與");
-    data.addRows(1);
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+    data.addRows([
+      ['Mushrooms', 3],
+      ['Onions', 1],
+      ['Olives', 1],
+      ['Zucchini', 1],
+      ['Pepperoni', 2]
+      ]);
 
-    data.setCell(0, 0, Day);
-    data.setCell(0, 1, parseFloat(3, 10));
-    data.setCell(0, 2, parseFloat(2, 10));
-    var options = 
-    {
-        title: '參與記錄百分比',
-        vAxis: 
-        {
-        title: '參與數值', titleTextStyle: {fontSize:18}, gridlines:{color: 'pink', count: 10}
-        },
-        hAxis:
-         {
-        title: '紀錄日期'},
-    };
+    var options = {'title':'How Much Pizza I Ate Last Night',
+        'width':400,
+        'height':300};
 
-    new google.visualization.ColumnChart(document.getElementById("chart_div")).
-    draw(data, options);
+        // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
 }
-
+    
