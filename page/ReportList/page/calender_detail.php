@@ -12,7 +12,6 @@ $date = $_GET['date'];
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
     google.load("visualization", "1", {packages:["corechart"]});
-    google.setOnLoadCallback(drawChart);
     
 	var userName = '<?php echo $username; ?>';
 	var eventID = '<?php echo $event_id; ?>';

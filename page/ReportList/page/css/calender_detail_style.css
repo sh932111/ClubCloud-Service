@@ -45,3 +45,7 @@ body
 	font-family:微軟正黑體;
 	color:#FF9224;
 }
+#chart_div{
+	width: 50%;
+	margin-left: 50%;
+}

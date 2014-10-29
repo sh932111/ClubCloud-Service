@@ -20,7 +20,6 @@ function getRequestData()
 
         getDetail();
     };
-
 }
 function getDetail() 
 {
@@ -144,19 +143,30 @@ function reloadData()
 }
 function drawChart()
 {
+    var get_data = responseData.data;
+    
+    var have = 0;
+   
+    for (var i = 0; i < get_data.num; i++) 
+    {
+        if (obj.t_check == 1)
+        {
+            have ++;
+        }
+    }
+
+    var nohave = get_data.num - have;
+
     var data = new google.visualization.DataTable();
 
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
     data.addRows([
-      ['Mushrooms', 3],
-      ['Onions', 1],
-      ['Olives', 1],
-      ['Zucchini', 1],
-      ['Pepperoni', 2]
+      ['已參與', have],
+      ['未參與', nohave]
       ]);
 
-    var options = {'title':'How Much Pizza I Ate Last Night',
+    var options = {'title':'活動參與百分比',
         'width':400,
         'height':300};
 
