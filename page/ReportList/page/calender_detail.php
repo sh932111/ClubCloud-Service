@@ -21,8 +21,6 @@ var eventID = '<?php echo $event_id; ?>';
 	<link rel="stylesheet" href="css/calender_detail_style.css">
 </head>
 <body onload="init()">
-	<div>
-	</div>	
 	<div id="listView" class="css_table">
 		<div class="up_css_tr">
           	<div class="up_css_td">名字</div>
@@ -30,6 +28,9 @@ var eventID = '<?php echo $event_id; ?>';
           	<div class="up_css_td">聯絡電話</div>
           	<div class="up_css_td">是否參與</div>
       	</div>
+	</div>
+	<div>
+		le;ler
 	</div>
 </body>
 
