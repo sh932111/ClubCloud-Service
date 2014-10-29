@@ -139,7 +139,7 @@ function goPage(i)
 
     var pull_id = responseData.data[index].id;
 
-    location.href = 'emergency_detail.php?username='+userName+'&id='+pull_id;
+    location.href = 'calender_detail.php?username='+userName+'&id='+pull_id;
 
 }
 function setValue(e)
