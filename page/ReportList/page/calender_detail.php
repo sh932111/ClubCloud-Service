@@ -11,6 +11,9 @@ $date = $_GET['date'];
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
+    google.load("visualization", "1", {packages:["corechart"]});
+    google.setOnLoadCallback(drawChart);
+    
 	var userName = '<?php echo $username; ?>';
 	var eventID = '<?php echo $event_id; ?>';
 	var Day = '<?php echo $date; ?>';
