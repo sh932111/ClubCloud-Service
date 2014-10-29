@@ -38,8 +38,6 @@ var userName = '<?php echo $username; ?>';
 		</div>
 		<div class="styled-select">
 			<select id="check_event_year" onChange="setValueYear(this)" >
-				<option value="2016">2016年</option>
-				<option value="2015">2015年</option>
 				<option value="2014">2014年</option>
 				<option value="2013">2013年</option>
 				<option value="2012">2012年</option>

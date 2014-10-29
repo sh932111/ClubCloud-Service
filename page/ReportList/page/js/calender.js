@@ -13,7 +13,7 @@ function init()
         //var dt = new Date();
 
         month = 1;//dt.getMonth()+1;
-        year = 2016//dt.getFullYear();
+        year = 2014//dt.getFullYear();
 
         var ymd  = year + "/"+month+"/1";
         var ymd2  = year + "/"+month+"/31";
