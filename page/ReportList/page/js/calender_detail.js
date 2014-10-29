@@ -96,7 +96,7 @@ function reloadData()
     {
         for (var i = 0; i < get_data.num; i++) 
         {
-            var obj = get_json[i];
+            var obj = get_data[i];
 
             var tr_Div = document.createElement("div");
 
