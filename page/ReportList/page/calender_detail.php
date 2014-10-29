@@ -4,16 +4,19 @@
 
 $username = $_GET['username'];
 $event_id = $_GET['id'];
-
+$date = $_GET['date'];
 ?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script type="text/javascript">
-
-var userName = '<?php echo $username; ?>';
-var eventID = '<?php echo $event_id; ?>';
-//console.log(userName);
+	google.load("visualization", "1", {packages:["corechart"]});
+	google.setOnLoadCallback(drawChart);
+		
+	var userName = '<?php echo $username; ?>';
+	var eventID = '<?php echo $event_id; ?>';
+	var Day = '<?php echo $date; ?>';
 </script>
 
 <title>活動參與人</title>
@@ -30,7 +33,6 @@ var eventID = '<?php echo $event_id; ?>';
       	</div>
 	</div>
 	<div>
-		le;ler
 	</div>
 </body>
 

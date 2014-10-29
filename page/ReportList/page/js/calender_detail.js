@@ -140,4 +140,18 @@ function reloadData()
             listView.appendChild(tr_Div);
         }
     }
+    drawChart();
 }
+function drawChart() 
+{
+    var data = new google.visualization.DataTable();
+
+    data.addColumn("string", "記錄日期");
+    data.addColumn("number", "以參與");
+    data.addColumn("number", "未參與");
+    data.addRows(1);
+
+    data.setCell(0, 0, Day);
+
+}
+
