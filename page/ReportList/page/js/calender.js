@@ -10,10 +10,10 @@ function init()
     {
         userData = user_data;
 
-        var dt = new Date();
+        //var dt = new Date();
 
-        month = dt.getMonth()+1;
-        year = dt.getFullYear();
+        month = 1;//dt.getMonth()+1;
+        year = 2016//dt.getFullYear();
 
         var ymd  = year + "/"+month+"/1";
         var ymd2  = year + "/"+month+"/31";
