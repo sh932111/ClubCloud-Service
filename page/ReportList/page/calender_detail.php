@@ -22,11 +22,18 @@ var eventID = '<?php echo $event_id; ?>';
 </head>
 <body onload="init()">
 	<div>
-		
 	</div>	
-	<div id="listView" class="css_table"></div>
+	<div id="listView" class="css_table">
+		<div class="up_css_tr">
+          	<div class="up_css_td">名字</div>
+          	<div class="up_css_td">身分證字號</div>
+          	<div class="up_css_td">聯絡電話</div>
+          	<div class="up_css_td">是否參與</div>
+      	</div>
+	</div>
 </body>
 
 <script src="js/calender_detail.js"></script>
+<script src="../../Push/lib/jquery-1.11.1.min.js"></script>
 <script src="../../lib/js/get_data.js"></script>
 </html>
