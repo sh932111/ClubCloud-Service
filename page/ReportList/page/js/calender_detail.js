@@ -166,11 +166,11 @@ function drawChart()
       ['未參與', nohave]
       ]);
 
-    var options = {'title':'活動參與百分比',
+    var options = {
+        'title':'活動參與百分比',
         'width':400,
         'height':300};
 
-        // Instantiate and draw our chart, passing in some options.
     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
     chart.draw(data, options);
 }

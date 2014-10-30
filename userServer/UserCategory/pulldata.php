@@ -70,24 +70,29 @@ else
 				$objResult2 = mysql_fetch_array($objQuery);
 				$intNumRows2 = mysql_num_rows($objQuery);
 
-				$data["name"] = $objResult2["name"];
-				$data["username"] = $objResult2["username"];
-				$data["data_id"] = $objResult2["data_id"];
-				$data["title"] = $objResult2["title"];
-				$data["detail"] = $objResult2["detail"];
-				$data["date"] = $objResult2["date"];
-				
-				$data["time"] = $objResult2["time"];//territory_name
-				$data["city"] = $objResult2["city"];//district_name
-				$data["area"] = $objResult2["area"];//city_id
-				$data["liner"] = $objResult2["liner"];//district_id
-				
-				$data["address"] = $objResult2["address"];//district_id
-				$data["image"] = $objResult2["image"];//district_id
+				if ($intNumRows2 != 0) 
+				{
+					
+					$data["name"] = $objResult2["name"];
+					$data["username"] = $objResult2["username"];
+					$data["data_id"] = $objResult2["data_id"];
+					$data["title"] = $objResult2["title"];
+					$data["detail"] = $objResult2["detail"];
+					$data["date"] = $objResult2["date"];
+					
+					$data["time"] = $objResult2["time"];//territory_name
+					$data["city"] = $objResult2["city"];//district_name
+					$data["area"] = $objResult2["area"];//city_id
+					$data["liner"] = $objResult2["liner"];//district_id
+					
+					$data["address"] = $objResult2["address"];//district_id
+					$data["image"] = $objResult2["image"];//district_id
 
-				$list[$i] = $data;
+					$list[$i] = $data;
 
-				$i = $i + 1;
+					$i = $i + 1;
+				}
+
 			}
 
 			$arr["result"] = TRUE;
