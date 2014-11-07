@@ -31,9 +31,9 @@ body {
 	font-family:微軟正黑體;
 	color:#FF8000;
 	border-bottom-style:solid;
+	border-width:2px;
 	border-bottom-color:#d0d0d0;
 	vertical-align:middle;
-	border-width:2px;
 	text-indent: 2%;
 }
 .up_list_css_td {
