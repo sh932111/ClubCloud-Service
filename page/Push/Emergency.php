@@ -25,7 +25,7 @@ var userName = "<?php echo $username; ?>";
 		<p>標題：</p>
 		<p><input type="text" name="title" size="20" id="title" value="地震" class="registerInput"/></p>
 		<p>訊息：</p>
-		<p><textarea size="20" id="detail" name="detail"  value="地震發生" class="textareaInput"></textarea></p>
+		<p><textarea size="20" id="detail" name="detail" class="textareaInput">地震發生</textarea></p>
 		<p><input type="button" value="傳送事件" onclick="EmergencyPush()"  class="EmergencyPushBt"/></p>
 	</div>
 </body>
